@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evPersistence</name>
+    <events>
+        <event-block sid="862569291805160">
+            <conditions>
+                <condition id="0" name="On function" sid="251820358832663" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="748148600284555" type="LocalStorage">
+                    <param id="0" name="Key">&quot;dificuldade&quot;</param>
+                    <param id="1" name="Value">dificuldade</param>
+                </action>
+                <action id="0" name="Set item" sid="775119133373467" type="LocalStorage">
+                    <param id="0" name="Key">&quot;nivelDesbloqueado&quot;</param>
+                    <param id="1" name="Value">nivelDesbloqueado</param>
+                </action>
+                <action id="0" name="Set item" sid="105300087552259" type="LocalStorage">
+                    <param id="0" name="Key">&quot;sfxOn&quot;</param>
+                    <param id="1" name="Value">sfxOn</param>
+                </action>
+                <action id="0" name="Set item" sid="665555704571947" type="LocalStorage">
+                    <param id="0" name="Key">&quot;musicOn&quot;</param>
+                    <param id="1" name="Value">musicOn</param>
+                </action>
+                <action id="0" name="Set item" sid="521108031696174" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ultimoLevelDesbloqueado&quot;</param>
+                    <param id="1" name="Value">ultimoLevelDesbloqueado</param>
+                </action>
+                <action id="0" name="Set item" sid="214974074819490" type="LocalStorage">
+                    <param id="0" name="Key">&quot;uai_so_destravado&quot;</param>
+                    <param id="1" name="Value">uai_so_destravado</param>
+                </action>
+                <action id="0" name="Set item" sid="177299344914963" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lavar_a_egua_destravado&quot;</param>
+                    <param id="1" name="Value">lavar_a_egua_destravado</param>
+                </action>
+                <action id="0" name="Set item" sid="252512957092892" type="LocalStorage">
+                    <param id="0" name="Key">&quot;picar_a_mula_destravado&quot;</param>
+                    <param id="1" name="Value">picar_a_mula_destravado</param>
+                </action>
+                <action id="0" name="Set item" sid="737918892727617" type="LocalStorage">
+                    <param id="0" name="Key">&quot;caroco_no_angu_destravado&quot;</param>
+                    <param id="1" name="Value">caroco_no_angu_destravado</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="644317072192700">
+            <conditions>
+                <condition id="0" name="On function" sid="754913716210563" type="Function">
+                    <param id="0" name="Name">&quot;LoadGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="847698753743456" type="LocalStorage">
+                    <param id="0" name="Key">&quot;dificuldade&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="805264786856647" type="LocalStorage">
+                    <param id="0" name="Key">&quot;nivelDesbloqueado&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="872639928158151" type="LocalStorage">
+                    <param id="0" name="Key">&quot;sfxOn&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="516998529250221" type="LocalStorage">
+                    <param id="0" name="Key">&quot;musicOn&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="300064574083270" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ultimoLevelDesbloqueado&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="480449897205586" type="LocalStorage">
+                    <param id="0" name="Key">&quot;uai_so_destravado&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="695346280004014" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lavar_a_egua_destravado&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="682920957938663" type="LocalStorage">
+                    <param id="0" name="Key">&quot;picar_a_mula_destravado&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="228988523863603" type="LocalStorage">
+                    <param id="0" name="Key">&quot;caroco_no_angu_destravado&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="519436294939653">
+            <conditions>
+                <condition id="0" name="On function" sid="649610212983249" type="Function">
+                    <param id="0" name="Name">&quot;RestoreGame&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="555340792105791" type="System">
+                    <param id="0" name="Variable">dificuldade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="784020710579604" type="System">
+                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="422671849998363" type="System">
+                    <param id="0" name="Variable">sfxOn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="365918763423593" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="198989681941250" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="497327061952525" type="System">
+                    <param id="0" name="Variable">uai_so_destravado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="770613322120009" type="System">
+                    <param id="0" name="Variable">picar_a_mula_destravado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="209330134406525" type="System">
+                    <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="669234579908583" type="System">
+                    <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="741699117232480" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="310118282339321">
+            <conditions>
+                <condition id="9" name="On item exists" sid="223386155383189" type="LocalStorage">
+                    <param id="0" name="Key">&quot;dificuldade&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="750485340602049" type="System">
+                    <param id="0" name="Variable">dificuldade</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="701988469229580">
+            <conditions>
+                <condition id="9" name="On item exists" sid="774731748047612" type="LocalStorage">
+                    <param id="0" name="Key">&quot;nivelDesbloqueado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="434587258630450" type="System">
+                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="619051626094472">
+            <conditions>
+                <condition id="9" name="On item exists" sid="711084257258181" type="LocalStorage">
+                    <param id="0" name="Key">&quot;sfxOn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="612393439047575" type="System">
+                    <param id="0" name="Variable">sfxOn</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707115983644530">
+            <conditions>
+                <condition id="9" name="On item exists" sid="519397799547541" type="LocalStorage">
+                    <param id="0" name="Key">&quot;musicOn&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="179479093285256" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="857155247940252">
+            <conditions>
+                <condition id="9" name="On item exists" sid="828981191905752" type="LocalStorage">
+                    <param id="0" name="Key">&quot;ultimoLevelDesbloqueado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="791422949617056" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="142821586358358">
+            <conditions>
+                <condition id="9" name="On item exists" sid="349551104486650" type="LocalStorage">
+                    <param id="0" name="Key">&quot;uai_so_destravado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="553243404987925" type="System">
+                    <param id="0" name="Variable">uai_so_destravado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="479287849115188">
+            <conditions>
+                <condition id="9" name="On item exists" sid="445059951129053" type="LocalStorage">
+                    <param id="0" name="Key">&quot;lavar_a_egua_destravado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="986821080685022" type="System">
+                    <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="266044636153915">
+            <conditions>
+                <condition id="9" name="On item exists" sid="524122000921687" type="LocalStorage">
+                    <param id="0" name="Key">&quot;caroco_no_angu_destravado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="872507784703004" type="System">
+                    <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="220817449708675">
+            <conditions>
+                <condition id="9" name="On item exists" sid="963944552735306" type="LocalStorage">
+                    <param id="0" name="Key">&quot;picar_a_mula_destravado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="987735304829815" type="System">
+                    <param id="0" name="Variable">picar_a_mula_destravado</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

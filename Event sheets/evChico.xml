@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evChico</name>
+    <events>
+        <event-block sid="402373452973685">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="981874575128506" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="805703507479321" type="galoChico">
+                    <param id="0" name="Animation">&quot;Pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="399824776841856">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="142641474401663" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="404709016507644" type="galoChico">
+                    <param id="0" name="X">Player.ImagePointX(1)</param>
+                    <param id="1" name="Y">Player.ImagePointY(1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="808027215805519">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="829798787788827" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="379758613699793" type="galoChico">
+                    <param id="0" name="Animation">&quot;Correndo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="589977556554332">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="357957453264449" type="Player">
+                            <param id="0" name="Instance variable">isGoingRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="211576356893587" type="galoChico">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="728666865556466">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="993407114253239" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="474758518494937" type="galoChico">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="340782841544815">
+            <conditions>
+                <condition id="-22" name="Else" sid="372834659708285" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="264912044852630" type="galoChico">
+                    <param id="0" name="Animation">&quot;Parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

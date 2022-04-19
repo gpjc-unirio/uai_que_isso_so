@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evGalinha</name>
+    <events>
+        <event-group description="" sid="378852731559086" title="Movimento da Galinha Andando" />
+        <event-block sid="754420002924884">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="651203740743440" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="270028461228721">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="308823833677600" type="System">
+                            <param id="0" name="Object">galinha</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="118231133530782">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="857236626856071" type="galinha">
+                                    <param id="0" name="Instance variable">isStopped</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="570305878683455" type="galinha">
+                                    <param id="0" name="Instance variable">walkDistance</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="100237303666959">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="183947139603556" type="galinha">
+                                            <param id="0" name="Instance variable">isLookingLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="740299249247721" type="galinha">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="225530792429454" type="galinha">
+                                            <param id="0" name="X">galinha.X - galinha.Speed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="873511517759627">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="946258516655306" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="924905319301636" type="galinha">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="989408920630227" type="galinha">
+                                            <param id="0" name="X">galinha.X + galinha.Speed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="454079733471233">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="267320518111128" type="galinha">
+                                    <param id="0" name="Instance variable">walkDistance</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">galinha.Distance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="384195082779433" type="galinha">
+                                    <param id="0" name="Instance variable">walkDistance</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="152914926006981">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="843253114861943" type="galinha" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="143795548211142" type="galinha">
+                                            <param id="0" name="Instance variable">isLookingLeft</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="601351378694634">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="353291236565445" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="294182604958907" type="galinha">
+                                            <param id="0" name="Instance variable">isLookingLeft</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="553606385339098" title="Colisão com Ataques do Player" />
+        <event-block any="1" sid="628502609756700">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="872805886967023" type="couve">
+                    <param id="0" name="Object">galinha</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="419632983054245">
+                    <conditions>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="907187460178153" type="galinha" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="304019130076551" type="galinha">
+                            <param id="0" name="&apos;On&apos; time">0</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">15</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="746807643550091" type="galinha">
+                            <param id="0" name="Instance variable">Demage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="614937844059337" type="galinha">
+                            <param id="0" name="Instance variable">isStopped</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Physics" id="21" name="Set immovable" sid="453938042144428" type="galinha">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543177618150494">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="442288978941362" type="galinha">
+                            <param id="0" name="Instance variable">color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;marrom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="884321091058794" type="galinha">
+                            <param id="0" name="Animation">&quot;Marrom_Eating&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897166251605010">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="500656577312003" type="galinha">
+                            <param id="0" name="Instance variable">color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;marrom_escura&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="672376625984156" type="galinha">
+                            <param id="0" name="Animation">&quot;Marrom_Escuro_Eating&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="409906866666448">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="517714020473973" type="galinha">
+                            <param id="0" name="Instance variable">color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;preta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="342814213327355" type="galinha">
+                            <param id="0" name="Animation">&quot;Preta_Eating&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="546017576578516">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="869623181337234" type="galinha">
+                            <param id="0" name="Instance variable">color</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;angola&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="290766359616789" type="galinha">
+                            <param id="0" name="Animation">&quot;Angola_Eating&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="118021643353950">
+            <conditions>
+                <condition id="-22" name="Else" sid="323388485853505" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="1" name="Stop flashing" sid="123754079124450" type="galinha" />
+                <action id="-13" name="Set boolean" sid="697228600408758" type="galinha">
+                    <param id="0" name="Instance variable">Demage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="917461719420573">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="421390424369501" type="galinha">
+                            <param id="0" name="Instance variable">Speed</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="494054686273562" type="galinha">
+                            <param id="0" name="Instance variable">isStopped</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="408192494771885">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="741145966263911" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;marrom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="835668052490455" type="galinha">
+                                    <param id="0" name="Animation">&quot;Marrom_Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="336183309584114">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="523489573938500" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;marrom_escura&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="828953695774257" type="galinha">
+                                    <param id="0" name="Animation">&quot;Marrom_Escuro_Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="234052693355546">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="132796421015736" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;preta&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="198360645217809" type="galinha">
+                                    <param id="0" name="Animation">&quot;Preta_Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="116773803624559">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="166906829975767" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;angola&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="724962475994761" type="galinha">
+                                    <param id="0" name="Animation">&quot;Angola_Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="969184135657145">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="764784633317710" type="galinha">
+                            <param id="0" name="Instance variable">Speed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="194119019074709">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="221282918686215" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;marrom&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="703728382386259" type="galinha">
+                                    <param id="0" name="Animation">&quot;Marrom_Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="965643142580543">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="711474896893524" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;marrom_escura&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="775104238297308" type="galinha">
+                                    <param id="0" name="Animation">&quot;Marrom_Escuro_Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="291272851033581">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="638008629013376" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;preta&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="561933857080289" type="galinha">
+                                    <param id="0" name="Animation">&quot;Preta_Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="520934277070621">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="324434068856626" type="galinha">
+                                    <param id="0" name="Instance variable">color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;angola&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="601675925261181" type="galinha">
+                                    <param id="0" name="Animation">&quot;Angola_Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="812038399687333">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="919614928730588" type="galinha">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="251371664416470">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="135909675402652" type="galinha">
+                            <param id="0" name="Instance variable">takeOff</param>
+                        </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="367243110112038" type="galinha" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="258315052600889" type="galinha">
+                            <param id="0" name="Object">couve</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="21" name="Set immovable" sid="977334327257935" type="galinha">
+                            <param id="0" name="Setting">0</param>
+                        </action>
+                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="673443979117208" type="galinha">
+                            <param id="0" name="Impulse">10</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                            <param id="3" name="Image point">0</param>
+                        </action>
+                        <action behavior="LineOfSight" id="0" name="Set range" sid="658180672937771" type="galinha">
+                            <param id="0" name="Range">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="406470057695694" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action behavior="LineOfSight" id="0" name="Set range" sid="688955169148246" type="galinha">
+                            <param id="0" name="Range">500</param>
+                        </action>
+                        <action behavior="Physics" id="21" name="Set immovable" sid="707354198049771" type="galinha">
+                            <param id="0" name="Setting">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="966533749348759">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="949298783219228" type="galinha">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="513099679322886" type="galinha">
+                                    <param id="0" name="Instance variable">isLookingLeft</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976570357530393">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="503177434042252" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="730749527825332" type="galinha">
+                                    <param id="0" name="Instance variable">isLookingLeft</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

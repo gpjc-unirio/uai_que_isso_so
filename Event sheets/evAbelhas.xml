@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evAbelhas</name>
+    <events>
+        <variable constant="0" name="countNewBees" sid="869705583820506" static="0" type="number">0</variable>
+        <variable constant="0" name="qtdeNewBees" sid="254864663558034" static="0" type="number">0</variable>
+        <variable constant="0" name="beeOriginY" sid="936270634786629" static="0" type="number">0</variable>
+        <variable constant="0" name="beeOriginX" sid="240313391638266" static="0" type="number">0</variable>
+        <variable constant="0" name="newBee" sid="400268202128300" static="0" type="number">0</variable>
+        <event-block sid="981344260871336">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="164258799454431" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="163546804355374">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="440888271549008" type="bee">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="246411145507072" type="bee">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="912320761225509">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="351383234582311" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="964463353077894" type="bee">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="949435123528870">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="506696138646632" type="bee" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="925469236547984" type="bee">
+                            <param id="0" name="X">player.X</param>
+                            <param id="1" name="Y">player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="349068118171462">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="448233024563957" type="System" />
+                        <condition id="-14" name="Compare variable" sid="825155958212431" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="283816253805182" type="bee" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="879784230378969">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="632918458001757" type="bee" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="296622608625132">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="308056573168440" type="System">
+                            <param id="0" name="Object">bee</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="334340062913318">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="314472584530374" type="bee">
+                                    <param id="0" name="Instance variable">isMovimento</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="875405762445444">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="387444800920824" type="bee" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="1" name="Move along path" sid="913359705525999" type="bee" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="151437686598601">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="433671899471424" type="bee">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="541309860628468">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="333154653653106" type="moita">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="313135520067355">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="810634852876368" type="System">
+                            <param id="0" name="Object">bee</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="678677939395010" type="bee">
+                            <param id="0" name="Set">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="639173663840963">
+            <conditions>
+                <condition id="-22" name="Else" sid="266820749353553" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="198591734498739">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="124767031455574" type="System">
+                            <param id="0" name="Object">bee</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="255637109831598" type="bee">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="185077324007864">
+            <conditions>
+                <condition id="0" name="On function" sid="984791970858237" type="Function">
+                    <param id="0" name="Name">&quot;LauncheBess&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="286256218550281">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="118660958101625" type="System">
+                            <param id="0" name="Object">bee</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="731457835161909" type="bee">
+                            <param id="0" name="Instance variable">isMovimento</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="764095141958034">
+            <conditions>
+                <condition id="0" name="On function" sid="659550395826352" type="Function">
+                    <param id="0" name="Name">&quot;CreateBees&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="244368803348162" type="System">
+                    <param id="0" name="Variable">qtdeNewBees</param>
+                    <param id="1" name="Value">Function.Param(2)</param>
+                </action>
+                <action id="-9" name="Set value" sid="831373610952888" type="System">
+                    <param id="0" name="Variable">countNewBees</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="789868022737842" type="System">
+                    <param id="0" name="Variable">newBee</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="902324521444995" type="System">
+                    <param id="0" name="Variable">beeOriginY</param>
+                    <param id="1" name="Value">Function.Param(1)</param>
+                </action>
+                <action id="-9" name="Set value" sid="827152700762178" type="System">
+                    <param id="0" name="Variable">beeOriginX</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317608650494260">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="109967629067656" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="195810174805141">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="125902458300405" type="System">
+                            <param id="0" name="Variable">newBee</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="427143973174175" type="System">
+                            <param id="0" name="Variable">newBee</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="454820704832699" type="System">
+                            <param id="0" name="Variable">countNewBees</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="450760987146639" type="System">
+                            <param id="0" name="Object to create">bee</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">beeOriginX  + (round(random(-15, 15)))</param>
+                            <param id="3" name="Y">beeOriginY  + (round(random(-15, 15)))</param>
+                        </action>
+                        <action behavior="Pathfinding" id="3" name="Set enabled" sid="369607974213906" type="bee">
+                            <param id="0" name="Set">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="419918897835141" type="bee">
+                            <param id="0" name="X">player.X</param>
+                            <param id="1" name="Y">player.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="468309416162330" type="bee" />
+                        <action id="-10" name="Set value" sid="558565639310665" type="bee">
+                            <param id="0" name="Instance variable">isMovimento</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="974374275172187">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="660035407653973" type="System">
+                                    <param id="0" name="Variable">countNewBees</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">qtdeNewBees</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="285715714613679" type="System">
+                                    <param id="0" name="Variable">newBee</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

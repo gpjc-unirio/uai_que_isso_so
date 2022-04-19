@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evLevelComplete</name>
+    <events>
+        <include>evJoystick</include>
+        <event-block sid="211781475178283">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="930891984427504" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="963878124224922" type="txtTituloFase">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="992901139308754" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="275559803173893" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;CAPÍTULO CONCLUÍDO&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="614374900159763" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="593331946533879" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="432235488750445">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="413654253527178" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="490626129034375" type="estrela_01">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="775806930089701">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="125827395505443" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="212537602880785" type="estrela_01">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="737256613476606" type="estrela_02">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="156509162646509">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="110929221033823" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="149024505610155" type="estrela_01">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="232569447469981" type="estrela_02">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="240529772003689" type="estrela_03">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="108260054143789">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="748434843294488" type="Mouse">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="560750120057365" type="Mouse">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="911737867420056" type="Mouse">
+                    <param id="0" name="Object">btnNext</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="811167003048504" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="649128321005069">
+            <conditions>
+                <condition id="3" name="On touched object" sid="392825596306003" type="Touch">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="908877387910649" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="697673797227884" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="225761305627397">
+            <conditions>
+                <condition id="3" name="On touched object" sid="772005390206073" type="Touch">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="876755877627535" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="125402090067535" type="System">
+                    <param id="0" name="Layout">&quot;Level_0&quot; &amp; levelExecutando</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="868787293912691">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="778155582826172" type="mousehand">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="872327494469006">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="150988367018274" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="407977120644888" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="151985163483795" type="System">
+                            <param id="0" name="Layout">&quot;Level_0&quot; &amp; levelExecutando</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="405110846715214">
+            <conditions>
+                <condition id="3" name="On touched object" sid="888879176543882" type="Touch">
+                    <param id="0" name="Object">btnNext</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="889410390298392" type="System">
+                    <param id="0" name="Variable">isRestartingLevel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="290957803174494" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="755246405750689">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="524795027584229" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="490556101686962" type="System">
+                            <param id="0" name="Variable">mensagemConlcusao</param>
+                            <param id="1" name="Value">&quot;UAI! NÓIS NÃO FIZEMOS TUDIM O QUE A MÃE MANDOU. ASSIM NÃO VAMOS SABER O SIGNIFICADO DAS EXPRESSÕES.&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="229227198713423" type="System">
+                            <param id="0" name="Layout">Narrativa</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="791384502347194">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="210119573175448" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="751446373716615">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="797622560225136" type="System">
+                                    <param id="0" name="Variable">expressaoColetadaNivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="102930315787078" type="System">
+                                    <param id="0" name="Variable">mensagemConlcusao</param>
+                                    <param id="1" name="Value">&quot;UAI! NÓIS PEGAMOS AS LETRAS, MAS NÃO FIZEMOS O AFAZER. A MÃE NÃO VAI FALAR DE ONDE SURGIU A TAL EXPRESSÃO.&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="480436555273892" type="System">
+                                    <param id="0" name="Layout">Narrativa</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="833485249319962">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="222249684585858" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="556497202955108" type="System">
+                                    <param id="0" name="Variable">mensagemConlcusao</param>
+                                    <param id="1" name="Value">&quot;UAI! NÓIS PEGAMOS OS TREM TUDO MENOS AS LETRAS DA EXPRESSÃO EM MINEIRÊS. A MÃE NÃO VAI FALAR DE ONDE SURGIU ESSE TREM.&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="893693171114182" type="System">
+                                    <param id="0" name="Layout">Narrativa</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="162359464011287">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="479298380981756" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="161734187546310" type="System">
+                            <param id="0" name="Variable">mensagemConlcusao</param>
+                            <param id="1" name="Value">&quot;UAU! OCÊ PEGOU TODOS OS TREM SEM ESQUECER DE SEU AFAZER.&quot; &amp; newline &amp; &quot;A MÃE VAI FICAR ORGULHOSA&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="698910559377655" type="System">
+                            <param id="0" name="Layout">Narrativa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="864277638465225">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="985918590952358" type="mousehand">
+                    <param id="0" name="Object">btnNext</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="573726741839387">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="358280924345862" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="842720376766801" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="479534757508908">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="263923835910198" type="System">
+                                    <param id="0" name="Variable">estrelasNivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="579111060962772" type="System">
+                                    <param id="0" name="Variable">mensagemConlcusao</param>
+                                    <param id="1" name="Value">&quot;UAI! NÓIS NÃO FIZEMOS TUDIM O QUE A MÃE MANDOU. ASSIM NÃO VAMOS SABER O SIGNIFICADO DAS EXPRESSÕES.&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="963447692807774" type="System">
+                                    <param id="0" name="Layout">Narrativa</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="328240160550974">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="972679828650313" type="System">
+                                    <param id="0" name="Variable">estrelasNivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="149901649088954" type="System">
+                                    <param id="0" name="Variable">mensagemConlcusao</param>
+                                    <param id="1" name="Value">&quot;UAU! OCÊ PEGOU TODOS OS TREM SEM ESQUECER DE SEU AFAZER.&quot; &amp; newline &amp; &quot;A MÃE VAI FICAR ORGULHOSA&quot;</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="441411120664097" type="System">
+                                    <param id="0" name="Layout">Narrativa</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="161303438452083">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="265675077776905" type="System">
+                                    <param id="0" name="Variable">estrelasNivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="919272738008737">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="103681058363052" type="System">
+                                            <param id="0" name="Variable">expressaoColetadaNivel</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="823196679526957" type="System">
+                                            <param id="0" name="Variable">mensagemConlcusao</param>
+                                            <param id="1" name="Value">&quot;UAI! NÓIS PEGAMOS AS LETRAS, MAS NÃO FIZEMOS O AFAZER. A MÃE NÃO VAI FALAR DE ONDE SURGIU A TAL EXPRESSÃO.&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="623331689415772" type="System">
+                                            <param id="0" name="Layout">Narrativa</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="433754775351926">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="262512796937131" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="822196998046865" type="System">
+                                            <param id="0" name="Variable">mensagemConlcusao</param>
+                                            <param id="1" name="Value">&quot;UAI! NÓIS PEGAMOS OS TREM TUDO MENOS AS LETRAS DA EXPRESSÃO EM MINEIRÊS. A MÃE NÃO VAI FALAR DE ONDE SURGIU ESSE TREM.&quot;</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="478325235420170" type="System">
+                                            <param id="0" name="Layout">Narrativa</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evPesca</name>
+    <events>
+        <variable constant="0" name="fishingAngle" sid="264532913777156" static="0" type="number">60</variable>
+        <variable constant="0" name="isFishing" sid="345221779997784" static="0" type="number">0</variable>
+        <variable constant="0" name="peixePescado" sid="791985154356791" static="0" type="number">0</variable>
+        <event-block sid="951108150293191">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="555804667363872" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-group description="" sid="214349931329495" title="Chain Creation">
+            <sub-events>
+                <comment>Parameter: number of links</comment>
+                <event-block sid="361489705694578">
+                    <conditions>
+                        <condition id="0" name="On function" sid="632826322154246" type="Function">
+                            <param id="0" name="Name">&quot;createChain&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="previousLink" sid="122608283527741" static="0" type="number">0</variable>
+                        <comment>Creating links</comment>
+                        <event-block sid="114854853636859">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="294842349962348" type="System">
+                                    <param id="0" name="Count">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="742510380699405" type="System">
+                                    <param id="0" name="Object to create">Link</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="X">Ball.X</param>
+                                    <param id="3" name="Y">Ball.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="368554399013560" type="Link">
+                                    <param id="0" name="Angle">Function.Param(1)</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="507461663159140" type="Link">
+                                    <param id="0" name="Angle">Function.Param(1)</param>
+                                    <param id="1" name="Distance">loopindex*(Link.Width-4)</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="846498381448434" type="Link">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>If this is the first link, connect it to the immovable ball</comment>
+                                <event-block sid="642796994581542">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="223897376104888" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="441629304217842" type="Ball">
+                                            <param id="0" name="This image point">0</param>
+                                            <param id="1" name="Object">Link</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Other links are connected to the previous link</comment>
+                                <event-block sid="476093998691283">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="171702831717771" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="195651294250301">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="102735543173780" type="ChainLinks">
+                                                    <param id="0" name="Unique ID">previousLink</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="11" name="Create revolute joint" sid="693558415173626" type="ChainLinks">
+                                                    <param id="0" name="This image point">1</param>
+                                                    <param id="1" name="Object">Link</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>last link - create another ball</comment>
+                                <event-block sid="612983092962125">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="591581278762965" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">Function.Param(0)-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="132012722363048" type="System">
+                                            <param id="0" name="Object to create">anzol</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Link.ImagePointX(1)</param>
+                                            <param id="3" name="Y">Link.ImagePointY(1)</param>
+                                        </action>
+                                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="390600839143797" type="anzol">
+                                            <param id="0" name="Object">vara</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="11" name="Create revolute joint" sid="520284077381135" type="Link">
+                                            <param id="0" name="This image point">1</param>
+                                            <param id="1" name="Object">anzol</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264759607908625">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="480107958193075" type="System">
+                                            <param id="0" name="Variable">previousLink</param>
+                                            <param id="1" name="Value">Link.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>calm the chain down, otherwise it will bounce back fast</comment>
+                                <event-block sid="309774135925274">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Physics" id="15" name="Set velocity" sid="294405092114414" type="Link">
+                                            <param id="0" name="X component">0</param>
+                                            <param id="1" name="Y component">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="483238534681520">
+            <conditions>
+                <condition id="0" name="On function" sid="626528145778249" type="Function">
+                    <param id="0" name="Name">&quot;Fishing&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="599019144595743" type="System">
+                    <param id="0" name="Object to create">Ball</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">vara.ImagePointX(1)</param>
+                    <param id="3" name="Y">vara.ImagePointY(1)</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="950522576065928" type="Ball">
+                    <param id="0" name="Object">Link</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action behavior="Physics" id="12" name="Set world gravity" sid="741574155325392" type="Ball">
+                    <param id="0" name="Gravity">5</param>
+                </action>
+                <action behavior="Physics" id="21" name="Set immovable" sid="387302996306320" type="Ball">
+                    <param id="0" name="Setting">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="578366854377601" type="Link" />
+                <action id="-16" name="Wait" sid="192645482733504" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="0" name="Call function" sid="595242239087853" type="Function">
+                    <param id="0" name="Name">&quot;createChain&quot;</param>
+                    <param id="1" name="Parameter {n}">12{###}fishingAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119360331097555">
+            <conditions>
+                <condition id="0" name="On function" sid="555938816171295" type="Function">
+                    <param id="0" name="Name">&quot;FishingEnd&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="439718455455786" type="vara" />
+                <action id="-9" name="Destroy" sid="253965770012697" type="Ball" />
+                <action id="0" name="Call function" sid="242327845288561" type="Function">
+                    <param id="0" name="Name">&quot;DestroyRope&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="562565016721719" type="System">
+                    <param id="0" name="Variable">isFishing</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="732369743960379">
+            <conditions>
+                <condition id="0" name="On function" sid="756645491039077" type="Function">
+                    <param id="0" name="Name">&quot;StartFishing&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="144773581275025" type="System">
+                    <param id="0" name="Object to create">vara</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Player.ImagePointX(2)</param>
+                    <param id="3" name="Y">Player.ImagePointY(2)</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="681633278088478" type="vara">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="556185955925599">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="823464625081325" type="vara" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="413475944097483">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="573708495598488" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="413821450844495" type="vara">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="890801954274370" type="vara">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action behavior="RotateTo" id="4" name="Rotate to angle" sid="290818163347256" type="vara">
+                                    <param id="0" name="Angle">315</param>
+                                    <param id="1" name="Clockwise">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="155053535556193" type="System">
+                                    <param id="0" name="Variable">fishingAngle</param>
+                                    <param id="1" name="Value">140</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742572986290085">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="351432047531879" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="534894168192391" type="vara">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="791350242507433" type="vara">
+                                    <param id="0" name="Angle">360</param>
+                                </action>
+                                <action behavior="RotateTo" id="4" name="Rotate to angle" sid="824047857703116" type="vara">
+                                    <param id="0" name="Angle">45</param>
+                                    <param id="1" name="Clockwise">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="776684626530677" type="System">
+                                    <param id="0" name="Variable">fishingAngle</param>
+                                    <param id="1" name="Value">30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="744552128941931">
+            <conditions>
+                <condition behavior="RotateTo" id="1" name="Compare speed" sid="648343923846256" type="vara">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="277202846276316">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="918021417420023" type="System">
+                            <param id="0" name="Variable">isFishing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-3" name="Create object" sid="597603240734660" type="System">
+                            <param id="0" name="Object to create">Ball</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">vara.ImagePointX(1)</param>
+                            <param id="3" name="Y">vara.ImagePointY(1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="892716284093833" type="Function">
+                            <param id="0" name="Name">&quot;Fishing&quot;</param>
+                            <param id="1" name="Parameter {n}">vara.ImagePointX(1){###}vara.ImagePointY(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="877792695668807" type="System">
+                            <param id="0" name="Variable">isFishing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="177061424167900">
+            <conditions>
+                <condition id="0" name="On function" sid="455365065115137" type="Function">
+                    <param id="0" name="Name">&quot;DestroyRope&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="423294221540777" type="anzol" />
+            </actions>
+            <sub-events>
+                <event-block sid="615880493468516">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="194400432065153" type="System">
+                            <param id="0" name="Object">ChainLinks</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="192460951467948" type="ChainLinks" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="922251486647697">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="580890345310486" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="236342510021460">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="260308398884522" type="Ball" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="902647366352746" type="Ball">
+                            <param id="0" name="Object">vara</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="217765188772316">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="966698637867665" type="Player" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="119974059577824" type="Function">
+                    <param id="0" name="Name">&quot;FishingEnd&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="507692115367243">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="581444831557148" type="peixe">
+                    <param id="0" name="Object">anzol</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="288714053178621" type="Audio">
+                    <param id="0" name="Audio file">bubble</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="585096032938905" type="System">
+                    <param id="0" name="Variable">peixePescado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="219000474312625" type="txtQtdItens">
+                    <param id="0" name="Text">(peixePescado &lt; 10 ? &quot;0&quot;&amp;peixePescado &amp;&quot; / &quot; &amp; itensTotal : peixePescado &amp;&quot; / &quot; &amp; itensTotal)</param>
+                </action>
+                <action id="-9" name="Destroy" sid="231883878057468" type="peixe" />
+                <action id="0" name="Call function" sid="555045754014725" type="Function">
+                    <param id="0" name="Name">&quot;FishingEnd&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

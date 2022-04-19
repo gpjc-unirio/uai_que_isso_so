@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evPeixe</name>
+    <events>
+        <event-block sid="522858929419969">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="355033511464077" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="411835132060873" type="System">
+                    <param id="0" name="Variable">peixePescado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="697220798106026">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="915123684448088" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="305648119863743">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="258145135478376" type="System">
+                            <param id="0" name="Object">peixe</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="952758710380239">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="736186321874759" type="peixe">
+                                    <param id="0" name="Instance variable">isLookingRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="644595553035099" type="peixe">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918383731169114">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="894164137649999" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="355270869352271" type="peixe">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="664029647803148">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="916936916995692" type="peixe">
+                                    <param id="0" name="Instance variable">previousX</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">peixe.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="529570212241978" type="peixe">
+                                    <param id="0" name="Instance variable">isLookingRight</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="738877255133652">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="455500100881075" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="408775817911419" type="peixe">
+                                    <param id="0" name="Instance variable">isLookingRight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="194974094438168">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Set value" sid="786639611008912" type="peixe">
+                                    <param id="0" name="Instance variable">previousX</param>
+                                    <param id="1" name="Value">peixe.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evGameController</name>
+    <events>
+        <include>evPersistence</include>
+        <variable constant="0" name="isRestartingLevel" sid="104947735607656" static="0" type="number">0</variable>
+        <variable constant="0" name="picar_a_mula_destravado" sid="822219414112269" static="0" type="number">0</variable>
+        <variable constant="0" name="caroco_no_angu_destravado" sid="910584728458771" static="0" type="number">0</variable>
+        <variable constant="0" name="lavar_a_egua_destravado" sid="500605925759051" static="0" type="number">0</variable>
+        <variable constant="0" name="uai_so_destravado" sid="140883634086645" static="0" type="number">0</variable>
+        <variable constant="0" name="dificuldade" sid="792381341880122" static="0" type="number">0</variable>
+        <variable constant="0" name="isPaused" sid="339063350679115" static="0" type="number">0</variable>
+        <variable constant="0" name="nivelDesbloqueado" sid="333671267871910" static="0" type="number">1</variable>
+        <variable constant="0" name="narrativaLevelConcluido" sid="242827716158488" static="0" type="text">uai</variable>
+        <variable constant="0" name="expressaoMineira" sid="265898764590161" static="0" type="text">UAI, SÔ!</variable>
+        <variable constant="0" name="mensagemConlcusao" sid="429990129793122" static="0" type="text"></variable>
+        <variable constant="0" name="levelConcluido" sid="478513617341738" static="0" type="number">0</variable>
+        <variable constant="0" name="expressaoColetadaNivel" sid="420743447609852" static="0" type="number">0</variable>
+        <variable constant="0" name="estrelasNivel" sid="591592067981903" static="0" type="number">0</variable>
+        <variable constant="0" name="enableNarrative" sid="123999000490001" static="0" type="number">1</variable>
+        <variable constant="0" name="ultimoLevelDesbloqueado" sid="683650361283353" static="0" type="number">1</variable>
+        <variable constant="0" name="levelExecutando" sid="702036191296626" static="0" type="number">0</variable>
+        <variable constant="0" name="sfxOn" sid="920423556963209" static="0" type="number">1</variable>
+        <variable constant="0" name="musicOn" sid="345297041310630" static="0" type="number">1</variable>
+        <variable constant="0" name="isMobile" sid="939730918459980" static="0" type="number">0</variable>
+        <variable constant="0" name="hasJoystick" sid="543507516076717" static="0" type="number">0</variable>
+        <event-block sid="935783267410290">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="318968667015640" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="756546439448659" type="Function">
+                    <param id="0" name="Name">&quot;LoadGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="650562562124173" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="380719381203985" type="Function">
+                    <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="917458855753768" type="Function">
+                    <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="340775246262910">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="140182503197575" type="System">
+                            <param id="0" name="Variable">isMobile</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="449399889782924" type="direita">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="345714988888614" type="esquerda">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="369534704925416" type="ataque">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="504878068487511" type="pular">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="783037503347885">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="705127358810422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="775499861372436" type="direita">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="711355772226789" type="esquerda">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="563336997062313" type="ataque">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="168574798893829" type="pular">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="852920288867974">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="731787276875799" type="Mouse">
+                    <param id="0" name="Object">btnClose_options</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="115467548497176" type="Mouse">
+                    <param id="0" name="Object">btnMute</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="881342917805635" type="Mouse">
+                    <param id="0" name="Object">btnMuteSfx</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="426597755064182" type="Mouse">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="595666261681542" type="Mouse">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="311570155043053" type="Mouse">
+                    <param id="0" name="Object">btnRestartSeve</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="151829471946542" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="345822906683901">
+            <conditions>
+                <condition id="-22" name="Else" sid="149132454387495" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="700642842313849" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="137632229897609">
+            <conditions>
+                <condition id="0" name="On function" sid="659611663602866" type="Function">
+                    <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="368649930433604">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="161867395946681" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="32" name="Add mute effect" sid="123000026109741" type="Audio">
+                            <param id="0" name="Tag">&quot;soundTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858011917082096">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="536879756568843" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Remove all effects" sid="696752535040896" type="Audio">
+                            <param id="0" name="Tag">&quot;soundTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="433206377480188">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="718603616732975">
+            <conditions>
+                <condition id="0" name="On function" sid="610711523822067" type="Function">
+                    <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="196105858792552">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="146202425485281" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="32" name="Add mute effect" sid="660089041839894" type="Audio">
+                            <param id="0" name="Tag">&quot;sfx&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="163578930994024">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="605827847436930" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Remove all effects" sid="698757364118297" type="Audio">
+                            <param id="0" name="Tag">&quot;sfx&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="301018182561126">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

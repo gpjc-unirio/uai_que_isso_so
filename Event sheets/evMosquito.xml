@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evMosquito</name>
+    <events>
+        <event-block sid="382351064736208">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="937360075343889" type="fly">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="476742329595287" type="fly">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="492570117912372">
+            <conditions>
+                <condition id="-22" name="Else" sid="131831674646270" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="134204165521034" type="fly">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="687201395098343">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="353062138451823" type="fly" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="160763203582838" type="fly">
+                    <param id="0" name="Instance variable">isMovimento</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314120184787241">
+            <conditions>
+                <condition id="-22" name="Else" sid="910772035206264" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="490105276556346" type="fly">
+                    <param id="0" name="Instance variable">isMovimento</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

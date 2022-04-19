@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evOpcoes</name>
+    <events>
+        <include>evJoystick</include>
+        <variable constant="0" name="countClickCheat" sid="838434680248738" static="0" type="number">0</variable>
+        <include>evGameController</include>
+        <event-block sid="502213435863281">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="938667972975346" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="900013177148097" type="Function">
+                    <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="431307524906061" type="System">
+                    <param id="0" name="Variable">countClickCheat</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="582772594862459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="939625724689308" type="System">
+                            <param id="0" name="Variable">isMobile</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="206239857815244" type="ataque">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="444541992294895" type="direita">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="302630884824749" type="esquerda">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="842295690122151" type="pular">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="530593281337055" title="Opcoes" />
+        <event-block any="1" sid="638896066855120">
+            <conditions>
+                <condition id="17" name="On tap object" sid="748912394833602" type="Touch">
+                    <param id="0" name="Object">btnClose_options</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="463112441719076" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="707789154745687">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="713522594020000" type="mousehand">
+                    <param id="0" name="Object">btnClose_options</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="355497902878035">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="615862675756655" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="771778299492744" type="System">
+                            <param id="0" name="Layout">Tela_Inicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="296423280808317">
+            <conditions>
+                <condition id="17" name="On tap object" sid="240061401668529" type="Touch">
+                    <param id="0" name="Object">btnMute</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="668260967432321" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Value">(musicOn = 1 ? 0 : 1)</param>
+                </action>
+                <action id="0" name="Call function" sid="762568436067659" type="Function">
+                    <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="115431292613199" type="Function">
+                    <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="207252241077491" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="261343711041590">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="190657703963608" type="mousehand">
+                    <param id="0" name="Object">btnMute</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="557099785629181">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="677783012270486" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="950366188971540" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Value">(musicOn = 1 ? 0 : 1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="329651253403684" type="Function">
+                            <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="297164984553786" type="Function">
+                            <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="483810196041985" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="704974456551874">
+            <conditions>
+                <condition id="17" name="On tap object" sid="265685615190296" type="Touch">
+                    <param id="0" name="Object">btnMuteSfx</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="730705846740678" type="System">
+                    <param id="0" name="Variable">sfxOn</param>
+                    <param id="1" name="Value">(sfxOn = 1 ? 0 : 1)</param>
+                </action>
+                <action id="0" name="Call function" sid="262262078928924" type="Function">
+                    <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="676259880372803" type="Function">
+                    <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="405254070414900" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="186770913783544">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="566274908531024" type="mousehand">
+                    <param id="0" name="Object">btnMuteSfx</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="278015404252096">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="504061143116132" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="873359713153293" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Value">(sfxOn = 1 ? 0 : 1)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="193090816910532" type="Function">
+                            <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="710615692904555" type="Function">
+                            <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="996421896003490" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="765531939186473">
+            <conditions>
+                <condition id="17" name="On tap object" sid="181548515591983" type="Touch">
+                    <param id="0" name="Object">btnRestartSeve</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="312066492503771" type="Function">
+                    <param id="0" name="Name">&quot;RestoreGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="610219229102849" type="Function">
+                    <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="497858797682635" type="Function">
+                    <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="627456118253332" type="Function">
+                    <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="446301618242784">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="126690944320967" type="mousehand">
+                    <param id="0" name="Object">btnRestartSeve</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="338676199040881">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="249218804984304" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="449626780104922" type="Function">
+                            <param id="0" name="Name">&quot;RestoreGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="654667696095705" type="Function">
+                            <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="957569375914558" type="Function">
+                            <param id="0" name="Name">&quot;musicOn_Off&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="912193934909825" type="Function">
+                            <param id="0" name="Name">&quot;sfxOn_Off&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="783262401933077">
+            <conditions>
+                <condition id="0" name="On function" sid="847785351736181" type="Function">
+                    <param id="0" name="Name">&quot;changeOptionButtons&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="554753979474857">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="262824249933792" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="925073686379345" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="283085641383330" type="opcoes_menu">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="571781442929988">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="854441297842120" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="769457288526819" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="666992336693551" type="opcoes_menu">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="683339177219316">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="159273670681578" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="551395581799143" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="440951076812750" type="opcoes_menu">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="870289866895777">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="959739230245411" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="290499838529442" type="System">
+                            <param id="0" name="Variable">sfxOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="996306545373069" type="opcoes_menu">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="153567382152226">
+            <conditions>
+                <condition id="17" name="On tap object" sid="933863332872653" type="Touch">
+                    <param id="0" name="Object">btnCheat</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="707430172229239" type="System">
+                    <param id="0" name="Variable">countClickCheat</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="375684708420566">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="758580635637584" type="System">
+                            <param id="0" name="Variable">countClickCheat</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="776444188881372" type="Audio">
+                            <param id="0" name="Audio file">uai_so</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="558562580857291" type="Function">
+                            <param id="0" name="Name">&quot;RestoreGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="755990703278019" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="233626194543014" type="System">
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="964863648284583" type="System">
+                            <param id="0" name="Variable">uai_so_destravado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="868625000788130" type="System">
+                            <param id="0" name="Variable">picar_a_mula_destravado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="340263457525827" type="System">
+                            <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="528061193846634" type="System">
+                            <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="448825079721118" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

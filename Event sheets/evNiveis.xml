@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evNiveis</name>
+    <events>
+        <include>evJoystick</include>
+        <include>evGameController</include>
+        <event-block sid="948405703394778">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="941776610058185" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="437755374407651" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="5" name="Set web font" sid="579309187102375" type="txtTituloFase">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="747061465755771" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">25</param>
+                </action>
+                <action id="5" name="Set web font" sid="724934150123453" type="txtLabel">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="220854234679319" type="txtHelp">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="839013842110781" type="txtHelp">
+                    <param id="0" name="Size (pt)">40</param>
+                </action>
+                <action id="0" name="Set text" sid="338353233906342" type="txtHelp">
+                    <param id="0" name="Text">&quot;COMO JOGAR?&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;TECLADO:&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;MOVIMENTO DO TIÃO:&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA DIREITA = SETA DIREITA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA ESQUERDA = SETA ESQUERDA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PULAR = SETA CIMA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;AÇÃO = ESPAÇO&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="674443210454459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="285523044982908" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="563816766651236" type="btnLevel02">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="832503517410234">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="331676889168324" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="407370895818413" type="btnLevel02">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="541031605432316" type="btnLevel03">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="439192359023891">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="562530648326003" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="632158378589186" type="btnLevel02">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="322889950024414" type="btnLevel03">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="127705605296038" type="btnLevel04">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="370186610335866">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="653543664994074" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="221474133794917" type="btnFacil">
+                            <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="223254168650289" type="btnDificil">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="905726259956157" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;PÃO DE QUEIJO: MOLIM, BAUMZIM, FACIM...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="721480851021597">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="752737060246102" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="803734658823858" type="btnFacil">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="949850335198741" type="btnDificil">
+                            <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="827140496539326" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;RAPADURA: É DÔCE, MAS NÃO E MOLE NÃO.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="822976622918488">
+            <conditions>
+                <condition id="3" name="On touched object" sid="279772280965802" type="Touch">
+                    <param id="0" name="Object">btnLevel01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="508191542663225" type="System">
+                    <param id="0" name="Variable">isRestartingLevel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="449672571518363" type="System">
+                    <param id="0" name="Layout">Level_01</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="270135225503687">
+            <conditions>
+                <condition id="3" name="On touched object" sid="667237528515836" type="Touch">
+                    <param id="0" name="Object">btnLevel02</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="348558736768469">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="972701458100117" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="893290146346940" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="895086342370670" type="System">
+                            <param id="0" name="Layout">Level_02</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="321581832109606">
+            <conditions>
+                <condition id="3" name="On touched object" sid="809209476455876" type="Touch">
+                    <param id="0" name="Object">btnLevel03</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="209492180727683">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="570000667246805" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="447657144721602" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="354001490435646" type="System">
+                            <param id="0" name="Layout">Level_03</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="278483892869621">
+            <conditions>
+                <condition id="3" name="On touched object" sid="722373732739095" type="Touch">
+                    <param id="0" name="Object">btnLevel04</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="335559714940634">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="363095460915187" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="201489133608606" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="608975611606413" type="System">
+                            <param id="0" name="Layout">Level_04</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="657767790525695">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="358808685672849" type="Mouse">
+                    <param id="0" name="Object">btnLevel01</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="697160522452615" type="Mouse">
+                    <param id="0" name="Object">btnLevel02</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="133880194566530" type="Mouse">
+                    <param id="0" name="Object">btnLevel03</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="868383309432674" type="Mouse">
+                    <param id="0" name="Object">btnLevel04</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="338435410440118" type="Mouse">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="439477103192587" type="Mouse">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="233107131224650" type="Mouse">
+                    <param id="0" name="Object">btnFacil</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="516620664333909" type="Mouse">
+                    <param id="0" name="Object">btnDificil</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="166562566747895" type="Mouse">
+                    <param id="0" name="Object">ajuda</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="599602023661723" type="Mouse">
+                    <param id="0" name="Object">btnCloseHelp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="783219135606258" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="613288511431989">
+            <conditions>
+                <condition id="-22" name="Else" sid="606370624467334" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="370561480024114" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="184121230854395">
+            <conditions>
+                <condition id="3" name="On touched object" sid="132711261084849" type="Touch">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="476802609730594" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="548535246967411">
+            <conditions>
+                <condition id="3" name="On touched object" sid="370004227438011" type="Touch">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="899653508638262" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="612378595881288">
+            <conditions>
+                <condition id="3" name="On touched object" sid="127214461426452" type="Touch">
+                    <param id="0" name="Object">btnCloseHelp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="322972215567999" type="System">
+                    <param id="0" name="Layer">&quot;Jogar&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352401421480650">
+            <conditions>
+                <condition id="3" name="On touched object" sid="993340673385192" type="Touch">
+                    <param id="0" name="Object">ajuda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="213442851026877" type="System">
+                    <param id="0" name="Layer">&quot;Jogar&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="221421121670337">
+            <conditions>
+                <condition id="3" name="On touched object" sid="380158728610746" type="Touch">
+                    <param id="0" name="Object">btnFacil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="526895516328954" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;PÃO DE QUEIJO: MOLIM, BAUMZIM, FACIM...&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="925125653702421" type="btnFacil">
+                    <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="438397242475870" type="btnDificil">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="685509456553153" type="System">
+                    <param id="0" name="Variable">dificuldade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="984833810360817" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912152921508956">
+            <conditions>
+                <condition id="3" name="On touched object" sid="691491474144732" type="Touch">
+                    <param id="0" name="Object">btnDificil</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="817905820110539" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;RAPADURA: E DÔCE, MAS NÃO E MOLE NÃO.&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="128000145921228" type="btnFacil">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="550036700236940" type="btnDificil">
+                    <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="837517537567180" type="System">
+                    <param id="0" name="Variable">dificuldade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="381046744716560" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

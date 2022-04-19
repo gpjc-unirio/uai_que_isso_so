@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evLevel_03</name>
+    <events>
+        <include>evNarrativa</include>
+        <include>evPeixe</include>
+        <include>evPesca</include>
+        <include>evBarco</include>
+        <include>evChico</include>
+        <include>evPlayer</include>
+        <event-block sid="354790129616079">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="179537133357137" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="427975228822119" type="txtTituloFase">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="754855243868222" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">1</param>
+                </action>
+                <action id="5" name="Set web font" sid="510166405852721" type="txtHelp">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="613664557886979" type="txtHelp">
+                    <param id="0" name="Size (pt)">36</param>
+                </action>
+                <action id="5" name="Set web font" sid="592617434857127" type="txtQtdItens">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="337063747166858" type="txtQtdItens">
+                    <param id="0" name="Size (pt)">38</param>
+                </action>
+                <action id="-9" name="Set value" sid="696736831060172" type="System">
+                    <param id="0" name="Variable">estrelasNivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="538965147236653" type="System">
+                    <param id="0" name="Variable">levelExecutando</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="611332844581419" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="33" name="Stop all" sid="392857941358534" type="Audio" />
+                <action id="0" name="Play" sid="986194310284733" type="Audio">
+                    <param id="0" name="Audio file">phase_track</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;soundTrack&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="824698052716608" type="Energia">
+                    <param id="0" name="Frame number">Player.energia</param>
+                </action>
+                <action id="0" name="Call function" sid="239142058278826" type="Function">
+                    <param id="0" name="Name">&quot;startSFX&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="690808900458000" type="System">
+                    <param id="0" name="Variable">ovosPegos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="870284614765505" type="System">
+                    <param id="0" name="Variable">letrasColetadas</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="233802162678895" type="System">
+                    <param id="0" name="Variable">expressaoColetadaNivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="932461856758236" type="System">
+                    <param id="0" name="Variable">expressaoMineira</param>
+                    <param id="1" name="Value">&quot;LAVAR A ÉGUA&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="926961372469716" type="Player">
+                    <param id="0" name="Instance variable">energia</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="550071344498101" type="System">
+                    <param id="0" name="Variable">LETRASTOTAL</param>
+                    <param id="1" name="Value">7</param>
+                </action>
+                <action id="-24" name="Move to top" sid="222944060747998" type="Player" />
+                <action id="-24" name="Move to top" sid="506948732182243" type="galoChico" />
+                <action id="-9" name="Set value" sid="327381459402672" type="System">
+                    <param id="0" name="Variable">itensTotal</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+                <action id="0" name="Set text" sid="760428527813197" type="txtQtdItens">
+                    <param id="0" name="Text">(peixePescado &lt; 10 ? &quot;0&quot;&amp;peixePescado &amp;&quot; / &quot; &amp; itensTotal : peixePescado &amp;&quot; / &quot; &amp; itensTotal)</param>
+                </action>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="549569041272230" type="barco">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Set text" sid="891977545830953" type="txtHelp">
+                    <param id="0" name="Text">&quot;O OBJETIVO DESTE CAPÍTULO É PEGAR TODOS OS PEIXES SEM CAIR NA ÁGUA, OU SER PICADO MUITAS VEZES PELOS MOSQUITOS. COLETE AS LETRAS QUE FORMAM A EXPRESSÃO DO MINEIRÊS! SE CUMPRIR TUDO, AO FINAL VOCÊ SABERÁ MAIS DE ONDE SURGIU MAIS UMA EXPRESSÃO.&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp; &quot;DICA PARA PESCAR SEGURE BOTÂO DE ATAQUE.&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="719489884406108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="472939619853946" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="844840947147543" type="System">
+                            <param id="0" name="Variable">liberarFase</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="275888112287813" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="712025332618115">
+            <conditions>
+                <condition id="0" name="On function" sid="361501277098633" type="Function">
+                    <param id="0" name="Name">&quot;startSFX&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="452798429343095" type="Audio">
+                    <param id="0" name="Audio file">waterfall</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826438226408515">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="881410427801772" type="Alfabeto">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="373609490361991" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="704211232964120" type="System">
+                    <param id="0" name="Variable">letrasColetadas</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="792886953652798">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="999885052708507" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">528</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="810106059036512" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="142888304947648" type="L_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="242777944202996">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="795850798394853" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">529</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="659086364871420" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="667975832567212" type="A_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424159038395552">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="185792624466475" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">515</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="574853160419717" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="600245011597223" type="V_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="955775450475893">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="911014316554715" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">527</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="401402069560669" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="852527722208422" type="R_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="666486475938803">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="654219966729900" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">525</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="766089417557631" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="476216205257951" type="É_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="777819452028144">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="931025897964416" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">526</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="425365047696738" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="766720591284041" type="G_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934571262543303">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="683803294366401" type="System">
+                            <param id="0" name="First value">Alfabeto.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">516</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="208015192393844" type="Alfabeto" />
+                        <action id="-15" name="Set visible" sid="770862057170006" type="U_Mural">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="978352032330324">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="704468150880001" type="System">
+                            <param id="0" name="Variable">LETRASTOTAL</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">letrasColetadas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="126136247323748" type="Audio">
+                            <param id="0" name="Audio file">expressao_completa</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">20</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="994693321598478" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="843743905522341" type="System">
+                            <param id="0" name="Variable">expressaoColetadaNivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="682709346423024">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="401307852755438" type="placa">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="921090294831767" type="System">
+                    <param id="0" name="Variable">estrelasNivel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="304787255283324" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="111263257780155" type="System">
+                    <param id="0" name="Variable">narrativaLevelConcluido</param>
+                    <param id="1" name="Value">&quot;lavar_a_egua&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="112372284918614">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="684595187736048" type="System">
+                            <param id="0" name="Variable">itensTotal</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">peixePescado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="498525842130956" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="649606906812417">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="882822165946726" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="331041786177321" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="721146315856810">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="513974527594955" type="System">
+                                    <param id="0" name="Variable">expressaoColetadaNivel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="331424470652160" type="System">
+                                    <param id="0" name="Variable">estrelasNivel</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="345741010596018">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="995177575796308" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="606116708589840" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="962513867628404">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="718773319520607" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">ultimoLevelDesbloqueado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="967762914545400" type="System">
+                                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                                    <param id="1" name="Value">nivelDesbloqueado</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="199721832506286">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="291306611633433" type="System">
+                            <param id="0" name="Variable">levelConcluido</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="744763764432133" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="713859423739455" type="System">
+                            <param id="0" name="Layout">ConclusaoNivel</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="655241288326409">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="547952152900783" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="600861195073177">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="855322326047567" type="System">
+                            <param id="0" name="Variable">liberarFase</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="327952398256324" type="System">
+                            <param id="0" name="Variable">liberarFase</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="480562176512448" type="barco">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="827157769377844">
+            <conditions>
+                <condition id="3" name="On touched object" sid="635680257431170" type="Touch">
+                    <param id="0" name="Object">ajuda</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="420272601689079" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="498276405610348">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="183647203011092" type="System">
+                            <param id="0" name="Variable">isPaused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="420243050693936" type="System">
+                            <param id="0" name="Layer">&quot;Ajuda&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="615117774097388" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="230222371671677" type="barco">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="409951340690457" type="System">
+                            <param id="0" name="Variable">isPaused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="233198340386718">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="273562724453215" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="937986863202635" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="728522730319394" type="System">
+                            <param id="0" name="Layer">&quot;Ajuda&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="409337445253670" type="barco">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="237102083488832" type="btnCloseHelp">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="120179408711730" type="System">
+                            <param id="0" name="Variable">isPaused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="847135105607844">
+            <conditions>
+                <condition id="3" name="On touched object" sid="579290009705555" type="Touch">
+                    <param id="0" name="Object">btnCloseHelp</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block any="1" sid="636225585619932">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="326684530665101" type="Mouse">
+                    <param id="0" name="Object">ajuda</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="460284077571735" type="Mouse">
+                    <param id="0" name="Object">pause</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="832367603352806" type="Mouse">
+                    <param id="0" name="Object">btnAvancar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="824208640491295" type="Mouse">
+                    <param id="0" name="Object">btnCloseHelp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="355032022012676" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

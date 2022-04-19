@@ -1,0 +1,2887 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evNarrativa</name>
+    <events>
+        <variable constant="0" name="liberarFase" sid="434350094824784" static="0" type="number">0</variable>
+        <variable constant="0" name="liberarTiao" sid="208204310042465" static="0" type="number">0</variable>
+        <variable constant="0" name="liberarChico" sid="900251234702152" static="0" type="number">0</variable>
+        <include>evGameController</include>
+        <include>evJoystick</include>
+        <event-block sid="741969540380183">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="753974903225613" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="698510380129406" type="txtTiao">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="250394002696520" type="txtChico">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="496753381752030" type="txtTiao">
+                    <param id="0" name="Size (pt)">1</param>
+                </action>
+                <action id="3" name="Set font size" sid="104132983857642" type="txtChico">
+                    <param id="0" name="Size (pt)">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="773599999314202" type="txtTiao">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="605882662457080" type="txtChico">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="279786786896043" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="113521353673560" type="Chico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="641673313228344" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="193314462294900" type="pular">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="717240311915000" type="ataque">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="533958810195642" type="direita">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="520176639050497" type="esquerda">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="805281555286547">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="532652209256658" type="System">
+                            <param id="0" name="Variable">hasJoystick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="539316931674850" type="btnAvancar">
+                            <param id="0" name="Animation">&quot;X&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="957507019999959" type="btnAvancar">
+                            <param id="0" name="Width">200</param>
+                            <param id="1" name="Height">200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="461826986111475">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="463632992667784" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="125660300283498" type="btnAvancar">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="559769306675506" type="btnAvancar">
+                            <param id="0" name="Width">244.511</param>
+                            <param id="1" name="Height">251.497</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="856228127225154">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="170536556808213" type="System" />
+                <condition id="-14" name="Compare variable" sid="804908611550350" type="System">
+                    <param id="0" name="Variable">enableNarrative</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="870633710395300" type="System">
+                    <param id="0" name="Variable">isRestartingLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="118122027414100">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="585344355836652" type="Tiao">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Tiao.maxWalk</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="877348967667613" type="Tiao">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="652448939878483" type="Tiao">
+                            <param id="0" name="X">Tiao.X + 10</param>
+                            <param id="1" name="Y">Tiao.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="224671065351955">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="625536988520655" type="System">
+                            <param id="0" name="Variable">liberarChico</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="479051564312604">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="328957839411631" type="Chico">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Chico.maxWalk</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="145507247866210" type="Chico">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="905073644530786" type="Chico">
+                                    <param id="0" name="X">Chico.X - 10</param>
+                                    <param id="1" name="Y">Chico.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="295494551312010">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="539048076281525" type="System">
+                    <param id="0" name="First value">Tiao.X</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">Tiao.maxWalk</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="628677046729103" type="Tiao">
+                    <param id="0" name="X">Tiao.X + 5</param>
+                    <param id="1" name="Y">Tiao.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="552940181480296">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="463428192050823" type="System">
+                            <param id="0" name="Variable">levelConcluido</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="806152072301908" type="Function">
+                            <param id="0" name="Name">&quot;Narrativa&quot;</param>
+                            <param id="1" name="Parameter {n}">levelExecutando</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="933264399794426">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="135001181891852" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="684406731140505" type="Function">
+                            <param id="0" name="Name">&quot;Narrativa_Level_Concluido&quot;</param>
+                            <param id="1" name="Parameter {n}">narrativaLevelConcluido</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="811506191029474">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="832762718854767" type="System">
+                    <param id="0" name="First value">Chico.X</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">Chico.maxWalk</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="172854814430876">
+            <conditions>
+                <condition id="0" name="On function" sid="417638533894274" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="904777430289984">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="385179050044338" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="317476319226035" type="Function">
+                            <param id="0" name="Name">&quot;Narrativa_Parte_1&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891932868649470">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="752916518775146" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="145400620946855">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="302121136457129" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="905937679746389" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_Fase_1&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="664840599468760">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="249088380012202" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="780792050421333">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="605988023234704" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="375955200398281" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_Fase_2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="453200400284952">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="442963246033897" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="809780537295006">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="749523972367628" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="686832604526850" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_Fase_3&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="862535042552587">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="562342359617407" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="199686553559718">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="823752259841590" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="769889350475130" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_Fase_4&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="246640422530292">
+            <conditions>
+                <condition id="0" name="On function" sid="997658779181181" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Level_Concluido&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="985735958916892">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="814900398853167" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="194603162188890">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="978414659348167" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;uai&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="500370233144515" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_UaiSo&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="100399806883079">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="424950294472146" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;pica_mula&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="401659358477752" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_PicaMula&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="468021000408693">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="325533046109828" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;lavar_a_egua&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="960764573207974" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_LavarAEgua&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="810892934128925">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="282527904735715" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;tem_caroco_nesse_angu&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="534687223777346" type="Function">
+                                    <param id="0" name="Name">&quot;Narrativa_TemCarocoNesseAngu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="380103468395337">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="339179848525335" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="483788771857804" type="txtTiao">
+                            <param id="0" name="Size (pt)">60</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="824922067519637" type="txtChico">
+                            <param id="0" name="Size (pt)">60</param>
+                        </action>
+                        <action id="25" name="Play at object" sid="511639724001032" type="Audio">
+                            <param id="0" name="Audio file">uai_so</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">20</param>
+                            <param id="3" name="Object">Tiao</param>
+                            <param id="4" name="Inner angle">360</param>
+                            <param id="5" name="Outer angle">360</param>
+                            <param id="6" name="Outer gain">0</param>
+                            <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="870823535549726" type="Function">
+                            <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                            <param id="1" name="Parameter {n}">mensagemConlcusao</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="892842628102288" type="System">
+                            <param id="0" name="Tag">&quot;next_message&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="537084857812680" type="System">
+                            <param id="0" name="Layout">Niveis</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="437680356605630">
+            <conditions>
+                <condition id="0" name="On function" sid="454072959604661" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Parte_1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="713340086992364" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="470601964397932" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="893447249573212" type="Audio">
+                    <param id="0" name="Audio file">baum</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="447937226863241" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;BAUM!?&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="576054098175792" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="347159653920293" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MEU NOME É TIÃO. BAUM COM OCÊ?&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="449457881023511" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="729854074094202" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;DEIXA EU CONTAR UM TREM PROCEIS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="115896215468655" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="567479205918743" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...TAVA AQUI EM CASA HOJE PENSANDO O PORQUÊ DE NÓIS FALAR ASSIM. DESSE JEITIM MINEIRIM.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="916628677532293" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="974105126067929" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ASSIM COMO EM OUTROS CANTOS DO BRASIL, NÓIS TEM UM MONTE DE EXPRESSÕES E FRASES SÓ NOSSA! UAI!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="989851420165369" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="973308571345135" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AÍ PERGUNTEI MINHA MÃE, SE ELA SABIA O MOTIVO E ONDE SURGIU ISSO AQUI.&quot; &amp; newline &amp; &quot;POR EXEMPLO: QUERIA SABÊ DE ONDE VEIO O &apos;&apos;UAI&apos;&apos;, UAI!&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="893110518859255" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="332058719730640" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="818483358006320" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AÍ ELA ME DISSE QUE IA ME CONTAR A ORIGEM DE EXPRESSÕES DO &apos;&apos;MINEIRÊS&apos;&apos; APÓS TERMINAR CADA UM DOS MEUS AFAZÊRES DO DIA.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="493452755405142" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="161181988793561" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="494668785832808" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ÓIA SÓ PROCÊ VÊ.... SOZIM VOU TER QUE FAZER UM MONTE DE TREM DIFERENTE PRA SABER DE ONDE OS OUTROS TREM MINEIRO VIREAM.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="765091504980764" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="239814190152014" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="724349796791305" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ RI CÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;SOZIM NADA SÔ! EU SEMPRE ANDO ATRÁS DOCÊ...&apos;&apos;&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="833798207861232" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="586642533501836" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="655424456092856" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI SÔ, É MEMO! NUM É QUE EU TAVA ESQUECENDO DOCÊ!&quot; &amp; NEWLINE &amp; &quot;PESSOAL ESSE É MEU GALO, O CHICO. TÁ COMIGO POR TODAS AS BANDAS.&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="205032537117184" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="586404594171311" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="667642382882160" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;BAUM!? EU TÔ BAUM TAMÉM E VOU AJUDAR O TIÃO...&apos;&apos;&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="872830594771128" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="980092958306067" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="272118133965761" type="Audio">
+                    <param id="0" name="Audio file">nu</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="228946357317965" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;NÚ! TÃO SIMBORA CHICO. QUE SE NÓIS QUER SABER DE ONDE VEIO NOSSAS EXPRESSÕES, TEM UM MONTÃO DE TREM PRA NÓS FAZER.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="459950296478693" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="762376568850647" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="678976240396290">
+            <conditions>
+                <condition id="0" name="On function" sid="722673424669742" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Fase_1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="179460005535791" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="354434132892262" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="167472311648536" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="429067122250491" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="812513345485736" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, ESSA É NOSSA PRIMEIRA TAREFA DO DIA...&quot; &amp;newline &amp; &quot;PEGAR OS OVOS DAS GALINHAS QUE BOTARAM ONTEM DE NOITE.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="159500020827777" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="700115386057546" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="961094778554558" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="879930807437858" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;CUIDADO EIN TIÃO! ELAS TÃO ENFEZADAS HOJE.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="951838984895725" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="981878271975041" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;O GARNIZÉ APRONTOU A NOITE E ACORDOU OS PINTINHO TUDO.&apos;&apos;&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="399972101294670" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="624789288291979" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="856609551656263" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ!&quot; &amp;newline &amp; &quot;VÃO TOMAR CUIDADO ENTÃO CHICO.&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="362553692163861" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="478226085082688" type="Audio">
+                    <param id="0" name="Audio file">chamando_galinha</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="849760432388164" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SERÁ QUE SE NÓIS JOGAR UMAS FOLHAS DE COUVE PRA ELAS, ELAS ACALMA E DEIXA NOIS PASSAR?&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="676934849140212" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="876620680866689" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="814023092889316" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ACHO QUE DÁ TIÂO. ELAS FICAM CALMAS DE BUCHO CHEIO.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="500494139409496" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="918308440520026" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="499459108932355" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! TAMO ESPERANDO O QUÊ? BORA COMEÇAR...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="723420377179638" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="861688402772798" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;FALANDO NISSO, SE NÓIS FIZER TUDO CERTO, MINHA MÃE DISSE QUE CONTA PRA NÓIS DE ONDE VEIO O &apos;&apos;UAI, SÔ!&apos;&apos;&quot; </param>
+                </action>
+                <action id="25" name="Play at object" sid="597842530031058" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="750356379147218" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ!)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! TÃO VÃO COMEÇAR ESSE TREM.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="673346576075704" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="596230049666262" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="419583805902688" type="Chico">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="543061389116209" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="358751494828725" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="350095413701364" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;UAI, SÔ! BOM DIA E FUJA DAS GALINHAS!&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="723801709983176" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="353064293783046" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="973857379798645" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="628140106209062" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="213298521793296">
+            <conditions>
+                <condition id="0" name="On function" sid="361522321405101" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Fase_2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="435058898680678" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="362567905402241" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="764344281378903" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="914012166995961" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="953015153421922" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">newline &amp; &quot;CHICO, AGORA NÓIS TEM UM AFAZÊR NOVO PRO VÔ, QUE A MÃE MANDOU...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="475433475008184" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="673838182557484" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="445203811301229" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="320216596405252" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI TIÃO, PRO VÔ? QUE TREM QUE É?&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="503569586437722" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="981935511158980" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;A CERCA DO CURRAL QUEBROU E A ÉGUA JUREMA DO VÔ &apos;&apos;PICOU A MULA&apos;&apos;...&quot; &amp;newline&amp;&quot;A MÃE QUER QUE NÓIS CAÇA ELA E TRAZ DE VOLTA...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="889460231142715" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="403962421655176" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="320023112574008" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI, SÔ! MAS A JUREMA NÃO CUSTUMA IR LONGE. SOSSEGA QUE NÓIS ACHA ELA.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="453902539993491" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="623086315366343" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="830996466423279" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;BAUM DEMAIS ENTÃO UAI!&quot; &amp;newline &amp; &quot;VÃO LÁ NA ESTRADA PROCURAR?&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="184973469109399" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="191029409074342" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="846759944378367" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;VÃO, UAI! MAS TIÃO, NÓIS TEM QUE TOMAR CUIDADO, EIN!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="407646454131503" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="658391422776153" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ) &apos;&apos;O GARNIZÉ FALOU PRA MIM QUE TÁ CHEIO DE GALINHA D&apos;ANGOLA SELVAGEM NA ESTRADA.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="799330995613521" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="886220322837774" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;VÃO PASSAR LONGE DELAS TIÃO, QUERO TOMAR BICADA DELAS NÃO.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="433925082362320" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="299372745794976" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="630992481635794" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;FALA ISSO NÃO MEU FÍ! A MÃE DISSE PRA EU NÃO FICAR MUITO CANSADO NEM MACHUCADO, POIS NÓIS TEM MAIS AFAZÊR PRA FAZÊR HOJE...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="948373267579676" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="694698151120621" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;... ENTÃO, NÃO POSSO SER BICADO HOJE NÃO.&quot; &amp;newline&amp; &quot;SERÁ QUE SE NÓIS JOGAR COUVE PRA ELAS, ELAS DEIXA NÓIS PASSAR?&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="429020717022036" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="119615066318098" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="462901266969004" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ACHO QUE DÁ TIÃO. ELAS GOSTAM DE UMA COUVE FRESCA,...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="961177157847633" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="167437649765949" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;...MAS COM ELAS, AS COUVES NÃO DURAM MUITO TEMPO NÃO&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="471067932328045" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="593993212494329" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! ENTÃO VAMOS COMEÇAR. VAMOS TOMAR BASTANTE CUIDADO...&quot;&amp;newline&amp; &quot;...E DEPOIS, NÓIS &apos;&apos;PICA A MULA&apos;&apos; DALÍ NUM PÉ SÓ.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="634847869331080" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="974848032758862" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="545587150672312" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;FALANDO NISSO, SE NÓIS ACHAR A JUREMA E NÃO VOLTAR MUITO CANSADO OU MACHUADO...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="350694271190734" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="606201236028505" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MINHA MÃE DISSE QUE CONTA PRA NÓIS DE ONDE VEIO ESSE TREM DE &apos;&apos;PICAR A MULA&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="436263178328189" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="319298465805161" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="826645882430570" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ!)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! TÃO VÃO COMEÇAR ESSE TREM.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="131638513787445" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="392637205583488" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="358448247067766" type="Chico">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="427769849233538" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="418625237208591" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="840092478125400" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;PICA A MULA, CHICO! AS D&apos;ANGOLA TÃO DOIDA!&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="747926747781813" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="985244698397958" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="307218674459370" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="853515279770182">
+            <conditions>
+                <condition id="0" name="On function" sid="702114409889843" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Fase_3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="933289822863698" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="438920214313635" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="778647959087631" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="495893633026509" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="149936344372267" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">newline &amp; &quot;CHICO, NOIS TEM UM AFAZÊR AGORA ANTES DO ALMOÇO...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="802352766456177" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="509710758321876" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="101197997278777" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="695709763796617" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI TIÃO! MAS AGORA? JÁ TÁ QUASE NA HORA DE COMER SÔ!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="229991544036971" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="202481814783448" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI CHICO! A MÃE CISMOU DE CHAMAR AS PRIMAIADA TUDO. SE NÓIS NÃO FOR PESCAR UNS PEIXES, NÃO TEM ALMOÇO NEM PRA NÓIS SÔ!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="281947442864755" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="706465493170540" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="393072665085274" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;TÁ BAUM CHICO! VAMOS PEGAR A CANOA, AS VARAS DE PESCAR, OS ANZÓIS, AS MINHOCAS E BORA PRO RIO.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="199649614345971" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="834448465550372" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="496418539261023" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;BAUM DEMAIS ENTÃO UAI!&quot; &amp;newline &amp; &quot;SÓ QUE NÓIS PRECISA DE TOMAR CUIDADO, CAIU TROMBA D&apos;ÁGUA NA CABECEIRA ONTEM...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="982671722615698" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="245512171470797" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E O RIO TÁ MAIS CHEIO QUE O DE CUSTUME.&quot; &amp;newline&amp; &quot;SE CAIR, A CORRENTEZA LEVA NÓIS EMBORA!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="717858715173841" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="615050704745250" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="420523538267399" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ENTÃO MELHOR NÓIS NÃO CAIR NA ÁGURA TIÃO...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="204954555206643" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="427773419303995" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ) &apos;&apos;AHHH TIÃO! O GARNIZÉ ME CONTOU QUE TEM UM PAÇOCO DE MOSQUITO NA BEIRADA DO RIO...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="620224898169952" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="845557858795433" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;...VÃO PASSAR LONGE DELES, NÓIS NÃO SABEMOS SE É DA DENGUE UAI!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="162284833328146" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="169415100790547" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="790219358184328" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI CHICO! VÃO PASSAR LONGE DESSES MOSQUITO ENTÃO...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="142234264040528" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="135665356085245" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="606496307881830" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OHHH CHICO! TÔ SENTINDO QUE NÓIS VAMOS &apos;&apos;LAVAR A ÉGUA&apos;&apos; NESSA PESCARIA DE HOJE...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="557492883693271" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="331839591037714" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="601896746210704" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;TO ACHANDO TAMBÉM TIÃO...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="558600194912550" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="216400849909438" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="376136134226917" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;FALANDO NISSO, SE NÓIS PESCAR TUDO, A MÃE CONTRA PRA NOIS DE ONDE VEIO O &apos;&apos;LAVAR A ÉGUA&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="523780018229435" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="412091255904755" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">newline&amp;&quot;VAMOS COMEÇAER ENTÃO CHICO? TÔ DOIDO PRA COMER ESSES LAMBARÍ...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="354533346852598" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="540352853414898" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="481832835335657" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ!)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! TÃO VÃO COMEÇAR ESSE TREM.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="869128262715199" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="897186332641175" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="101752097406036" type="Chico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Call function" sid="253233362656863" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AHHH... PESSOAL QUE TAÍ DE FORA VENDO NÓIS, ATENÇÃO: PRA PESCAR TEM QUE SEGURAR O BOTÃO DE AÇÃO EIN! TA BAUM?!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="120196194517777" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="107694712954058" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="712865645731599" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="466212622615167" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;HOJE NÓIS LAVA A ÉGUA!&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="681357032857259" type="System">
+                    <param id="0" name="Variable">liberarFase</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="843053046636370" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="855001865306809" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="689626132846973" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="395721781501784">
+            <conditions>
+                <condition id="0" name="On function" sid="771701324497748" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Fase_4&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="652779906903115" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="205918287017220" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="106621653928926" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="762937188722458" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="674310849927911" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, DO CÉU! A MÃE MANDOU NÓIS PEGAR UM TANTÃO DE MANGA PRA LEVAR PRA ELA...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="212951538028414" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="940445217332727" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="747292551881559" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="360206459621363" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI TIÃO! MAS POR QUÊ DESSA URGÊNCIA TODA?&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="261110514201939" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="241021509424846" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SEI NÃO CHICO! A MÃE SÓ PEDIU PRA NÓIS PEGAR O MÁXIMO DE MANGA QUE CONSEGUIRMOS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="632181542673318" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="153341427013795" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="584464839694794" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;CHICO, TEM CAROÇO NESSE ANGU!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="285599338100863" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="180208995669064" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="985818204892344" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OHH SE TEM, UAI!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="685244795347412" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="928953833596724" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="619936022529324" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ) &apos;&apos;ENTÃO VAMOS FAZER ISSO RÁPIDO, TIÃO E VOLTAR CORRENDO PRA CASA PRA DESCOBRIR O QUÊ É...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="819342299993922" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="833530329307231" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="491949411059512" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;PEGA O BAMBÚ CHICO E VAMOS DERRUBAR ESSAS MANGAS DAS ÁRVORES...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="395018256587475" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="103942023015063" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="666331538114226" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ) &apos;&apos;AHHH TIÃO! CUIDADO EIN! O GARNIZÉ DISSE QUE TA CHEIO DE ABELHA NAS ÁRVORES...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="196674676903479" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="289215377944099" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;...E SE FICAR BALANÇANDO AS ÁRVORES ELAS VÃO ATRÁS DE NÓIS.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="696408154131397" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="646482922701021" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="815224571172215" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OHHH CHICO! TEM ISSO NÃO, SÔ. SE ELAS VIEREM ATRÁS DE NÓIS, NÓIS ENTRA NA MOITA...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="521611398038746" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="409998155742636" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="639969292834244" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;...VERDADE TIÃO, SE NÓIS ENTRAR NA MOIDA ELAS PERDE DA GENTE!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="741624631077601" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="186205966216433" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="587836096401126" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ) &apos;&apos;AHHH TIÃO! CUIDADO TAMBÉM PARA OS GALHOS PODRES NÃO CAIR NA NOSSA CABEÇA...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="657180089992277" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="809018552909650" type="Audio">
+                    <param id="0" name="Audio file">ixi</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="409141414503404" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;IXI CHICO! SE CAIR, NÓIS CORRE...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="878866446876895" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="994303319095136" type="Audio">
+                    <param id="0" name="Audio file">baum_demais</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="727846467921799" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, A MÃE DISSE QUE CONTA PRA NOIS DE ONDE VEIO O &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos; SE NÓIS CONSEGUIR FAZER TUDO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="353445664640813" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="466431530502420" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">newline&amp;&quot;VAMOS COMEÇAR ENTÃO ESSE TREM RÁPIDO? TÔ DOIDOS PRA SABER O POR QUÊ DESSAS MANGA TUDO...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="570265356478732" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="246296914280951" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="307185797255247" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ!)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! TÃO VÃO COMEÇAR ESSE TREM.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="583005524906568" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="176661204624552" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;PESSOAL QUE TAÍ DE FORA VENDO NÓIS, ATENÇÃO: PRA PEGAR AS MANGAS TEM QUE BATER O BAMBÚ NAS FOLHAS DAS ÁRVORES!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="552416511163208" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="900047822662746" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="483857485079722" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="3" name="Set font size" sid="307212060643893" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="945814868043017" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;MANGAS E ANGU?&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="632847804288975" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="915018821623969" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="473099597625259" type="System">
+                    <param id="0" name="Layer">&quot;Titulo&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="535561532972639" type="System">
+                    <param id="0" name="Variable">liberarFase</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="662460239556485">
+            <conditions>
+                <condition id="0" name="On function" sid="617175294823442" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_UaiSo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="644743462026743" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="549403831586079" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="302736022232317" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="210635275160521" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">mensagemConlcusao</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="604122798048773" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="899579989363153" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="978115719955446" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, MÃE CONTOU PRA NÓIS DE ONDE VEIO O &apos;&apos;&quot; &amp; expressaoMineira &amp; &quot;&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="109434884394977" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="853342667328609" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="117388641025937" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;DIZIAM OS ANTIGOS QUE NO CICLO DO OURO, MINAS GERAIS CHAMOU ATENÇÃO DE GRANDES COMPANHIAS INGLESAS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="131966251812906" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="886034239967033" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E OS TRABALHADORES MINEIROS TINHAM GRANDE BARREIRAS PARA COMPREENDER O IDIOMA DE SEUS PATRÕES...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="253622671318062" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="203939978975866" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...AO OBSERVAR QUE SEUS PATRÕES SEMPRE OS PERGUNTAVAM SOBRE OS PROBLEMAS NAS OBRAS (&apos;&apos;Why&apos;?&apos; QUE É &apos;&apos;POR QUÊ&apos;&apos; ME INGLÊS)...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="781525073947899" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="894520887692930" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...OS MINEIROS ASSOCIARAM O SOM DO &apos;&apos;POR QUÊ?&apos;&apos; EM INGLÊS COM PERGUNTAS QUE ERAM FEITAS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="754293434083277" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="489185817570412" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="634727961102701" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;... DAÍ VEM O NOSSO FAMOSO &apos;&apos;UAI!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="694317681829724" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="911945521872070" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="848359894653697" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="435576124369855" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;MAS E O &apos;SÔ&apos;? VEM DE ONDE?&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="543804579512469" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="941100638417246" type="Audio">
+                    <param id="0" name="Audio file">nu</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="360184942830955" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;VEM DESSA MESMA LINHA DE RACIOCÍCIO, SÔ!&quot; &amp;newline&amp; &quot;AO OBSEVAR TRABALHADORES QUE FALAVAM EM INGLES COM OS PATRÕES...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="731170543286544" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="929888326992589" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...OS MINEIROS PERCEBERAM QUE AS VEZES USAVAM &apos;&apos;Why, Sir!&apos;&apos; O &apos;SIR&apos; NO MINEIRÊS VIROU &apos;SÔ&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="471768643088359" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="809349239521559" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="966213210912902" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...DAÍ, EM MINEIRÊS &apos;&apos;UAI, SÔ!&apos;&apos;. QUE É TIPO &apos;&apos;POR QUÊ, SENHOR!&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="799091562167675" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="447416593325855" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="135280078662533" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="323408514790419" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="193063980748289" type="System">
+                    <param id="0" name="Variable">uai_so_destravado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="971408322986188" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="342821284588971" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914074609518067">
+            <conditions>
+                <condition id="0" name="On function" sid="461397416618102" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_PicaMula&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="731321327586966" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="667157914890212" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="223105955626152" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="226996108429220" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, NÓIS ENCONTRAMOS A JUREMA E PEGAMOS AS LETRAS TODAS. AÍ, MÃE CONTOU ONDE VEIO O &apos;&apos;&quot; &amp; expressaoMineira &amp; &quot;&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="744222996996516" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="815728754709534" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="408702305118933" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="506397367341480" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;E DE ONDE VEM ESSE TREM?&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="359877754268392" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="538514711431406" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="896712856951808" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ATÉ HOJE OS CAVALOS SÃO UM MEIO DE TRANSPORTE MUITO USADO NESSAS BANDA DE MINAS GERAIS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="274387075697304" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="806235347599239" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MAS NOS TEMPOS ANTIGOS ELES ERAM USADOS MUITO MAIS PARA TRANSPORTAR QUALQUER TREM...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="894948312160515" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="618583091156933" type="Audio">
+                    <param id="0" name="Audio file">nu</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="332696955416327" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...PORÉM CHICO, QUEM NÃO TINHA DINHEIRO PARA COMPRAR UM CAVALO, ANDAVA NO LOMBO DAS MULAS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="848113813008777" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="796439056613418" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="671263248427310" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...SÓ QUE AS MULAS ERAM MUITO LENTAS E MENOS INTELIGENTES QUE OS CAVALOS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="169025706023082" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="619610066934498" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...  E SEUS DONOS PASSAVAM APERTO PRA FAZER ELAS OBDEDECEREM...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="498593906494753" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="245021728881061" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...PRA RESOLVER ISSO, OS DONOS USAVAM ESPORAS COM PONTA NAS BOTAS. IGUAL AS SUAS CHICO...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="881002595829198" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="213405389146432" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="525545725090749" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO EU JÁ ENTENDÍ!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="692074651359664" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="432123724753471" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;OS DONOS DA MULAS PICAVAM ELAS COM AS ESPORAS PARA ELAS ANDAREM!&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="811043029307651" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="839118407523335" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="950665294562865" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;É UAI! POR CAUSA DESSA &apos;&apos;PICADA&apos;&apos; AS MULAS CORRIAM DEPRESSA.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="863654068218131" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="394776140456650" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="991220836784231" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...DAÍ, EM MINEIRÊS &apos;&apos;PICAR A MULA!&apos;&apos;. QUE É TIPO &apos;&apos;VÃO EMBORA!&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="614523566200987" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="936871791562491" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="884703351661967" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="782168085038078" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="860552782554827" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="690652309447796" type="System">
+                    <param id="0" name="Variable">picar_a_mula_destravado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="450263678542683" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="629931980074443" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="391542314274892">
+            <conditions>
+                <condition id="0" name="On function" sid="306162575980832" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_LavarAEgua&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="258703957787150" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="568810596221929" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="-9" name="Set value" sid="700770438963615" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="534912127862913" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="693773448122768" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;TIÃO HOJE NÓIS &apos;&apos;LAVAMOS A ÉGUA&apos;&apos; COM ESSES PEIXES. ENCHER OS BUCHO...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="338033585712278" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="281010501753619" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="705365333180270" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MAIS É CLARO QUE LAVAMOS, E LAVAMOS BONITO!  NÓIS E OS PRIMO TUDO VAMOS ENCHER O BUCHO!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="888887170076423" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="786778194768599" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="944229055163602" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;FALANDO NISSO TIÃO, JÁ QUE NÓIS FIZEMOS TUDO DESSE...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="615578756933691" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="819323277355170" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="894173672215809" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;... AFAZER, QUAL É A ORIGEM DESSA EXPRESSÃO?&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="278689877066824" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="101888376714637" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="290919353645037" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ÓIA SÓ CHICO, MINHA MÃE ME DISSO, QUE NO TEMPO DO OURO E ESCRAVOS AQUI NAS MINAS GERAIS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="446033374810355" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="181986411896826" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...ERAM USADAS MULAS E ÉGUAS PRA LEVAR O OURO PRA FORA DAS MINAS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="992493688604726" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="714152560384547" type="Audio">
+                    <param id="0" name="Audio file">nu</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="744882567090443" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...PORÉM CHICO, TINHAM MUITAS PEDRAS PONTUDAS QUE MACHUCAVAM O LOMBO DOS BICHOS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="422685581344061" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="865649419841532" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="415980563745470" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E ESSES MACHUCADOS ATRAÍAM MUITOS INSETOS E MOSQUITOS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="785633464803924" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="378476854776315" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...PARA PROTEGER, OS ESCRAVOS COLOCAVAM ARGILA NO LOMBO DAS MULAS E DAS ÉGUAS...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="402252826798930" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="234121442832232" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...COM O PRETEXTO DE PROTEGER OS MACHUCADOS DOS BICHOS. MAS NA VERDADE...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="159039815349434" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="960957096952361" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="846741657237151" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;VOU ADIVINHA TIÃO... &apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="523852172017369" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="443128069755311" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;...COMO ELES ESTAVAM DENTRO DAS MINAS DE OURO...&apos;&apos;&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="308244356005789" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="858634522292231" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="307457621134517" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;... ELES ESCONDIAM OS OUROS E DIAMANTES EM BAIXO DA...&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="891988830867899" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="335738218916073" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;... ARGILA QUE ELEM PASSAVAM NAS ÉGUAS.&apos;&apos;&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="880225356385046" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="874263857311606" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="550564019083842" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;É  ISSO, UAI! AÍ NA HORA QUE O ESCRAVO FOSSE LAVAR O BICHO PARA LIMPAR, ELE PEGAVA O OURO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="901869085199708" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="921225020807412" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="544504336215705" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;DAÍ, EM MINEIRÊS &apos;&apos;LAVAR A ÉGUA!&apos;&apos;. QUE É TIPO &apos;&apos;VOU ME DAR BEM!&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="387437235597627" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="167326595061799" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="366228145663042" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="783904485887621" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="780492940981296" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="538707349838444" type="System">
+                    <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="921990510210013" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="191768126831346" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="825103029935505">
+            <conditions>
+                <condition id="0" name="On function" sid="618599103961816" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_TemCarocoNesseAngu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="453481237727974" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="968886296798789" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="846803738478180" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="143845214339271" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SABIA CHICO, TINHA &apos;&apos;CAROÇO NESSE ANGU&apos;&apos;.&quot;&amp;newline&amp;&quot;A MÃE CHAMOU OS TIOS DA CIDADE PRA COMER DÔCE DE MANGA HOJE.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="546192017923310" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="170681160698123" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="533474274877870" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="133426410713330" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;TIÃO, ENTÃO ERA ISSO E NÓIS TRABALHAMOS IGUAL BURRO DE CARGA NESSE TREM.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="146067129065801" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="470504244768552" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="997547209244072" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! MAS VALEU A PENA! NÓIS VAMOS COMER DÔCE TAMBÉM...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="582964870379688" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="461538272737976" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="960200173484670" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...ALÉM DO MAIS CHICO, ELA CONTOU PRA MIM COMO SURGIU O &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="535078575456457" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="915646334538619" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="645984327654807" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ) &apos;&apos;ENTÃO ME CONTA ESSE TREM SÔ!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="265046585733376" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="310421351113125" type="Audio">
+                    <param id="0" name="Audio file">eba</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="637384392472941" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MINAS GERAIS TINHA MUITOS ESCRAVOS NO SÉCULO XVIII...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="371720776311932" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="676420265212280" type="Audio">
+                    <param id="0" name="Audio file">eta_ferro</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="392485760925762" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E ELES TABRALHAVAM TANTO, E TINHAM TÃO POUCO PRA COMER, NA MAIORIA DAS VEZES, ANGU.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="557647680688696" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="443980066157260" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E MUITOS MORRIAM DE FOME.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="727702577855836" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="491323399643989" type="Audio">
+                    <param id="0" name="Audio file">baum</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="271418653843636" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...AS ESCRAVAS QUE TRABALHAVAM NA COZINHA DA FAZENDA TINHAM PENA DELES...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="730241464137733" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="993015844352028" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E MISTURAVAM PEDAÇOS DE CARNE E TORRESMO NO ANGÚ QUE O FEITOR LEVAVA PROS ESCRAVOS NO FINAL DO DIA...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="250528362751541" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="573136603510525" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="721911990082918" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...QUANDO UM ESCRAVA COMEÇAVA A COMER E ENCONTRAVA ALGUMA CARNE ESCONDIDA...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="741074996792511" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="334462820882356" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...ELES AVISAVAM OS OUTROS: &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos;...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="375278242107427" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="750207284717009" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="998841370734897" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;UAI TIÃO. QUE ESPERTEZA, ELES USAVAM UM CÓDIGO PRA AVISAR OS OUTROS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="168957713063331" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="643889947762046" type="Audio">
+                    <param id="0" name="Audio file">eta_ferro</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="749423619006776" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SIM CHICO! POR QUÊ SE O FEITOR ENCONTRAR, ELES IAM PRO TRONCO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="991612292067334" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="523377688998782" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="781668853949165" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;DAÍ, EM MINEIRÊS &apos;&apos;TEM CAROÇO NESSE ANGÚ!&apos;&apos;. QUE É TIPO &apos;&apos;TEM ALGO ESTRANHO!&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="428316735110383" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="300305335346168" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="865125910214824" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI, SÔ! ESSES ESCRAVOS ERAM ESPERTOS! BAUM SABER QUE SURGIU ASSIM!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="120382287849700" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="371383034679225" type="System">
+                    <param id="0" name="Variable">levelConcluido</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="177598136213717" type="System">
+                    <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="535390665405796" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="854796915664979" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Final&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="760584037913031">
+            <conditions>
+                <condition id="0" name="On function" sid="252680774298560" type="Function">
+                    <param id="0" name="Name">&quot;Narrativa_Final&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="477717063619921" type="txtTiao">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="410648751803108" type="txtChico">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="25" name="Play at object" sid="878702799672130" type="Audio">
+                    <param id="0" name="Audio file">oi_pcv</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="785166672334627" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, BAUM QUE NÓIS TERMINADOS OS AFAZERES DE HOJE...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="310962539151948" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="750337358556053" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="554469470572315" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="923019495572006" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;UFA TIÃO! BAUM PRA NÓIS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="284453976148864" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="755208057418331" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="746408381542457" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ÓIA PROCÊ VÊ! NÓIS TRABALHOS E SOUBEMOS DE ONDE VIERAM UM MONTE DE EXPRESSÃO EM MINEIRÊS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="644157213433499" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="748335065688951" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="563208158063185" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ) &apos;&apos;SOUBEMOS MESMO CHICO. EU TÔ ME SENTIDO ATÉ MAIS INTELIGENTE.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="598560228379601" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="566078795280582" type="Audio">
+                    <param id="0" name="Audio file">eba</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="894319568993856" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;EU TAMBÉM CHICO!&quot;&amp;newline&amp;&quot;MAS AGORA CHICO, É MELHOR NÓIS IRMOS DESCANSAR. AMANHÃ NÓIS TEMOS MAIS AFAZÊRES.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="282095856803085" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="270889314965064" type="Audio">
+                    <param id="0" name="Audio file">galo_cantando</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="971249094661734" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ) &apos;&apos;BOA NOITE TIÃO MEU AMIGO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="250707889338626" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="216415008736419" type="Audio">
+                    <param id="0" name="Audio file">eta_ferro</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="813299791959068" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;BOA NOITE CHICO, ATÉ AMANHÃ!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="611824583570877" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="514071934156603" type="Function">
+                    <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-2" name="Go to layout" sid="223720811031903" type="System">
+                    <param id="0" name="Layout">Creditos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="831398682251993">
+            <conditions>
+                <condition id="0" name="On function" sid="129048157429212" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="473033093952000" type="txtTiao">
+                    <param id="0" name="Text">Function.Param(0)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="372255999016625" type="balaoTiao">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="259649451888388" type="txtTiao">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="311346146916360" type="balaoChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="997289657461022" type="txtChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="455825393834942" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="815573376429733" type="balaoChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="161604940651791" type="txtChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="892873267624359">
+            <conditions>
+                <condition id="0" name="On function" sid="253145861012830" type="Function">
+                    <param id="0" name="Name">&quot;FalaChico&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="637879156325043" type="txtChico">
+                    <param id="0" name="Text">Function.Param(0)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="648976747661086" type="balaoChico">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="205794992912740" type="txtChico">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="869960240465834" type="balaoTiao">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="403252259505811" type="txtTiao">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="318530609233522" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="186424714967567">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="297852303027736" type="Mouse">
+                    <param id="0" name="Object">btnAvancar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="935271885112579" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="913178594482032">
+            <conditions>
+                <condition id="-22" name="Else" sid="158754313457892" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="498738933014840" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="132484282721978">
+            <conditions>
+                <condition id="3" name="On touched object" sid="220404818885088" type="Touch">
+                    <param id="0" name="Object">btnAvancar</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="244435454029863" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="851088154554649" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="170533269091908">
+            <conditions>
+                <condition id="0" name="On function" sid="319817575951045" type="Function">
+                    <param id="0" name="Name">&quot;Comecar_Narrativa&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="434267771526403" type="System">
+                    <param id="0" name="Variable">liberarTiao</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="160194831175554">
+            <conditions>
+                <condition id="0" name="On function" sid="432304528276022" type="Function">
+                    <param id="0" name="Name">&quot;Reuniciar_Narrativa&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="528999971859970" type="System">
+                    <param id="0" name="Variable">liberarTiao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="147281254082164" type="System">
+                    <param id="0" name="Variable">liberarChico</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="564933360068161" type="Tiao">
+                    <param id="0" name="X">-420</param>
+                </action>
+                <action id="-1" name="Set X" sid="580624157641584" type="Chico">
+                    <param id="0" name="X">2170</param>
+                </action>
+                <action id="-15" name="Set visible" sid="524936588357625" type="balaoChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="381091319933867" type="txtChico">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="357646423689846" type="balaoTiao">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="126078951176297" type="txtTiao">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

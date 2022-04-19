@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evJoystick</name>
+    <events>
+        <include>evGameController</include>
+        <event-block sid="931534506685617">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="996268978164480" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="310338909871196" type="mousehand">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="377193457555012">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="163505311106831" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="636252311496246" type="mousehand">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467728802448515">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="274564712975523" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="472284088721672" type="mousehand">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="979121357051162">
+            <conditions>
+                <condition id="5" name="Compare axis" sid="848451415091491" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="404608409342155" type="mousehand">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="838686519510738">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="645552793196059" type="mousehand">
+                    <param id="0" name="Object">btnCréditos</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="726910561989873">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="732683767763601" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="857975257009849" type="System">
+                            <param id="0" name="Layout">Creditos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="771793592761444">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="585712608906877" type="mousehand">
+                    <param id="0" name="Object">btnJogar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="346128581052354">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="756380328616992" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="776534400652420" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="737608272591576" type="System">
+                            <param id="0" name="Layout">Narrativa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="444938562816616">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="410551482580590" type="mousehand">
+                    <param id="0" name="Object">btnMenuOptions</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="276003748881941">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="226159613238492" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="879258737671574" type="System">
+                            <param id="0" name="Layout">Opcoes</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="769854711254267">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="994215356184768" type="mousehand">
+                    <param id="0" name="Object">btnExpressoes</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="477812494897144">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="280769427416936" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="459089656510240" type="System">
+                            <param id="0" name="Layout">Expressoes</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="576101484171775">
+            <conditions>
+                <condition id="1" name="On gamepad connected" sid="557656993915765" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="177466850392832" type="mousehand">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="134695329506586" type="System">
+                    <param id="0" name="Variable">hasJoystick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="831019411152390" type="System">
+                    <param id="0" name="Variable">isMobile</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="831349264803332">
+            <conditions>
+                <condition id="2" name="On gamepad disconnected" sid="499811616969319" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="214221406966651" type="mousehand">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="560083589618741" type="System">
+                    <param id="0" name="Variable">hasJoystick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="141941766087335" type="System">
+                    <param id="0" name="Variable">isMobile</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="515570980325307">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="446626385223909" type="mousehand">
+                    <param id="0" name="Object">btnLevel01</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="713012121580011">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="603719625430830" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="950370073994486" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="250133919916441" type="System">
+                            <param id="0" name="Layout">Level_01</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="645942287383513">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="243463925389800" type="mousehand">
+                    <param id="0" name="Object">btnLevel02</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="410587662082211">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="269907681637737" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="749412093479815">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="510233381632566" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="927042465391988" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="925814791252766" type="System">
+                                    <param id="0" name="Layout">Level_02</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="374774898615623">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="712602945144157" type="mousehand">
+                    <param id="0" name="Object">btnLevel03</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="971713685323853">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="667156504905862" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="667443150093826">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="473075063698564" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="565165638005504" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="474475710134155" type="System">
+                                    <param id="0" name="Layout">Level_03</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="442906115599015">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="934702473842000" type="mousehand">
+                    <param id="0" name="Object">btnLevel04</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="437464126488717">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="997420196948501" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="970601395804074">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="727477005325066" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="284736153683556" type="System">
+                                    <param id="0" name="Variable">isRestartingLevel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="887989772878886" type="System">
+                                    <param id="0" name="Layout">Level_04</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="186693731209856">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="874744907313536" type="mousehand">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="526364178173991">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="102720201704148" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="929096766563995" type="System">
+                            <param id="0" name="Layout">Tela_Inicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="530810337085332">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="176321382730930" type="mousehand">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="405858188921559">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="292454337692604" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="223674321849068" type="System">
+                            <param id="0" name="Layout">Tela_Inicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="961787189275834">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="915647184092296" type="mousehand">
+                    <param id="0" name="Object">btnFacil</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="579603013979893">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="941703448331501" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="881695820913551" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;PÃO DE QUEIJO: MOLIM, BAUMZIM, FACIM...&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="749923825889966" type="btnFacil">
+                            <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="192948281330239" type="btnDificil">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="112904793601997" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="784722111715663" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="723621976578114">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="946648721858082" type="mousehand">
+                    <param id="0" name="Object">btnDificil</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="279894750713157">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="163639092714291" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="322763131339936" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;DIFICULDADE:&quot;&amp;newline&amp;&quot;RAPADURA: E DÔCE, MAS NÃO E MOLE NÃO.&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="295191137268187" type="btnFacil">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="138057487962689" type="btnDificil">
+                            <param id="0" name="Animation">&quot;Selecionado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="307510523398212" type="System">
+                            <param id="0" name="Variable">dificuldade</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="840850861424940" type="Function">
+                            <param id="0" name="Name">&quot;SaveGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="664465147899356">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="156842957826423" type="mousehand">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="585887736656696">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="118209345073717" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="965161049883589" type="System">
+                            <param id="0" name="Variable">isRestartingLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="494241232634155" type="System">
+                            <param id="0" name="Layout">&quot;Level_0&quot; &amp; levelExecutando</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

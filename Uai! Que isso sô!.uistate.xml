@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="1">Loader</layout>
+        <event-sheet order="0">evOpcoes</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="1" name="Alfabeto" />
+        <family expanded="1" name="ChainLinks" />
+        <family expanded="1" name="Manga" />
+        <family expanded="1" name="Copa_Arvore" />
+        <family expanded="1" name="Galhos" />
+        <family expanded="0" name="Labels" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="sound-folder/SFX/" />
+        <folder expanded="1" path="animation-folder/telaInicial/" />
+        <folder expanded="1" path="animation-folder/menuInicial/" />
+        <folder expanded="1" path="animation-folder/btnJogar/" />
+        <folder expanded="1" path="animation-folder/btnCréditos/" />
+        <folder expanded="1" path="animation-folder/fundo/" />
+        <folder expanded="1" path="animation-folder/niveis/" />
+        <folder expanded="1" path="animation-folder/btnLevel01/" />
+        <folder expanded="1" path="animation-folder/btnLevel02/" />
+        <folder expanded="1" path="animation-folder/btnLevel04/" />
+        <folder expanded="1" path="animation-folder/btnLevel03/" />
+        <folder expanded="1" path="animation-folder/fundo_level/" />
+        <folder expanded="1" path="animation-folder/piso_level/" />
+        <folder expanded="1" path="animation-folder/porta_level/" />
+        <folder expanded="1" path="animation-folder/porta_entrada/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/galoChico/" />
+        <folder expanded="1" path="animation-folder/esquerda/" />
+        <folder expanded="1" path="animation-folder/direita/" />
+        <folder expanded="1" path="animation-folder/pular/" />
+        <folder expanded="1" path="animation-folder/pause/" />
+        <folder expanded="1" path="animation-folder/ajuda/" />
+        <folder expanded="1" path="animation-folder/Energia/" />
+        <folder expanded="1" path="animation-folder/mural/" />
+        <folder expanded="1" path="animation-folder/Bloqueio/" />
+        <folder expanded="1" path="animation-folder/A_Mural/" />
+        <folder expanded="1" path="animation-folder/I_Mural/" />
+        <folder expanded="1" path="animation-folder/Ô_Mural/" />
+        <folder expanded="1" path="animation-folder/S_Mural/" />
+        <folder expanded="1" path="animation-folder/U_Mural/" />
+        <folder expanded="1" path="animation-folder/POLEIRO/" />
+        <folder expanded="1" path="animation-folder/POLEIRO2/" />
+        <folder expanded="1" path="animation-folder/POLEIRO3/" />
+        <folder expanded="1" path="animation-folder/NINHO/" />
+        <folder expanded="1" path="animation-folder/caixa/" />
+        <folder expanded="1" path="animation-folder/galinha/" />
+        <folder expanded="1" path="animation-folder/ataque/" />
+        <folder expanded="1" path="animation-folder/quadro/" />
+        <folder expanded="1" path="animation-folder/couve/" />
+        <folder expanded="1" path="animation-folder/plataformas/" />
+        <folder expanded="1" path="animation-folder/opcoes_menu/" />
+        <folder expanded="1" path="animation-folder/btnClose_options/" />
+        <folder expanded="1" path="animation-folder/btnMenuOptions/" />
+        <folder expanded="1" path="animation-folder/btnMute/" />
+        <folder expanded="1" path="animation-folder/btnMuteSfx/" />
+        <folder expanded="1" path="animation-folder/btnCloseGame/" />
+        <folder expanded="1" path="animation-folder/Tiao/" />
+        <folder expanded="1" path="animation-folder/Chico/" />
+        <folder expanded="1" path="animation-folder/balaoTiao/" />
+        <folder expanded="1" path="animation-folder/balaoChico/" />
+        <folder expanded="1" path="animation-folder/btnAvancar/" />
+        <folder expanded="1" path="animation-folder/quadro2/" />
+        <folder expanded="1" path="animation-folder/menu_ajuda/" />
+        <folder expanded="1" path="animation-folder/btnHelp/" />
+        <folder expanded="1" path="animation-folder/btnCloseHelp/" />
+        <folder expanded="1" path="animation-folder/ovos/" />
+        <folder expanded="1" path="animation-folder/A/" />
+        <folder expanded="1" path="animation-folder/I/" />
+        <folder expanded="1" path="animation-folder/U/" />
+        <folder expanded="1" path="animation-folder/S/" />
+        <folder expanded="1" path="animation-folder/Ô/" />
+        <folder expanded="1" path="animation-folder/gameOver/" />
+        <folder expanded="1" path="animation-folder/btnRecomecar/" />
+        <folder expanded="1" path="animation-folder/btnHome/" />
+        <folder expanded="1" path="animation-folder/coracao/" />
+        <folder expanded="1" path="animation-folder/nivel_completo/" />
+        <folder expanded="1" path="animation-folder/estrela_01/" />
+        <folder expanded="1" path="animation-folder/estrela_02/" />
+        <folder expanded="1" path="animation-folder/estrela_03/" />
+        <folder expanded="1" path="animation-folder/btnNext/" />
+        <folder expanded="1" path="animation-folder/cerca/" />
+        <folder expanded="1" path="animation-folder/ceu_f/" />
+        <folder expanded="1" path="animation-folder/chao_f2/" />
+        <folder expanded="1" path="animation-folder/matoEstrada_f/" />
+        <folder expanded="1" path="animation-folder/morros_f/" />
+        <folder expanded="1" path="animation-folder/fundo_a/" />
+        <folder expanded="1" path="animation-folder/arvore/" />
+        <folder expanded="1" path="animation-folder/arbustos/" />
+        <folder expanded="1" path="animation-folder/arvore2/" />
+        <folder expanded="1" path="animation-folder/arvore3/" />
+        <folder expanded="1" path="animation-folder/arvore4/" />
+        <folder expanded="1" path="animation-folder/arvore5/" />
+        <folder expanded="1" path="animation-folder/cerca2/" />
+        <folder expanded="1" path="animation-folder/cerca3/" />
+        <folder expanded="1" path="animation-folder/cerca4/" />
+        <folder expanded="1" path="animation-folder/cerca5/" />
+        <folder expanded="1" path="animation-folder/boi/" />
+        <folder expanded="1" path="animation-folder/arvores/" />
+        <folder expanded="1" path="animation-folder/P_Mural/" />
+        <folder expanded="1" path="animation-folder/C_Mural/" />
+        <folder expanded="1" path="animation-folder/R_Mural/" />
+        <folder expanded="1" path="animation-folder/M_Mural/" />
+        <folder expanded="1" path="animation-folder/L_Mural/" />
+        <folder expanded="1" path="animation-folder/mula/" />
+        <folder expanded="1" path="animation-folder/logo/" />
+        <folder expanded="1" path="animation-folder/progressBar/" />
+        <folder expanded="1" path="animation-folder/P/" />
+        <folder expanded="1" path="animation-folder/C/" />
+        <folder expanded="1" path="animation-folder/R/" />
+        <folder expanded="1" path="animation-folder/M/" />
+        <folder expanded="1" path="animation-folder/L/" />
+        <folder expanded="1" path="animation-folder/vara/" />
+        <folder expanded="1" path="animation-folder/anzol/" />
+        <folder expanded="1" path="animation-folder/linha/" />
+        <folder expanded="1" path="animation-folder/peixe/" />
+        <folder expanded="1" path="animation-folder/linha2/" />
+        <folder expanded="1" path="animation-folder/linha3/" />
+        <folder expanded="1" path="animation-folder/Ball/" />
+        <folder expanded="1" path="animation-folder/Link/" />
+        <folder expanded="1" path="animation-folder/ceu_f2/" />
+        <folder expanded="1" path="animation-folder/fundo_verde_f/" />
+        <folder expanded="1" path="animation-folder/morros_f2/" />
+        <folder expanded="1" path="animation-folder/nuvem1_f/" />
+        <folder expanded="1" path="animation-folder/nuvem2_f/" />
+        <folder expanded="1" path="animation-folder/sol_f/" />
+        <folder expanded="1" path="animation-folder/chao_rio1_f/" />
+        <folder expanded="1" path="animation-folder/chao_rio2_f/" />
+        <folder expanded="1" path="animation-folder/rio/" />
+        <folder expanded="1" path="animation-folder/fundo_gramas_f/" />
+        <folder expanded="1" path="animation-folder/arvore1_f/" />
+        <folder expanded="1" path="animation-folder/coqueiro_f/" />
+        <folder expanded="1" path="animation-folder/arvore2_f/" />
+        <folder expanded="1" path="animation-folder/arvore3_f/" />
+        <folder expanded="1" path="animation-folder/bananeira_f/" />
+        <folder expanded="1" path="animation-folder/barco/" />
+        <folder expanded="1" path="animation-folder/tronco/" />
+        <folder expanded="1" path="animation-folder/pedra1_f/" />
+        <folder expanded="1" path="animation-folder/pedra2_f/" />
+        <folder expanded="1" path="animation-folder/placa/" />
+        <folder expanded="1" path="animation-folder/fly/" />
+        <folder expanded="1" path="animation-folder/deathZone/" />
+        <folder expanded="1" path="animation-folder/itens_/" />
+        <folder expanded="1" path="animation-folder/peixe_icon/" />
+        <folder expanded="1" path="animation-folder/V_Mural/" />
+        <folder expanded="1" path="animation-folder/V/" />
+        <folder expanded="1" path="animation-folder/G_Mural/" />
+        <folder expanded="1" path="animation-folder/É_Mural/" />
+        <folder expanded="1" path="animation-folder/É/" />
+        <folder expanded="1" path="animation-folder/G/" />
+        <folder expanded="1" path="animation-folder/logomarca/" />
+        <folder expanded="1" path="animation-folder/novoFundo/" />
+        <folder expanded="1" path="animation-folder/ovos_mural/" />
+        <folder expanded="1" path="animation-folder/fundoF4_/" />
+        <folder expanded="1" path="animation-folder/fundo_f4_/" />
+        <folder expanded="1" path="animation-folder/arvore_manga_f4_/" />
+        <folder expanded="1" path="animation-folder/arvore_manga_f4_2/" />
+        <folder expanded="1" path="animation-folder/moita/" />
+        <folder expanded="1" path="animation-folder/colmeia/" />
+        <folder expanded="1" path="animation-folder/bee/" />
+        <folder expanded="1" path="animation-folder/manga_1/" />
+        <folder expanded="1" path="animation-folder/manga_2/" />
+        <folder expanded="1" path="animation-folder/manga_3/" />
+        <folder expanded="1" path="animation-folder/manga_4/" />
+        <folder expanded="1" path="animation-folder/bambu/" />
+        <folder expanded="1" path="animation-folder/copa_arvore_manga_f4_/" />
+        <folder expanded="1" path="animation-folder/copa_manga_f4_/" />
+        <folder expanded="1" path="animation-folder/galho_01/" />
+        <folder expanded="1" path="animation-folder/galho_/" />
+        <folder expanded="1" path="animation-folder/galho_2/" />
+        <folder expanded="1" path="animation-folder/galho_3/" />
+        <folder expanded="1" path="animation-folder/btnDificil/" />
+        <folder expanded="1" path="animation-folder/btnFacil/" />
+        <folder expanded="1" path="animation-folder/T_Mural/" />
+        <folder expanded="1" path="animation-folder/T/" />
+        <folder expanded="1" path="animation-folder/E_Mural/" />
+        <folder expanded="1" path="animation-folder/E/" />
+        <folder expanded="1" path="animation-folder/O_Mural/" />
+        <folder expanded="1" path="animation-folder/O/" />
+        <folder expanded="1" path="animation-folder/Ç_Mural/" />
+        <folder expanded="1" path="animation-folder/Ç/" />
+        <folder expanded="1" path="animation-folder/N_Mural/" />
+        <folder expanded="1" path="animation-folder/N/" />
+        <folder expanded="1" path="animation-folder/Ú_Mural/" />
+        <folder expanded="1" path="animation-folder/Ú/" />
+        <folder expanded="1" path="animation-folder/btnExpressoes/" />
+        <folder expanded="1" path="animation-folder/Carregando/" />
+        <folder expanded="1" path="animation-folder/btnRestartSeve/" />
+        <folder expanded="1" path="animation-folder/btnCheat/" />
+        <folder expanded="1" path="animation-folder/btnUaiSo/" />
+        <folder expanded="1" path="animation-folder/btnPicar_mula/" />
+        <folder expanded="1" path="animation-folder/btnLavar_egua/" />
+        <folder expanded="1" path="animation-folder/btnCaroco_angu/" />
+        <folder expanded="1" path="animation-folder/A2/" />
+        <folder expanded="1" path="animation-folder/A3/" />
+        <folder expanded="1" path="animation-folder/A4/" />
+        <folder expanded="1" path="animation-folder/A5/" />
+        <folder expanded="1" path="animation-folder/mousehand/" />
+    </folders-expanded>
+</c2uistate>

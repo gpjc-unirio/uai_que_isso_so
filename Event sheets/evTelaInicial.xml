@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evTelaInicial</name>
+    <events>
+        <include>evGameController</include>
+        <include>evJoystick</include>
+        <event-block sid="437324029584066">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="387824793421538" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="755109016314595" type="Audio" />
+                <action id="5" name="Set web font" sid="138342290519837" type="txtFalaPersonagem">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="32" name="Add mute effect" sid="375160604554159" type="Audio">
+                    <param id="0" name="Tag">&quot;soundTrack&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="364001932268226" type="System">
+                    <param id="0" name="Variable">levelExecutando</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="700284285275585">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="404137480092484" type="System">
+                            <param id="0" name="Variable">musicOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="12" name="Remove all effects" sid="755786906327468" type="Audio">
+                            <param id="0" name="Tag">&quot;soundTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="638993276326697">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Play" sid="840466246306754" type="Audio">
+                            <param id="0" name="Audio file">phase_track</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;soundTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="330757686904787">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="676333487688568" type="System">
+                            <param id="0" name="Variable">isMobile</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="306239661835658" type="btnCréditos">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="345641149404823">
+            <conditions>
+                <condition id="17" name="On tap object" sid="938371731878894" type="Touch">
+                    <param id="0" name="Object">btnJogar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="990389649376416" type="System">
+                    <param id="0" name="Variable">isRestartingLevel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="898638108838046" type="System">
+                    <param id="0" name="Layout">Narrativa</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="305344250982451">
+            <conditions>
+                <condition id="3" name="On touched object" sid="142158433334437" type="Touch">
+                    <param id="0" name="Object">btnCréditos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="435061849725012" type="System">
+                    <param id="0" name="Layout">Creditos</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="231834523957157">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="902148730418271" type="System">
+                            <param id="0" name="Variable">isMobile</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="542713512896053" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="489051132824279">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="244026252661202" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="107160225059918" type="System">
+                            <param id="0" name="Layout">Creditos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="851024721606952">
+            <conditions>
+                <condition id="3" name="On touched object" sid="298019357236186" type="Touch">
+                    <param id="0" name="Object">btnMenuOptions</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="812319518852919" type="System">
+                    <param id="0" name="Layout">Opcoes</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="500455640192411">
+            <conditions>
+                <condition id="3" name="On touched object" sid="512198747613459" type="Touch">
+                    <param id="0" name="Object">btnCloseGame</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block any="1" sid="891128175619979">
+            <conditions>
+                <condition id="3" name="On touched object" sid="837682784681238" type="Touch">
+                    <param id="0" name="Object">btnExpressoes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="575341403125181" type="System">
+                    <param id="0" name="Layout">Expressoes</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="949417324806867">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="648636917465429" type="Mouse">
+                    <param id="0" name="Object">btnJogar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="409663596752710" type="Mouse">
+                    <param id="0" name="Object">btnMenuOptions</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="262502940434987" type="Mouse">
+                    <param id="0" name="Object">btnCréditos</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="459506147583570" type="Mouse">
+                    <param id="0" name="Object">btnCloseGame</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="478415136888966" type="Mouse">
+                    <param id="0" name="Object">btnExpressoes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="596597019218857" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="319964118872692">
+            <conditions>
+                <condition id="-22" name="Else" sid="255477905181583" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="916940321952183" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="895058031955945">
+            <conditions>
+                <condition id="1" name="On gamepad connected" sid="288527122319416" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="498367548690613" type="mousehand">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="108171251875521" type="System">
+                    <param id="0" name="Variable">hasJoystick</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="432433749290930">
+            <conditions>
+                <condition id="2" name="On gamepad disconnected" sid="339652871633666" type="Gamepad" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="349612262341954" type="mousehand">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="243459487767445" type="System">
+                    <param id="0" name="Variable">hasJoystick</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

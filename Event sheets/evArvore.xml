@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evArvore</name>
+    <events>
+        <include>evAbelhas</include>
+        <variable constant="1" name="qtdeTreeItens" sid="641824161617819" static="0" type="number">5</variable>
+        <variable constant="0" name="rdnItemTree" sid="969689366854781" static="0" type="number">1</variable>
+        <event-block sid="847462946287140">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="800927231104658" type="Copa_Arvore">
+                    <param id="0" name="Object">bambu</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="914299217246514">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="287128679947897" type="Copa_Arvore">
+                            <param id="0" name="Instance variable">beat</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="404660542803701" type="Copa_Arvore">
+                            <param id="0" name="Instance variable">beat</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="587342372705716" type="Audio">
+                            <param id="0" name="Audio file">ixi</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">10</param>
+                            <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="749629112736634" type="Function">
+                            <param id="0" name="Name">&quot;CreateBees&quot;</param>
+                            <param id="1" name="Parameter {n}">Copa_Arvore.beeOriginX{###}Copa_Arvore.beeOriginY{###}round(random(1, 10))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="639423785636291">
+                            <conditions>
+                                <condition id="-10" name="For" sid="992304563846765" type="System">
+                                    <param id="0" name="Name">&quot;Itens_Arvore&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">round(random(1,QTDETREEITENS))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="928603507439954" type="System">
+                                    <param id="0" name="Variable">rdnItemTree</param>
+                                    <param id="1" name="Value">round(random(1, 8))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="119087011000971">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="615400436394112" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="353457598589485" type="System">
+                                            <param id="0" name="Object to create">manga_1</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="941973909263126" type="manga_1">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="437684820081362" type="manga_1">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="541978053775595" type="manga_1" />
+                                        <action id="-25" name="Move to bottom" sid="318181045138549" type="manga_1" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="488437199052506">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="699006332511378" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="538822294483511" type="System">
+                                            <param id="0" name="Object to create">manga_2</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="855051907805916" type="manga_2">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="390653495321096" type="manga_2">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="136981612178708" type="manga_2" />
+                                        <action id="-25" name="Move to bottom" sid="686695213831557" type="manga_2" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="193640420269289">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="316346452772750" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="790647360968573" type="System">
+                                            <param id="0" name="Object to create">manga_3</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="882677862494416" type="manga_3">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="238500777515443" type="manga_3">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="742022623544809" type="manga_3" />
+                                        <action id="-25" name="Move to bottom" sid="598957152569485" type="manga_3" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="523008201934964">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="571042881461498" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="227658590422548" type="System">
+                                            <param id="0" name="Object to create">manga_4</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="132287155806064" type="manga_4">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="614935671919023" type="manga_4">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="598572205148739" type="manga_4" />
+                                        <action id="-25" name="Move to bottom" sid="239671692359014" type="manga_4" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="583777273566478">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="970472714193715" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="348209418513934" type="System">
+                                            <param id="0" name="Object to create">galho_</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="283777009437530" type="galho_">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="152523107538676" type="galho_">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="746206215327323" type="galho_" />
+                                        <action id="-25" name="Move to bottom" sid="694895244726107" type="galho_" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="175191769262845">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="631076044746906" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="114966784796342" type="System">
+                                            <param id="0" name="Object to create">galho_01</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="337793115742739" type="galho_01">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="775617239999661" type="galho_01">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="648421804602128" type="galho_01" />
+                                        <action id="-25" name="Move to bottom" sid="748759704939491" type="galho_01" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="562110142819833">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="173219275973819" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">7</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="169334612259765" type="System">
+                                            <param id="0" name="Object to create">galho_2</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="609930696582502" type="galho_2">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="160693333021687" type="galho_2">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="625273755099923" type="galho_2" />
+                                        <action id="-25" name="Move to bottom" sid="919878841998506" type="galho_2" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359588973462557">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="305437716842133" type="System">
+                                            <param id="0" name="Variable">rdnItemTree</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="938852877834136" type="System">
+                                            <param id="0" name="Object to create">galho_3</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Copa_Arvore.X + (random(-Copa_Arvore.Width/4, Copa_Arvore.Width/4))</param>
+                                            <param id="3" name="Y">Copa_Arvore.Y + random(Copa_Arvore.Height/3) -25</param>
+                                        </action>
+                                        <action behavior="Physics" disabled="1" id="21" name="Set immovable" sid="741276386817383" type="galho_3">
+                                            <param id="0" name="Setting">1</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="917650136816876" type="galho_3">
+                                            <param id="0" name="Layer">&quot;Fundo_04&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="-24" name="Move to top" sid="358525422749289" type="galho_3" />
+                                        <action id="-25" name="Move to bottom" sid="120421940680061" type="galho_3" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="692345649754746">
+                            <conditions />
+                            <actions>
+                                <action id="-11" name="Add to" sid="769568789098028" type="Copa_Arvore">
+                                    <param id="0" name="Instance variable">countBeat</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="853592574988242">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="454074741912431" type="Galhos">
+                    <param id="0" name="Object">piso_level</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-16" name="Wait" sid="473926609073357" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Flash" disabled="1" id="0" name="Flash" sid="970017257018769" type="Galhos">
+                    <param id="0" name="&apos;On&apos; time">0</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">3</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="647497857663396" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="773717567633839" type="Galhos" />
+            </actions>
+        </event-block>
+        <event-block sid="886523499170583">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="312131328529576" type="Manga">
+                    <param id="0" name="Object">piso_level</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="675848528745077" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="970609077921335" type="Manga">
+                    <param id="0" name="&apos;On&apos; time">0</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">3</param>
+                </action>
+                <action id="-16" name="Wait" sid="588148470891390" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-9" name="Destroy" sid="592744631655091" type="Manga" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

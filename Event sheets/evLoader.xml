@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evLoader</name>
+    <events>
+        <include>evJoystick</include>
+        <variable constant="0" name="progressPointNumber" sid="672647060126586" static="0" type="number">0</variable>
+        <event-block sid="151648543877761">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="606053807008074" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="848732488656902" type="Function">
+                    <param id="0" name="Name">&quot;LoadGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set web font" sid="870716747409557" type="txtTituloFase">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="934985136433518" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">1</param>
+                </action>
+                <action id="5" name="Set web font" sid="457666289460123" type="txtProgress">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="212488427458676" type="txtProgress">
+                    <param id="0" name="Size (pt)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="963210200677430">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="567890637152561" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="170967630672149" type="txtProgress">
+                    <param id="0" name="Text">(round(loadingprogress*100)) &amp; &quot;%&quot;</param>
+                </action>
+                <action id="-5" name="Set width" sid="402011209681722" type="progressBar">
+                    <param id="0" name="Width">round(loadingprogress*1024)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="883427108108319">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="531922321131974" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="168033519979427" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">60</param>
+                </action>
+                <action id="3" name="Set font size" sid="897673070736868" type="txtProgress">
+                    <param id="0" name="Size (pt)">50</param>
+                </action>
+                <action id="-10" name="Add to" sid="868379197381495" type="System">
+                    <param id="0" name="Variable">progressPointNumber</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="821219338230399">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="221867990796531" type="System">
+                            <param id="0" name="Variable">progressPointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="736253508871501" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;CARREGANDO...&quot; </param>
+                        </action>
+                        <action id="-9" name="Set value" sid="293828911706431" type="System">
+                            <param id="0" name="Variable">progressPointNumber</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="635107331747581">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="381553937023900" type="System">
+                            <param id="0" name="Variable">progressPointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="602332637242343" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;CARREGANDO..&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829715985160465">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="114286169063690" type="System">
+                            <param id="0" name="Variable">progressPointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="709446909104629" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;CARREGANDO.&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="590114177825046">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="488605702189169" type="System">
+                            <param id="0" name="Variable">progressPointNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="148867667253066" type="txtTituloFase">
+                            <param id="0" name="Text">&quot;CARREGANDO&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="360153185614269">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="586281620318159" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="939436438970888" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="446747309766380" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

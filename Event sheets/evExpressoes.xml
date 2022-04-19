@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evExpressoes</name>
+    <events>
+        <include>evJoystick</include>
+        <include>evGameController</include>
+        <event-block sid="295503644576212">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="579389207628544" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="112627442357288" type="txtLabel">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="5" name="Set web font" sid="525728918351340" type="txtTituloFase">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="367369369997223" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;&apos;&apos;UAI, QUE ISSO SÔ!&apos;&apos;&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;É UM JOGO DIGITAL EDUCATIVO QUE PERMITE O JOGADOR ADENTRAR DENTRO DA CULTURA MINEIRA E DESCOBRIR A ORIGEM DE EXPRESSÕES FAMOSAS DO &apos;&apos;MINEIRÊS FALADO&apos;&apos;. VEM JOGAR ESSE TREM COM NÓIS, UAI!&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;GAME DESIGNER E PROGRAMADOR&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;PROF. DR. TADEU MOREIRA DE CLASSE (UNIRIO)&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;DESIGNER GRÁFICO&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;JULIANA ALVES INOCÊNCIO (IF SUDESTE/CATAGUAZES)&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;IDEALIZADOR&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;PROF. DR. RONNEY MOREIRA CASTRO (UNIVERSO)&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;JOGO BASEADO EM: RODRIGUES, F.W. (2020). &apos;&apos;REZALENDA: PALAVRAS E EXPRESSÕES ORIUNDAS DO PERÍODO COLONINAS&apos;&apos;. FREE WALKING TOUR TIRADENTES, MINRAS GERAIS.&quot;&#x0D;&#x0A;</param>
+                </action>
+                <action id="3" name="Set font size" sid="898923605706127" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">26</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="646623835929007" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="528572688228500" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="455082117606862">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="340534485533275" type="System">
+                            <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="845808155957597" type="btnLavar_egua">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="181617726218207">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="294031993956987" type="System">
+                            <param id="0" name="Variable">uai_so_destravado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="150064850885906" type="btnUaiSo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="331091441411230">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="806459029147860" type="System">
+                            <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="103232385694887" type="btnCaroco_angu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522885676859758">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="969076397222960" type="System">
+                            <param id="0" name="Variable">picar_a_mula_destravado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="913598584387912" type="btnPicar_mula">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="154772781578600">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="220399090149092" type="System">
+                            <param id="0" name="Variable">hasJoystick</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="163416401442800" type="btnAvancar">
+                            <param id="0" name="Animation">&quot;X&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="859801084299674" type="btnAvancar">
+                            <param id="0" name="Width">60</param>
+                            <param id="1" name="Height">60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="978175528232787">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="564081312605939" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="476284136559227" type="btnAvancar">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="698261170665558" type="btnAvancar">
+                            <param id="0" name="Width">129</param>
+                            <param id="1" name="Height">124</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="914205748076566">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="236448476573091" type="Mouse">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="743504516793178" type="Mouse">
+                    <param id="0" name="Object">btnUaiSo</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="555402073863879" type="Mouse">
+                    <param id="0" name="Object">btnLavar_egua</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="712199058917872" type="Mouse">
+                    <param id="0" name="Object">btnPicar_mula</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="980241812672914" type="Mouse">
+                    <param id="0" name="Object">btnCaroco_angu</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="676953886230864" type="Mouse">
+                    <param id="0" name="Object">btnAvancar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="541593647045853" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="832940034677893">
+            <conditions>
+                <condition id="-22" name="Else" sid="895980074064917" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="601456528515808" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="158193082387168">
+            <conditions>
+                <condition id="3" name="On touched object" sid="388457528376119" type="Touch">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="709479205544391" type="System">
+                    <param id="0" name="Layout">Tela_Inicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="648594932892198">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="426038813879596" type="mousehand">
+                    <param id="0" name="Object">btnRecomecar</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="965402312713990">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="969577014375467" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="528420696840391" type="System">
+                            <param id="0" name="Layout">Tela_Inicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="590040052203997">
+            <conditions>
+                <condition id="3" name="On touched object" sid="849109070310441" type="Touch">
+                    <param id="0" name="Object">btnAvancar</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="911194923348516" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="471296839681493" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="134441112799810">
+            <conditions>
+                <condition id="3" name="On touched object" sid="417151495790922" type="Touch">
+                    <param id="0" name="Object">btnUaiSo</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="428644527597111" type="System">
+                    <param id="0" name="Variable">uai_so_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="525344188462577" type="Function">
+                    <param id="0" name="Name">&quot;exp_uai_so&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="207644590856834">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="572275223621756" type="mousehand">
+                    <param id="0" name="Object">btnUaiSo</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="840331412637786" type="System">
+                    <param id="0" name="Variable">uai_so_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="231085699275676">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="173788528063685" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="550427536275255" type="Function">
+                            <param id="0" name="Name">&quot;exp_uai_so&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="477087887919208">
+            <conditions>
+                <condition id="3" name="On touched object" sid="595020682643521" type="Touch">
+                    <param id="0" name="Object">btnPicar_mula</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="537143645956461" type="System">
+                    <param id="0" name="Variable">picar_a_mula_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="917275187195022" type="Function">
+                    <param id="0" name="Name">&quot;exp_picar_mula&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723358817271111">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="731398599847873" type="mousehand">
+                    <param id="0" name="Object">btnPicar_mula</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="255341328341252" type="System">
+                    <param id="0" name="Variable">picar_a_mula_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="691655372141220">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="417944783410578" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="730890312433920" type="Function">
+                            <param id="0" name="Name">&quot;exp_picar_mula&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="886980017218287">
+            <conditions>
+                <condition id="3" name="On touched object" sid="314628225081618" type="Touch">
+                    <param id="0" name="Object">btnLavar_egua</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="652320557407997" type="System">
+                    <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="751220441358227" type="Function">
+                    <param id="0" name="Name">&quot;exp_lavar_a_egua&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476230406457776">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="318676300243520" type="mousehand">
+                    <param id="0" name="Object">btnLavar_egua</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="344822397204546" type="System">
+                    <param id="0" name="Variable">lavar_a_egua_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="816418764896070">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="574075023160885" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="314910178131429" type="Function">
+                            <param id="0" name="Name">&quot;exp_lavar_a_egua&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="834622300439729">
+            <conditions>
+                <condition id="3" name="On touched object" sid="398601681779835" type="Touch">
+                    <param id="0" name="Object">btnCaroco_angu</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="227651665879028" type="System">
+                    <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="159895428716403" type="Function">
+                    <param id="0" name="Name">&quot;exp_tem_caroco_nesse_angu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="463920293784328">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="307876774664744" type="mousehand">
+                    <param id="0" name="Object">btnCaroco_angu</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="134691920872727" type="System">
+                    <param id="0" name="Variable">caroco_no_angu_destravado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="949623875972831">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="256835403954570" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="314247457515404" type="Function">
+                            <param id="0" name="Name">&quot;exp_tem_caroco_nesse_angu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="744127502151055">
+            <conditions>
+                <condition id="0" name="On function" sid="161095934070407" type="Function">
+                    <param id="0" name="Name">&quot;exp_uai_so&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="973822386074208" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="726755103208227" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="258806123004647" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="818876886059198" type="txtTituloFase">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set font size" sid="597840925099458" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="807988928925663" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;UAI, SÔ!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="572524574356745" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="129836940896508" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">30</param>
+                </action>
+                <action id="0" name="Set text" sid="261540105849937" type="txtTituloFase">
+                    <param id="0" name="Text">&#x0D;&#x0A;&quot;QUEM NÃO CONHECE UM MINEIRO QUE TEM ESSA EXPRESSÃO NA PONTA DA LÍNGUA?&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;O &apos;&apos;UAI, SÔ&apos;&apos; DO MEINEIRO É SEM DÚVIDA UM PATRIMÔNIO DE MINAS GERAIS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;ELA TEVE ORIGEM NO CICLO DO OURO, ONDE MUITAS COMPANHIAS INGLESAS ADIQUIRIRAM ÁREAS DE EXPLORAÇÃO.&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="134216251846488" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="174313147453506" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;DURANTE ESSE PERÍODO, OS MINEIROS ENFRENTARAM UMA BARREIRA NO IDIOMA POIS, NÃO COMPREENDIAM O INGLÊS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;OS MINEIROS OBSERVARAM QUE OS INGLESES, SEMPRE QUE FAZIAM UM QUESTIONAMENTO FALAVAM &apos;&apos;WHY?’ (PORQUE) E ESSA PALAVRA EM INGLÊS TEM O MESMO SOM DO &apos;&apos;UAI&apos;&apos; NO MINEIRÊS.&quot;&#x0D;&#x0A;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="313177154683126" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="220341938991418" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;ASSIM, QUANDO UM INGLÊS VINHA PERGUNTAR SOBRE ALGUM PROBLEMA, OS TRABALHADORES MINEIROS ASSOCIARAM O SOM DO &apos;&apos;WHY&apos;&apos; COM UMA EXPRESSÃO DE SURPRESA.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;JÁ O &apos;&apos;SÔ&apos;&apos; SURGIU NA MESMA LINHA. OS TRABALHADORES OBSERVARAM OS INGLESES SEMPRE QUESTIONANDO &apos;&apos;WHY, SIR?&apos;&apos; (PORQUE, SENHOR?), E, ASSIM, IMCORPORARAM O &apos;&apos;SÔ&apos;&apos;.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="799756846845782" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="830035315155104" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">50</param>
+                </action>
+                <action id="0" name="Set text" sid="660378417280667" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;EXEMPLO DE USO NO MINEIRÊS:&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;UAI, SÔ! O QUE ISSO? UAI, SÔ! SEI NÃO&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="844080740296264" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="833871370415442" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="631537301398962" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="451673398636589">
+            <conditions>
+                <condition id="0" name="On function" sid="968466682774763" type="Function">
+                    <param id="0" name="Name">&quot;exp_picar_mula&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="572870692603170" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="141613917950187" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="424296540481772" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="167172430919994" type="txtTituloFase">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set font size" sid="292735541877090" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="128362376022722" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;PICAR A MULA&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="782140002260067" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="868376717795779" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">30</param>
+                </action>
+                <action id="0" name="Set text" sid="583050403959654" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;NA ÉPOCA DO PERÍODO COLONIAL BRASILEIRO, O CAVALO ERA O MEIO DE TRANSPORTE MAIS USADO. PORÉM, ERAM CAROS!&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;QUEM NÃO TINHA CONDIÇÃO DE COMPRAR, USAVA MULAS. MAS AS MULAS SÃO ANIMAIS MAIS LENTOS E MENOS INTELIGENTES QUE OS CAVALOS E, FREQUENTEMENTE, NÃO OBEDECIAM AOS COMANDOS DE SEUS DONOS E EMPACAVAM.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="339900886100701" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="972693799797608" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;PARA QUE ELAS RESPONDESSEM AOS COMANDOS, ESSES DONOS COMEÇARAM A USAR ESPORAS PONTIAGUDAS NAS SUAS BOTAS. ASSIM, QUANDO PRECISAVAM DE QUE A MULA RESPEITAVA ALGUM COMANDO, ELES AS ESPETAVAM COM A ESPORA.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;COM ISSO, AO &apos;&apos;PICA A MULA&apos;&apos;, A DOR CAUSADA PELA ESPORA FAZIA O ANIMAL ANDAR E O DONO PODIA SEGUIR SEU RUMO.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;ENTÃO A EXPRESSÃO &apos;&apos;PICA A MULA&apos;&apos; COMEÇOU A SER USADA PARA SE REFERERIR À NECESSIDADE DE ALGUÉM IR EMBORA.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="490696534960429" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="750350489951127" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;ENTÃO A EXPRESSÃO &apos;&apos;PICA A MULA&apos;&apos; COMEÇOU A SER USADA PARA SE REFERERIR À NECESSIDADE DE ALGUÉM IR EMBORA.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="523717636399728" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="805932432147102" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">35</param>
+                </action>
+                <action id="0" name="Set text" sid="692276977554117" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;EXEMPLO DE USO NO MINEIRÊS:&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;USO: ESCUTEI UM BALHO ESTRANHO, VOU PICAR MULA DAQUI!&quot;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;SIGNIFICADO: ESCUTEI UM BALHO ESTRANHO, VOU EMBORA DAQUI!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="158440948220874" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="286518636115565" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="846002201131490" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="646111080421611">
+            <conditions>
+                <condition id="0" name="On function" sid="434079022954422" type="Function">
+                    <param id="0" name="Name">&quot;exp_lavar_a_egua&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="922151621981759" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="347640640432165" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="718859232811176" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="657698414442392" type="txtTituloFase">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set font size" sid="678831283959805" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="676932428702832" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;LAVAR A ÉGUA&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="745407073472847" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="925135177375140" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">30</param>
+                </action>
+                <action id="0" name="Set text" sid="595218490824409" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;NA ÉPOCA DO IMPÉRIO BRASILEIRO OS ESCRAVOS USAVAM MULAS E ÉGUAS PARA O TRANSPORTE DE PEDRAS E MINEIRAIS PRECIOSOS DE DENTRO DAS MINAS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;PORÉM, MUITAS DESSAS PEDRAS ERAM PONTIAGUDAS E MACHUCAVAM AS COSTAS DOS ANIMAIS, E ESTES MACHUCADOS ATRAÍAM MOSCAS E OUTROS INSETOS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="203601048531865" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="171275976088272" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;PARA RESOLVER ESSE PROBLEMA, OS ESCRAVAS COBRIAM COM ARGILA E BARRO AS FERIDAS DAS ÉGUAS, COM E DESCULPA QUE ERA PARA PROTEGER AS FERIDAS NAS COSTAS DAS MULHAS DOS INSETOS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;MAS, A VERDADE É QUE OS ESCRAVOS ESCONDIAM PEQUENAS PEPITAS DE OURO NO BARRO QUE APLICAVAM NO FERIMENTO DO ANIMAL.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="100800885211680" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="388910417185417" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;ASSIM, QUANDO UM ESCRAVO IA LIMPAR O ANIMAL, ELE &apos;&apos;LAVAVA A ÉGUA&apos;&apos; E PEGAVA TODOS O OURO ESCONDIDO PARA COMPRAR A SUA LIBERDADE. DESTA MANEIRA, MUITOS ESCRAVOS CONSEGUIRAM A LIBERADADE LAVANDO A ÉGUA, LITERALMENTE.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;ENTÃO A EXPRESSÃO &apos;&apos;LAVAR A ÉGUA&apos;&apos; COMEÇOU A SER USADA COMO SINÔNIMO DE SORTE, DE ALGUER SE DAR BEM EM ALGUM MOMENTO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="994224634445085" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="321999601448778" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">35</param>
+                </action>
+                <action id="0" name="Set text" sid="764362462511542" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;EXEMPLO DE USO NO MINEIRÊS:&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;USO: ESTOU SENTINDO QUE VOU LAVAR A ÉGUA NA PROVA AMANHA.&quot;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;SIGNIFICADO: ESTOU SENTINDO QUE VOU ME DAR MUITO BEM NA PROVA AMANHÃ.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="349458628550010" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="270099041638938" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="700062813970798" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="438702726905811">
+            <conditions>
+                <condition id="0" name="On function" sid="222579976410510" type="Function">
+                    <param id="0" name="Name">&quot;exp_tem_caroco_nesse_angu&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="984442762209650" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="663039440393246" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="685188808326299" type="btnAvancar">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="805430593638834" type="txtTituloFase">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="3" name="Set font size" sid="241675367385987" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">80</param>
+                </action>
+                <action id="0" name="Set text" sid="212208852084052" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;TEM CAROÇO NESSE ANGU&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="377526477839747" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="852594155106002" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">30</param>
+                </action>
+                <action id="0" name="Set text" sid="210853808559283" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;DURANTE O SÉCULO XVIII O BRASIL RECEBIA MILHARES DE ESCRAVOS VINDOS DA ÁFRICA.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;POR SEREM CONSIDERADOS UM &apos;&apos;BEM MATERIAL&apos;&apos; RELATIVAMENTE BARADO E ACESSÍVO, ESSES ESCRAVOS ERAM EXPLORADOS À EXAUSTÃO. PORIS SE MORRESSEM, SEU DONO PODERIA FACILMENTE COMPRAR OUTRO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="482666314971995" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="621940377049559" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;ESTES ESCRAVOS EXECUTAVAM TRABALHOS PESADOS, RIGOROSAS PUNIÇÕES E TINHAM UMA ALIMENTAÇÃO DE PÉSSIMA QUALIDADE, MUITAS DAS VEZES, SENDO APENAS ANGU DE MILHO.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;DIZEM QUE AS ESCRAVAS DA COZINHA NA CASA GRANDE TINHAM MUITA PENA DESSES ESCRAVOS E SEMPRE ROUBAVAM CARNE E TORRESMO DOS SENHORES E MISTURAVAM NO ANGU DOS ESCRAVOS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="940362342732001" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="652364051398683" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;QUANDO TERMINAVA O DIA, O ANGU DE MILHO ERA LEVADO NA SENZALA. QUANDO OS ESCRAVOS COMEÇARAM A COMER E ACHAVAM A CARNE E AVISAVAM FALANDO: &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos;. COM ESSES CODIGOS, ELES REFORÇAVAM SUA ALIMENTAÇÃO.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;ASSIM, EM MINERÊS A EXPRESSÃO &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos; SIMBOLOZA ALGO QUE É FEITO ESCONDIDO OU ALGO ESTRANHO.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="927723123110597" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="451502016411271" type="txtTituloFase">
+                    <param id="0" name="Size (pt)">32</param>
+                </action>
+                <action id="0" name="Set text" sid="720625419727999" type="txtTituloFase">
+                    <param id="0" name="Text">&quot;EXEMPLO DE USO NO MINEIRÊS:&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;USO: ELE NUNCA ME CONVIDA PRA SAIR, HOJE ELE CONVIDOU, TEM CAROÇO NESSE ANGU!&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;SIGNIFICADO: ELE NUNCA ME CONVIDA PRA SAIR, HOJE ELE CONVIDOU, TEM ALGO ESTRANHO!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="419822928018088" type="System">
+                    <param id="0" name="Tag">&quot;proxima&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="137465583130989" type="System">
+                    <param id="0" name="Layer">&quot;Botoes&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="483357727822653" type="System">
+                    <param id="0" name="Layer">&quot;Narrativa&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
