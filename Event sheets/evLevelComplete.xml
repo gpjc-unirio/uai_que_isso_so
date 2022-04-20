@@ -82,6 +82,38 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="484621542530147">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="658431883266673" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="840612369287730" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Value">levelExecutando + 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="964467373213850">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="154829057676812" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">ultimoLevelDesbloqueado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="529073895179874" type="System">
+                                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                                    <param id="1" name="Value">nivelDesbloqueado</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block any="1" sid="108260054143789">

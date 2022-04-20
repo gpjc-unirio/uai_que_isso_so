@@ -30,7 +30,7 @@
                 <condition id="-2" name="On start of layout" sid="318968667015640" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="756546439448659" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="756546439448659" type="Function">
                     <param id="0" name="Name">&quot;LoadGame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>

@@ -39,7 +39,7 @@
                 <event-block sid="674443210454459">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="285523044982908" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -53,7 +53,7 @@
                 <event-block sid="832503517410234">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="331676889168324" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -70,7 +70,7 @@
                 <event-block sid="439192359023891">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="562530648326003" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -160,7 +160,7 @@
                 <event-block sid="348558736768469">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="972701458100117" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -188,7 +188,7 @@
                 <event-block sid="209492180727683">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="570000667246805" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -216,7 +216,7 @@
                 <event-block sid="335559714940634">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="363095460915187" type="System">
-                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">4</param>
                         </condition>

@@ -374,7 +374,7 @@
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="718773319520607" type="System">
                                     <param id="0" name="Variable">nivelDesbloqueado</param>
-                                    <param id="1" name="Comparison">4</param>
+                                    <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">ultimoLevelDesbloqueado</param>
                                 </condition>
                             </conditions>
@@ -522,6 +522,46 @@
                     <param id="0" name="Cursor style">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="942042426976233">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="487140165025085" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="940789153623371">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="457924024841256" type="System">
+                            <param id="0" name="Variable">estrelasNivel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="160247760008274" type="System">
+                            <param id="0" name="Variable">nivelDesbloqueado</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="291444587765192">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="582917626996559" type="System">
+                                    <param id="0" name="Variable">nivelDesbloqueado</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">ultimoLevelDesbloqueado</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="168211841321673" type="System">
+                                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                                    <param id="1" name="Value">nivelDesbloqueado</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

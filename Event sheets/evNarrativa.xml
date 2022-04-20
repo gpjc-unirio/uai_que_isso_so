@@ -1818,6 +1818,10 @@
                     <param id="0" name="Variable">uai_so_destravado</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="264582343128974" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">2</param>
+                </action>
                 <action id="0" name="Call function" sid="971408322986188" type="Function">
                     <param id="0" name="Name">&quot;SaveGame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
@@ -2032,6 +2036,10 @@
                 <action id="-9" name="Set value" sid="690652309447796" type="System">
                     <param id="0" name="Variable">picar_a_mula_destravado</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="772925691410345" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">3</param>
                 </action>
                 <action id="0" name="Call function" sid="450263678542683" type="Function">
                     <param id="0" name="Name">&quot;SaveGame&quot;</param>
@@ -2306,6 +2314,10 @@
                     <param id="0" name="Variable">lavar_a_egua_destravado</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="795971402689442" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">4</param>
+                </action>
                 <action id="0" name="Call function" sid="921990510210013" type="Function">
                     <param id="0" name="Name">&quot;SaveGame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
@@ -2577,6 +2589,10 @@
                 <action id="-9" name="Set value" sid="371383034679225" type="System">
                     <param id="0" name="Variable">levelConcluido</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="569743425353322" type="System">
+                    <param id="0" name="Variable">ultimoLevelDesbloqueado</param>
+                    <param id="1" name="Value">5</param>
                 </action>
                 <action id="-9" name="Set value" sid="177598136213717" type="System">
                     <param id="0" name="Variable">caroco_no_angu_destravado</param>

@@ -22,6 +22,10 @@
                     <param id="0" name="Variable">levelExecutando</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Call function" sid="116736346905196" type="Function">
+                    <param id="0" name="Name">&quot;LoadGame&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="700284285275585">
