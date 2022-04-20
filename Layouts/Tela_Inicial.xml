@@ -97,7 +97,7 @@
                 </instance>
                 <instance type="txtFalaPersonagem" uid="62">
                     <properties>
-                        <text>v.1.0.15</text>
+                        <text>v.1.0.25</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-35,400,0</font>
                         <color>0,0,0</color>

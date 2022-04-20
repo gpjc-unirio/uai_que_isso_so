@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Splash</name>
-    <sid>288442457714739</sid>
+    <sid>188387408983548</sid>
     <event-sheet>evSplash</event-sheet>
     <size>
         <width>1920</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="366738147496828">
+        <layer name="Layer 0" sid="441982156882028">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="fundo_b" uid="370">
+                <instance type="Carregando" uid="370">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -39,16 +39,38 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>931</x>
-                        <y>495</y>
+                        <x>-302</x>
+                        <y>-300</y>
                         <z>0</z>
-                        <width>4007.520019531</width>
-                        <height>2004.686279297</height>
+                        <width>2474.361328125</width>
+                        <height>1392.391723633</height>
                         <depth>0</depth>
-                        <hotspotX>0.500231147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="ifsudeste_cataguases" uid="688">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>573</x>
+                        <y>882</y>
+                        <z>0</z>
+                        <width>212.661315918</width>
+                        <height>306.00769043</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="unirio" uid="705">
@@ -61,11 +83,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>923</x>
-                        <y>883</y>
+                        <x>895.240234375</x>
+                        <y>878.243896484</y>
                         <z>0</z>
-                        <width>279.007232666</width>
-                        <height>249.384231567</height>
+                        <width>355.944854736</width>
+                        <height>318.153198242</height>
                         <depth>0</depth>
                         <hotspotX>0.501234591</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -73,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ppgi" uid="688">
+                <instance type="ppgi" uid="706">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -83,33 +105,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1290</x>
-                        <y>880</y>
+                        <x>1336</x>
+                        <y>882</y>
                         <z>0</z>
-                        <width>375.810333252</width>
-                        <height>255.583724976</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ifsudeste_cataguases" uid="706">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>587</x>
-                        <y>891</y>
-                        <z>0</z>
-                        <width>176.677276611</width>
-                        <height>246.053161621</height>
+                        <width>466.811859131</width>
+                        <height>317.472686768</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

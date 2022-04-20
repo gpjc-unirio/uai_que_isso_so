@@ -582,7 +582,7 @@
                     <param id="0" name="Tag">&quot;proxima&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="171275976088272" type="txtTituloFase">
-                    <param id="0" name="Text">&quot;PARA RESOLVER ESSE PROBLEMA, OS ESCRAVAS COBRIAM COM ARGILA E BARRO AS FERIDAS DAS ÉGUAS, COM E DESCULPA QUE ERA PARA PROTEGER AS FERIDAS NAS COSTAS DAS MULHAS DOS INSETOS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;MAS, A VERDADE É QUE OS ESCRAVOS ESCONDIAM PEQUENAS PEPITAS DE OURO NO BARRO QUE APLICAVAM NO FERIMENTO DO ANIMAL.&quot;</param>
+                    <param id="0" name="Text">&quot;PARA RESOLVER ESSE PROBLEMA, OS ESCRAVAS COBRIAM COM ARGILA E BARRO AS FERIDAS DAS ÉGUAS, COM E DESCULPA QUE ERA PARA PROTEGER AS FERIDAS NAS COSTAS DAS MULAS DOS INSETOS.&quot;&#x0D;&#x0A;&amp;NEWLINE&amp;NEWLINE&amp;&#x0D;&#x0A;&quot;MAS, A VERDADE É QUE OS ESCRAVOS ESCONDIAM PEQUENAS PEPITAS DE OURO NO BARRO QUE APLICAVAM NO FERIMENTO DO ANIMAL.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="100800885211680" type="System">
                     <param id="0" name="Tag">&quot;proxima&quot;</param>

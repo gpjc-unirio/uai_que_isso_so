@@ -2,7 +2,7 @@
 <c2project>
     <name>Uai! Que isso sô!</name>
     <description>Uai! Que isso sô!</description>
-    <version>1.0.15</version>
+    <version>1.0.25</version>
     <author>Tadeu Moreira de Classe</author>
     <author-email>tadeu.classe@uniriotec.br</author-email>
     <author-website>http://</author-website>
@@ -4139,6 +4139,62 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Assets Uai\rio_cima_f2.png" />
         </object-type>
+        <object-type name="ifsudeste_cataguases" sid="824047686462804">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="741264525120076" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\ifsudeste_cataguases.png">
+                        <collision-poly>
+                            <point x="0.316832" y="0.220183" />
+                            <point x="0.5" y="0.00458716" />
+                            <point x="0.689769" y="0.215596" />
+                            <point x="0.782178" y="0.5" />
+                            <point x="0.833333" y="0.884174" />
+                            <point x="0.188119" y="0.869266" />
+                            <point x="0.181518" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="unirio" sid="106584389988697">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203202592293829" speed="5">
+                    <frame duration="1" hotspotX="0.501235" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\unirio.png">
+                        <collision-poly>
+                            <point x="0.17037" y="0.190608" />
+                            <point x="0.498765" y="0.00828729" />
+                            <point x="0.832099" y="0.187845" />
+                            <point x="0.716049" y="0.5" />
+                            <point x="0.967901" y="0.964088" />
+                            <point x="0.498765" y="1" />
+                            <point x="0.0320988" y="0.964088" />
+                            <point x="0.28642" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ppgi" sid="605591295871493">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="236093590230397" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\ppgi.png">
+                        <collision-poly>
+                            <point x="0.336779" y="0.4952" />
+                            <point x="0.5" y="0.1072" />
+                            <point x="0.577802" y="0.6208" />
+                            <point x="0.597933" y="0.5" />
+                            <point x="0.996192" y="0.9944" />
+                            <point x="0.5" y="0.9176" />
+                            <point x="0.0054407" y="0.992" />
+                            <point x="0.336779" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Alfabeto" plugin-id="Sprite" sid="123669849436878">
@@ -4248,6 +4304,7 @@
         <layout>GameOver.xml</layout>
         <layout>ConclusaoNivel.xml</layout>
         <layout>Loader.xml</layout>
+        <layout>Splash.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>evTelaInicial.xml</event-sheet>
@@ -4276,6 +4333,7 @@
         <event-sheet>evExpressoes.xml</event-sheet>
         <event-sheet>evJoystick.xml</event-sheet>
         <event-sheet>evCreditos.xml</event-sheet>
+        <event-sheet>evSplash.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="0" />
