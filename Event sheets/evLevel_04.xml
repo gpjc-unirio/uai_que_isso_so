@@ -68,7 +68,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="414663598138948" type="System">
                     <param id="0" name="Variable">itensTotal</param>
-                    <param id="1" name="Value">15</param>
+                    <param id="1" name="Value">25</param>
                 </action>
                 <action id="-9" name="Set value" sid="747632877898226" type="System">
                     <param id="0" name="Variable">letrasColetadas</param>

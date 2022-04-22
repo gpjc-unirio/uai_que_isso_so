@@ -10,10 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Splash</layout>
-        <layout order="2">Loader</layout>
-        <layout active="1" order="3">Tela_Inicial</layout>
-        <event-sheet order="0">evSplash</event-sheet>
+        <layout order="3">Level_04</layout>
+        <layout order="5">Tela_Inicial</layout>
+        <event-sheet order="0">evNarrativa</event-sheet>
+        <event-sheet order="1">evCreditos</event-sheet>
+        <event-sheet order="2">evNiveis</event-sheet>
+        <event-sheet active="1" order="4">evTelaInicial</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

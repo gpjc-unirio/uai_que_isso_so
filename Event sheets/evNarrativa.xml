@@ -519,7 +519,7 @@
                 </action>
                 <action id="0" name="Call function" sid="973308571345135" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;AÍ PERGUNTEI MINHA MÃE, SE ELA SABIA O MOTIVO E ONDE SURGIU ISSO AQUI.&quot; &amp; newline &amp; &quot;POR EXEMPLO: QUERIA SABÊ DE ONDE VEIO O &apos;&apos;UAI&apos;&apos;, UAI!&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AÍ PERGUNTEI MINHA MÃE, SE ELA SABIA DE ONDE SURGIU AS NOSSAS EXPRESSÕES. POR EXEMPLO: QUERIA SABÊ DE ONDE VEIO O &apos;&apos;UAI&apos;&apos;, UAI!&quot;</param>
                 </action>
                 <action id="25" name="Play at object" sid="893110518859255" type="Audio">
                     <param id="0" name="Audio file">uai</param>
@@ -581,7 +581,7 @@
                 </action>
                 <action id="0" name="Call function" sid="655424456092856" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;UAI SÔ, É MEMO! NUM É QUE EU TAVA ESQUECENDO DOCÊ!&quot; &amp; NEWLINE &amp; &quot;PESSOAL ESSE É MEU GALO, O CHICO. TÁ COMIGO POR TODAS AS BANDAS.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI SÔ, É MEMO! NÃO É QUE EU TAVA ESQUECENDO DOCÊ!&quot; &amp; NEWLINE &amp; &quot;PESSOAL ESSE É MEU GALO, O CHICO. TÁ COMIGO POR TODAS AS BANDAS.&quot;</param>
                 </action>
                 <action id="25" name="Play at object" sid="205032537117184" type="Audio">
                     <param id="0" name="Audio file">uai_so</param>
@@ -625,7 +625,7 @@
                 </action>
                 <action id="0" name="Call function" sid="228946357317965" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;NÚ! TÃO SIMBORA CHICO. QUE SE NÓIS QUER SABER DE ONDE VEIO NOSSAS EXPRESSÕES, TEM UM MONTÃO DE TREM PRA NÓS FAZER.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;NÚ! TÃO SIMBORA CHICO. QUE SE NÓIS QUISER SABER DE ONDE VEIO NOSSAS EXPRESSÕES, TEM UM MONTÃO DE TREM PRA NÓS FAZER.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="459950296478693" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -725,7 +725,7 @@
                 </action>
                 <action id="0" name="Call function" sid="849760432388164" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;SERÁ QUE SE NÓIS JOGAR UMAS FOLHAS DE COUVE PRA ELAS, ELAS ACALMA E DEIXA NOIS PASSAR?&quot; </param>
+                    <param id="1" name="Parameter {n}">&quot;SERÁ QUE SE NÓIS JOGAR UMAS FOLHAS DE COUVE PRA ELAS, ELAS ACALMA E DEIXA NÓIS PASSAR?&quot; </param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="676934849140212" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -759,7 +759,7 @@
                 </action>
                 <action id="0" name="Call function" sid="499459108932355" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! TAMO ESPERANDO O QUÊ? BORA COMEÇAR...&quot; </param>
+                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! TAMO ESPERANDO O QUÊ ENTÃO? BORA COMEÇAR...&quot; </param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="723420377179638" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -783,6 +783,40 @@
                     <param id="1" name="Parameter {n}">&quot;(COCÓ!)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! TÃO VÃO COMEÇAR ESSE TREM.&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="673346576075704" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="269787508076050" type="Audio">
+                    <param id="0" name="Audio file">ixi</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="366755718086422" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AHH CHICO, ANTES DE EU ESQUECER. SE NÓIS FICAR SEM ENERGIA, MACHUCADOs OU CANSADOs...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="176060051361501" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="735391980125544" type="Audio">
+                    <param id="0" name="Audio file">quejim</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="877151838095730" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...NÓIS PODE COMER UM PEDAÇO DE QUEJIM MINAS QUE NOSSA ENERGIA VOLTA. SANTO REMÉDIO ESSE QUEJIM!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="316606028005507" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="596230049666262" type="System">
@@ -891,7 +925,7 @@
                 </action>
                 <action id="0" name="Call function" sid="320023112574008" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI, SÔ! MAS A JUREMA NÃO CUSTUMA IR LONGE. SOSSEGA QUE NÓIS ACHA ELA.&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI, SÔ! MAS A JUREMA NÃO CUSTUMA IR LONGE. SOSSEGA O FAXO QUE NÓIS ACHA ELA.&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="453902539993491" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -980,7 +1014,7 @@
                 </action>
                 <action id="0" name="Call function" sid="462901266969004" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ACHO QUE DÁ TIÃO. ELAS GOSTAM DE UMA COUVE FRESCA,...&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCOCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ACHO QUE DÁ TIÃO. ELAS GOSTAM DE UMA COUVE FRESCA...&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="961177157847633" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -992,9 +1026,26 @@
                 <action id="-41" name="Wait for signal" sid="471067932328045" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
+                <action id="25" name="Play at object" sid="546845057546496" type="Audio">
+                    <param id="0" name="Audio file">quejim</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="994395534320820" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, SE NÓIS FOR BICADO, NÓIS CORRE. E SE NÓIS CANSAR, NÓIS COME UM QUEJIM PRA MELHORAR...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="533132303829101" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="593993212494329" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;UAI, SÔ! ENTÃO VAMOS COMEÇAR. VAMOS TOMAR BASTANTE CUIDADO...&quot;&amp;newline&amp; &quot;...E DEPOIS, NÓIS &apos;&apos;PICA A MULA&apos;&apos; DALÍ NUM PÉ SÓ.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MEMO ASSIM, VAMOS TOMAR BASTANTE CUIDADO...&quot;&amp;newline&amp; &quot;...E DEPOIS, NÓIS &apos;&apos;PICA A MULA&apos;&apos; DALÍ NUM PÉ SÓ.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="634847869331080" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1011,14 +1062,14 @@
                 </action>
                 <action id="0" name="Call function" sid="545587150672312" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;FALANDO NISSO, SE NÓIS ACHAR A JUREMA E NÃO VOLTAR MUITO CANSADO OU MACHUADO...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;A MÃE DISSE QUE SE NÓIS ACHAR A JUREMA E NÃO VOLTAR MUITO CANSADO OU MACHUCADO...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="350694271190734" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="606201236028505" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...MINHA MÃE DISSE QUE CONTA PRA NÓIS DE ONDE VEIO ESSE TREM DE &apos;&apos;PICAR A MULA&apos;&apos;.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...ELA VAI CONTAR PRA NÓIS DE ONDE VEIO ESSE TREM DE &apos;&apos;PICAR A MULA&apos;&apos;.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="436263178328189" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1097,7 +1148,7 @@
                 </action>
                 <action id="0" name="Call function" sid="149936344372267" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">newline &amp; &quot;CHICO, NOIS TEM UM AFAZÊR AGORA ANTES DO ALMOÇO...&quot;</param>
+                    <param id="1" name="Parameter {n}">newline &amp; &quot;CHICO, NÓIS TEM UM AFAZÊR AGORA ANTES DO ALMOÇO...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="802352766456177" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1183,7 +1234,7 @@
                 </action>
                 <action id="0" name="Call function" sid="420523538267399" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ENTÃO MELHOR NÓIS NÃO CAIR NA ÁGURA TIÃO...&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;ENTÃO MELHOR NÓIS NÃO CAIR NA ÁGUA TIÃO...&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="204954555206643" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1231,9 +1282,16 @@
                 </action>
                 <action id="0" name="Call function" sid="606496307881830" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;OHHH CHICO! TÔ SENTINDO QUE NÓIS VAMOS &apos;&apos;LAVAR A ÉGUA&apos;&apos; NESSA PESCARIA DE HOJE...&quot; </param>
+                    <param id="1" name="Parameter {n}">&quot;OHHH CHICO! TÔ SENTINDO QUE NÓIS VAMOS &apos;&apos;LAVAR A ÉGUA&apos;&apos; NESSA PESCARIA DE HOJE, SÔ!&quot; </param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="557492883693271" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="663693152773068" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;TEM UM TANTÃO DE PEIXE DE TODO TAMANHO NESSE RIO HOJE, UAI!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="535847071762782" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="25" name="Play at object" sid="331839591037714" type="Audio">
@@ -1574,7 +1632,7 @@
                 </action>
                 <action id="0" name="Call function" sid="466431530502420" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">newline&amp;&quot;VAMOS COMEÇAR ENTÃO ESSE TREM RÁPIDO? TÔ DOIDOS PRA SABER O POR QUÊ DESSAS MANGA TUDO...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;VAMOS COMEÇAR ENTÃO ESSE TREM RÁPIDO? TÔ DOIDOS PRA SABER O POR QUÊ DESSAS MANGA TUDO...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="570265356478732" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1614,7 +1672,7 @@
                     <param id="0" name="Size (pt)">80</param>
                 </action>
                 <action id="0" name="Set text" sid="945814868043017" type="txtTituloFase">
-                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;MANGAS E ANGU?&quot;</param>
+                    <param id="0" name="Text">&quot;CAPÍTULO:&quot;&amp;newline&amp;&quot;CAROÇO DE MANGA NO ANGU?&quot;</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="632847804288975" type="System">
                     <param id="0" name="Layer">&quot;Titulo&quot;</param>
@@ -1675,7 +1733,7 @@
                 </action>
                 <action id="0" name="Call function" sid="978115719955446" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;CHICO, MÃE CONTOU PRA NÓIS DE ONDE VEIO O &apos;&apos;&quot; &amp; expressaoMineira &amp; &quot;&apos;&apos;.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, A MÃE CONTOU PRA NÓIS DE ONDE VEIO O &apos;&apos;&quot; &amp; expressaoMineira &amp; &quot;&apos;&apos;.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="109434884394977" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1692,28 +1750,45 @@
                 </action>
                 <action id="0" name="Call function" sid="117388641025937" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;DIZIAM OS ANTIGOS QUE NO CICLO DO OURO, MINAS GERAIS CHAMOU ATENÇÃO DE GRANDES COMPANHIAS INGLESAS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;A MINEIRADA MAIS ANTIGA CONTA QUE NO CICLO DO OURO, MINAS GERAIS CHAMOU ATENÇÃO DE GRANDES COMPANHIAS INGLESAS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="131966251812906" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="886034239967033" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...E OS TRABALHADORES MINEIROS TINHAM GRANDE BARREIRAS PARA COMPREENDER O IDIOMA DE SEUS PATRÕES...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E OS TRABALHADORES MINEIROS NÃO ENTENDIAM MUITO BEM O QUE OS PATRÕES FALAVMA NÃO, UAI!...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="253622671318062" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="203939978975866" type="Function">
+                <action id="0" name="Call function" sid="666796260178002" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...AO OBSERVAR QUE SEUS PATRÕES SEMPRE OS PERGUNTAVAM SOBRE OS PROBLEMAS NAS OBRAS (&apos;&apos;Why&apos;?&apos; QUE É &apos;&apos;POR QUÊ&apos;&apos; ME INGLÊS)...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MAS ELES FICAM OLHANDO OS OUTRS FALAREM E VIRAM QUE SEUS PATRÕES SEMPRE APONTAVAM PROS PROBLEMAS NAS OBRAS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="781525073947899" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
+                <action id="25" name="Play at object" sid="214134619955353" type="Audio">
+                    <param id="0" name="Audio file">uai</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="203939978975866" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...FALAVAM NAQUELA LÍNGUA DELES (&apos;&apos;Why&apos;?&apos; QUE É &apos;&apos;POR QUÊ&apos;&apos; EM INGLÊS)...&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="132442271014522" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="894520887692930" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...OS MINEIROS ASSOCIARAM O SOM DO &apos;&apos;POR QUÊ?&apos;&apos; EM INGLÊS COM PERGUNTAS QUE ERAM FEITAS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;... ÓIA PROCÊ VÊ! OS MINEIROS ASSOCIARAM O SOM DO &apos;&apos;POR QUÊ?&apos;&apos; EM INGLÊS COM PERGUNTAS QUE ERAM FEITAS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="754293434083277" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1751,7 +1826,7 @@
                 </action>
                 <action id="0" name="Call function" sid="435576124369855" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;MAS E O &apos;SÔ&apos;? VEM DE ONDE?&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;MAS E O &apos;SÔ&apos;? VEM DE ONDE, SÔ?&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="543804579512469" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1768,7 +1843,7 @@
                 </action>
                 <action id="0" name="Call function" sid="360184942830955" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;VEM DESSA MESMA LINHA DE RACIOCÍCIO, SÔ!&quot; &amp;newline&amp; &quot;AO OBSEVAR TRABALHADORES QUE FALAVAM EM INGLES COM OS PATRÕES...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;UAI! VEM DO MESMO LUGAR DO UAI, UAI!&quot; &amp;newline&amp; &quot;AO OBSEVAR TRABALHADORES QUE FALAVAM EM INGLÊS COM OS PATRÕES...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="731170543286544" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1809,7 +1884,7 @@
                 </action>
                 <action id="0" name="Call function" sid="135280078662533" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM? BAUM SABER!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="323408514790419" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1894,7 +1969,7 @@
                 </action>
                 <action id="0" name="Call function" sid="896712856951808" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;ATÉ HOJE OS CAVALOS SÃO UM MEIO DE TRANSPORTE MUITO USADO NESSAS BANDA DE MINAS GERAIS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ATÉ NOS TEMPO DE HOJE POR ESSA BANDAS, OS CAVALOS SÃO UM  TRANSPORTE MUITO USADOS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="274387075697304" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1935,21 +2010,21 @@
                 </action>
                 <action id="0" name="Call function" sid="671263248427310" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...SÓ QUE AS MULAS ERAM MUITO LENTAS E MENOS INTELIGENTES QUE OS CAVALOS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...SÓ QUE AS MULAS ERAM MUITO LENTAS, LESAS E MENOS INTELIGENTES QUE OS CAVALOS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="169025706023082" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="619610066934498" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...  E SEUS DONOS PASSAVAM APERTO PRA FAZER ELAS OBDEDECEREM...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, SEUS DONOS PASSAVAM APERTO PRA ELAS OBDEDECEREM...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="498593906494753" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="245021728881061" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...PRA RESOLVER ISSO, OS DONOS USAVAM ESPORAS COM PONTA NAS BOTAS. IGUAL AS SUAS CHICO...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E, PRA RESOLVER ISSO, OS DONOS USAVAM ESPORAS COM PONTA NAS BOTAS. IGUAL AS SUAS CHICO...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="881002595829198" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1966,14 +2041,14 @@
                 </action>
                 <action id="0" name="Call function" sid="525545725090749" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO EU JÁ ENTENDÍ!&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO EU JÁ ENTENDÍ, SÔ!&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="692074651359664" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="432123724753471" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;OS DONOS DA MULAS PICAVAM ELAS COM AS ESPORAS PARA ELAS ANDAREM!&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;OS DONOS DA MULAS PICAVAM ELAS COM AS ESPORAS PARA ELAS SEGUIREM SEU RUMO!&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="811043029307651" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -1990,7 +2065,7 @@
                 </action>
                 <action id="0" name="Call function" sid="950665294562865" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;É UAI! POR CAUSA DESSA &apos;&apos;PICADA&apos;&apos; AS MULAS CORRIAM DEPRESSA.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;É UAI! POR CAUSA DESSA &apos;&apos;PICADA&apos;&apos; AS MULAS COMEÇAVAM A ANDAR DEPRESSA.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="863654068218131" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2024,7 +2099,7 @@
                 </action>
                 <action id="0" name="Call function" sid="884703351661967" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM? BAUM SABER!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="782168085038078" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2096,7 +2171,7 @@
                 </action>
                 <action id="0" name="Call function" sid="705365333180270" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;MAIS É CLARO QUE LAVAMOS, E LAVAMOS BONITO!  NÓIS E OS PRIMO TUDO VAMOS ENCHER O BUCHO!&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;MAIS É CLARO QUE LAVAMOS, UAI! PEGAMOS UM PAÇOCO DE PEIXE HOJE!  NÓIS E OS PRIMO TUDO VAMOS ENCHER O BUCHO!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="888887170076423" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2113,7 +2188,7 @@
                 </action>
                 <action id="0" name="Call function" sid="944229055163602" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;FALANDO NISSO TIÃO, JÁ QUE NÓIS FIZEMOS TUDO DESSE...&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ) &apos;&apos;FALANDO NISSO TIÃO, JÁ QUE NÓIS FIZEMOS TUDO DESSE AFAZER...&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="615578756933691" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2130,7 +2205,7 @@
                 </action>
                 <action id="0" name="Call function" sid="894173672215809" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;... AFAZER, QUAL É A ORIGEM DESSA EXPRESSÃO?&apos;&apos;&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓÓÓÓÓÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;QUAL É A ORIGEM DE &apos;&apos;PICAR A MULA&apos;&apos;, SÔ?&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="278689877066824" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2147,7 +2222,7 @@
                 </action>
                 <action id="0" name="Call function" sid="290919353645037" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;ÓIA SÓ CHICO, MINHA MÃE ME DISSO, QUE NO TEMPO DO OURO E ESCRAVOS AQUI NAS MINAS GERAIS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ÓIA PROCÊ VÊ CHICO, MINHA MÃE ME DISSE, QUE NO TEMPO DO OURO E ESCRAVOS AQUI NAS MINAS GERAIS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="446033374810355" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2171,7 +2246,7 @@
                 </action>
                 <action id="0" name="Call function" sid="744882567090443" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...PORÉM CHICO, TINHAM MUITAS PEDRAS PONTUDAS QUE MACHUCAVAM O LOMBO DOS BICHOS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MAS VÊ SE PODE ESSE TREM! TINHAM MUITAS PEDRAS PONTUDAS QUE MACHUCAVAM O LOMBO DOS BICHOS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="422685581344061" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2195,7 +2270,7 @@
                 </action>
                 <action id="0" name="Call function" sid="378476854776315" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...PARA PROTEGER, OS ESCRAVOS COLOCAVAM ARGILA NO LOMBO DAS MULAS E DAS ÉGUAS...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...PARA PROTEGER, OS ESCRAVOS TACAVAM ARGILA NO LOMBO DAS MULAS E DAS ÉGUAS...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="402252826798930" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2301,7 +2376,7 @@
                 </action>
                 <action id="0" name="Call function" sid="366228145663042" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM!? BAUM SABER!&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ COCÓ)&quot; &amp; NEWLINE &amp; &quot;&apos;&apos;UAI! ENTÃO ESSE TREM SURGIU ASSIM? BAUM SABER!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="783904485887621" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2465,7 +2540,7 @@
                 </action>
                 <action id="0" name="Call function" sid="443980066157260" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...E MUITOS MORRIAM DE FOME.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...E MUITOS MORRIAM DE FOME SÔ!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="727702577855836" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2482,7 +2557,7 @@
                 </action>
                 <action id="0" name="Call function" sid="271418653843636" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...AS ESCRAVAS QUE TRABALHAVAM NA COZINHA DA FAZENDA TINHAM PENA DELES...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;AS ESCRAVAS QUE TRABALHAVAM NA COZINHA DA FAZENDA TINHAM PENA DELES...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="730241464137733" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2506,14 +2581,14 @@
                 </action>
                 <action id="0" name="Call function" sid="721911990082918" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...QUANDO UM ESCRAVA COMEÇAVA A COMER E ENCONTRAVA ALGUMA CARNE ESCONDIDA...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...QUANDO UM ESCRAVO DA SENZALA COMEÇAVA A COMER E ENCONTRAVA ALGUMA CARNE ESCONDIDA...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="741074996792511" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="334462820882356" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;...ELES AVISAVAM OS OUTROS: &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos;...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...ELES &apos;&apos;RECLAMAVAM&apos;&apos; COS OUTROS: &apos;&apos;TEM CAROÇO NESSE ANGU&apos;&apos;...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="375278242107427" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2547,7 +2622,7 @@
                 </action>
                 <action id="0" name="Call function" sid="749423619006776" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;SIM CHICO! POR QUÊ SE O FEITOR ENCONTRAR, ELES IAM PRO TRONCO.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SIM CHICO! POR QUÊ SE O FEITOR DESCOBRISSE, ELES IAM PRO TRONCO E TOMAVAM UMA COÇA DE FAZER O GATO MIÁ.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="991612292067334" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2633,7 +2708,7 @@
                 </action>
                 <action id="0" name="Call function" sid="785166672334627" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;CHICO, BAUM QUE NÓIS TERMINADOS OS AFAZERES DE HOJE...&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;CHICO, BAUM QUE NÓIS TERMINAMOS OS AFAZERES DE HOJE...&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="310962539151948" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2671,7 +2746,7 @@
                 </action>
                 <action id="0" name="Call function" sid="746408381542457" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;ÓIA PROCÊ VÊ! NÓIS TRABALHOS E SOUBEMOS DE ONDE VIERAM UM MONTE DE EXPRESSÃO EM MINEIRÊS.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;ÓIA PROCÊ VÊ! NÓIS TRABALHAMOS MUITO E DESCOBRIMOS DE ONDE VIERAM UM TANTÃO DE EXPRESSÃO EM MINEIRÊS.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="644157213433499" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2688,7 +2763,7 @@
                 </action>
                 <action id="0" name="Call function" sid="563208158063185" type="Function">
                     <param id="0" name="Name">&quot;FalaChico&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;(COCÓ) &apos;&apos;SOUBEMOS MESMO CHICO. EU TÔ ME SENTIDO ATÉ MAIS INTELIGENTE.&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;(COCÓ) &apos;&apos;SOUBEMOS MESMO CHICO. EU TÔ ME SENTIDO ATÉ MAIS INTELIGENTE.&apos;&apos;&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="598560228379601" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>

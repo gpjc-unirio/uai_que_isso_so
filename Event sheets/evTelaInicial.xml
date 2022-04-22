@@ -15,6 +15,9 @@
                     <param id="0" name="Family name">&quot;bagusregular&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="939657701564372" type="txtFalaPersonagem">
+                    <param id="0" name="Text">&quot;v.&quot; &amp; projectversion</param>
+                </action>
                 <action id="32" name="Add mute effect" sid="375160604554159" type="Audio">
                     <param id="0" name="Tag">&quot;soundTrack&quot;</param>
                 </action>
