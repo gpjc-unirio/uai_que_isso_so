@@ -10,13 +10,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <event-sheet order="0">evPlayer</event-sheet>
+        <layout order="7">Niveis</layout>
+        <layout order="8">Level_03</layout>
+        <layout order="10">Level_02</layout>
+        <event-sheet active="1" order="0">evPlayer</event-sheet>
         <event-sheet order="1">evLevel_03</event-sheet>
         <event-sheet order="2">evLevel_04</event-sheet>
         <event-sheet order="3">evPesca</event-sheet>
         <event-sheet order="4">evGalinha</event-sheet>
         <event-sheet order="5">evNiveis</event-sheet>
-        <event-sheet active="1" order="6">evNarrativa</event-sheet>
+        <event-sheet order="6">evNarrativa</event-sheet>
+        <event-sheet order="9">evLevel_02</event-sheet>
+        <event-sheet order="11">evAbelhas</event-sheet>
+        <event-sheet order="12">evArvore</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

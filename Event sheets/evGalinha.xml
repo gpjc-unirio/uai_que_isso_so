@@ -460,5 +460,49 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="323371784978788">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="804245977388653" type="moita">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="491441479736206">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="633832908429310" type="System">
+                            <param id="0" name="Object">galinha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="954104158881300" type="galinha">
+                            <param id="0" name="Instance variable">Demage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="368698754760897">
+            <conditions>
+                <condition id="-22" name="Else" sid="291475092760406" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="146905947077982">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="707417134593455" type="System">
+                            <param id="0" name="Object">galinha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="680654871768303" type="galinha">
+                            <param id="0" name="Instance variable">Demage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

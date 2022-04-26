@@ -940,6 +940,7 @@
                         <ponto>150</ponto>
                         <origemX>5483.804</origemX>
                         <origemY>570.601</origemY>
+                        <Demage>false</Demage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1715,8 +1716,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3117</x>
-                        <y>851</y>
+                        <x>2692</x>
+                        <y>857</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>88.317611694</height>
@@ -1758,8 +1759,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3208</x>
-                        <y>851</y>
+                        <x>2783</x>
+                        <y>857</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>90.060722351</height>
@@ -1801,8 +1802,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3022</x>
-                        <y>852</y>
+                        <x>2597</x>
+                        <y>858</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>90.060722351</height>
@@ -1844,8 +1845,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3114</x>
-                        <y>760</y>
+                        <x>2689</x>
+                        <y>766</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>88.317611694</height>
@@ -1887,8 +1888,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3210</x>
-                        <y>757</y>
+                        <x>2785</x>
+                        <y>763</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>90.060722351</height>
@@ -1930,8 +1931,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3302</x>
-                        <y>849</y>
+                        <x>2877</x>
+                        <y>855</y>
                         <z>0</z>
                         <width>88.317611694</width>
                         <height>88.317611694</height>
@@ -2456,8 +2457,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4656</x>
-                        <y>788</y>
+                        <x>4662</x>
+                        <y>852</y>
                         <z>0</z>
                         <width>48.048000336</width>
                         <height>42.799999237</height>
@@ -2478,8 +2479,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3163</x>
-                        <y>621</y>
+                        <x>3009</x>
+                        <y>383</y>
                         <z>0</z>
                         <width>48.048000336</width>
                         <height>42.799999237</height>
@@ -2522,8 +2523,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2855</x>
-                        <y>778</y>
+                        <x>2592</x>
+                        <y>392</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
@@ -2544,8 +2545,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4408</x>
-                        <y>652</y>
+                        <x>4728</x>
+                        <y>511</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
@@ -2588,8 +2589,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>5098</x>
-                        <y>764</y>
+                        <x>4018</x>
+                        <y>865</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
@@ -2654,8 +2655,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>6227</x>
-                        <y>775</y>
+                        <x>6518</x>
+                        <y>861</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
@@ -2698,8 +2699,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>6742</x>
-                        <y>794</y>
+                        <x>4256</x>
+                        <y>605</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
@@ -2764,13 +2765,731 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3976</x>
-                        <y>787</y>
+                        <x>4374</x>
+                        <y>752</y>
                         <z>0</z>
                         <width>58</width>
                         <height>58</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="712">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2971</x>
+                        <y>853</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>88.317611694</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="713">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2892</x>
+                        <y>763</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="714">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2748</x>
+                        <y>672</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>88.317611694</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="715">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2846</x>
+                        <y>672</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>88.317611694</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="716">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2797</x>
+                        <y>582</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="717">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4563</x>
+                        <y>851</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="718">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4563</x>
+                        <y>755</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="719">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4559</x>
+                        <y>663</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="720">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>0</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4465</x>
+                        <y>752</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>90.060722351</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="galinha" uid="721">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Angola_Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isLookingLeft>true</isLookingLeft>
+                        <walkDistance>0</walkDistance>
+                        <Speed>0</Speed>
+                        <Demage>true</Demage>
+                        <isStopped>false</isStopped>
+                        <color>angola</color>
+                        <Distance>100</Distance>
+                        <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>500</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4558</x>
+                        <y>583</y>
+                        <z>0</z>
+                        <width>69.419219971</width>
+                        <height>50.230175018</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504065037</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="galinha" uid="723">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Angola_Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isLookingLeft>true</isLookingLeft>
+                        <walkDistance>0</walkDistance>
+                        <Speed>0</Speed>
+                        <Demage>true</Demage>
+                        <isStopped>false</isStopped>
+                        <color>angola</color>
+                        <Distance>100</Distance>
+                        <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>500</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1836</x>
+                        <y>651</y>
+                        <z>0</z>
+                        <width>69.419219971</width>
+                        <height>50.230175018</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504065037</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="galinha" uid="724">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Angola_Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isLookingLeft>true</isLookingLeft>
+                        <walkDistance>0</walkDistance>
+                        <Speed>0</Speed>
+                        <Demage>true</Demage>
+                        <isStopped>false</isStopped>
+                        <color>angola</color>
+                        <Distance>100</Distance>
+                        <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>500</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6809</x>
+                        <y>587</y>
+                        <z>0</z>
+                        <width>69.419219971</width>
+                        <height>50.230175018</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504065037</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="galinha" uid="722">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Angola_Idle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isLookingLeft>true</isLookingLeft>
+                        <walkDistance>0</walkDistance>
+                        <Speed>0</Speed>
+                        <Demage>true</Demage>
+                        <isStopped>false</isStopped>
+                        <color>angola</color>
+                        <Distance>100</Distance>
+                        <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>50</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>500</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5786</x>
+                        <y>667</y>
+                        <z>0</z>
+                        <width>69.419219971</width>
+                        <height>50.230175018</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504065037</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="caixa" uid="725">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3466</x>
+                        <y>849</y>
+                        <z>0</z>
+                        <width>88.317611694</width>
+                        <height>88.317611694</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503268003</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -2983,6 +3702,7 @@
                         <countBeat>0</countBeat>
                         <beeOriginX>1689.443</beeOriginX>
                         <beeOriginY>566.441</beeOriginY>
+                        <maxMangos>25</maxMangos>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3011,6 +3731,7 @@
                         <countBeat>0</countBeat>
                         <beeOriginX>5494.861</beeOriginX>
                         <beeOriginY>573.868</beeOriginY>
+                        <maxMangos>25</maxMangos>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3039,6 +3760,7 @@
                         <countBeat>0</countBeat>
                         <beeOriginX>3389.772</beeOriginX>
                         <beeOriginY>586.33</beeOriginY>
+                        <maxMangos>25</maxMangos>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

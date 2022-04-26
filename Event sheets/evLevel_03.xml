@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evLevel_03</name>
     <events>
+        <include>evGalinha</include>
         <include>evArvore</include>
         <include>evAbelhas</include>
         <include>evPlayer</include>
@@ -70,7 +71,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="120325603127702" type="System">
                     <param id="0" name="Variable">itensTotal</param>
-                    <param id="1" name="Value">25</param>
+                    <param id="1" name="Value">50</param>
                 </action>
                 <action id="-9" name="Set value" sid="536373074808472" type="System">
                     <param id="0" name="Variable">letrasColetadas</param>
@@ -109,6 +110,16 @@
                     <param id="1" name="Loop">1</param>
                     <param id="2" name="Volume">10</param>
                     <param id="3" name="Object">colmeia</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="121290272865110" type="Audio">
+                    <param id="0" name="Audio file">galinha_dangola</param>
+                    <param id="1" name="Loop">1</param>
+                    <param id="2" name="Volume">-20</param>
+                    <param id="3" name="Object">galinha</param>
                     <param id="4" name="Inner angle">360</param>
                     <param id="5" name="Outer angle">360</param>
                     <param id="6" name="Outer gain">0</param>

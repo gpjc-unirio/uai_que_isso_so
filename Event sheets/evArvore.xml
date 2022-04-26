@@ -37,7 +37,7 @@
                         </action>
                         <action id="0" name="Call function" sid="749629112736634" type="Function">
                             <param id="0" name="Name">&quot;CreateBees&quot;</param>
-                            <param id="1" name="Parameter {n}">Copa_Arvore.beeOriginX{###}Copa_Arvore.beeOriginY{###}round(random(1, (dificuldade = 0 ? 5 : 10)))</param>
+                            <param id="1" name="Parameter {n}">Copa_Arvore.beeOriginX{###}Copa_Arvore.beeOriginY{###}round(random(3, (dificuldade = 0 ? 10 : 15)))</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -63,6 +63,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="236321756708842" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="353457598589485" type="System">
@@ -79,6 +84,10 @@
                                         </action>
                                         <action disabled="1" id="-24" name="Move to top" sid="541978053775595" type="manga_1" />
                                         <action id="-25" name="Move to bottom" sid="318181045138549" type="manga_1" />
+                                        <action id="-12" name="Subtract from" sid="890174852095848" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="488437199052506">
@@ -87,6 +96,11 @@
                                             <param id="0" name="Variable">rdnItemTree</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="833673790397771" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -104,6 +118,10 @@
                                         </action>
                                         <action disabled="1" id="-24" name="Move to top" sid="136981612178708" type="manga_2" />
                                         <action id="-25" name="Move to bottom" sid="686695213831557" type="manga_2" />
+                                        <action id="-12" name="Subtract from" sid="252328438877241" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="193640420269289">
@@ -112,6 +130,11 @@
                                             <param id="0" name="Variable">rdnItemTree</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="955536377305688" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -129,6 +152,10 @@
                                         </action>
                                         <action disabled="1" id="-24" name="Move to top" sid="742022623544809" type="manga_3" />
                                         <action id="-25" name="Move to bottom" sid="598957152569485" type="manga_3" />
+                                        <action id="-12" name="Subtract from" sid="637829973072483" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="523008201934964">
@@ -137,6 +164,11 @@
                                             <param id="0" name="Variable">rdnItemTree</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="179953739967669" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -154,6 +186,10 @@
                                         </action>
                                         <action disabled="1" id="-24" name="Move to top" sid="598572205148739" type="manga_4" />
                                         <action id="-25" name="Move to bottom" sid="239671692359014" type="manga_4" />
+                                        <action id="-12" name="Subtract from" sid="575682999053827" type="Copa_Arvore">
+                                            <param id="0" name="Instance variable">maxMangos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="583777273566478">

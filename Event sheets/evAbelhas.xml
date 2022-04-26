@@ -129,6 +129,10 @@
                         <action behavior="Pathfinding" id="3" name="Set enabled" sid="678677939395010" type="bee">
                             <param id="0" name="Set">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="869633825222885" type="bee">
+                            <param id="0" name="Instance variable">Demage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -148,6 +152,10 @@
                     <actions>
                         <action behavior="Pathfinding" id="3" name="Set enabled" sid="255637109831598" type="bee">
                             <param id="0" name="Set">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="843534304835775" type="bee">
+                            <param id="0" name="Instance variable">Demage</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

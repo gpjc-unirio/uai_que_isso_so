@@ -2,7 +2,7 @@
 <c2project>
     <name>Uai! Que isso sô!</name>
     <description>Uai! Que isso sô!</description>
-    <version>1.1.152</version>
+    <version>1.2.159</version>
     <author>Tadeu Moreira de Classe</author>
     <author-email>tadeu.classe@uniriotec.br</author-email>
     <author-website>http://</author-website>
@@ -3340,6 +3340,7 @@
                 <instance-variable name="ponto" sid="653446171680816" type="number" />
                 <instance-variable name="origemX" sid="824156997199274" type="number" />
                 <instance-variable name="origemY" sid="469183135562815" type="number" />
+                <instance-variable name="Demage" sid="977457363830674" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="678853961516130">
@@ -4291,6 +4292,7 @@
                 <instance-variable name="countBeat" sid="437079634289074" type="number" />
                 <instance-variable name="beeOriginX" sid="440036019858194" type="number" />
                 <instance-variable name="beeOriginY" sid="131561338310720" type="number" />
+                <instance-variable name="maxMangos" sid="620441241298864" type="number" />
             </instance-variables>
         </family>
         <family name="Galhos" plugin-id="Sprite" sid="884773795348756">

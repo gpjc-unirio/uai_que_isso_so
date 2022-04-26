@@ -718,13 +718,23 @@
                     <param id="0" name="Object">bee</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="638770755241295" type="bee" />
-                <action id="0" name="Call function" sid="437782855545104" type="Function">
-                    <param id="0" name="Name">&quot;PlayerDamage&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="327704041449519">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="119960260740237" type="bee">
+                            <param id="0" name="Instance variable">Demage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="638770755241295" type="bee" />
+                        <action id="0" name="Call function" sid="437782855545104" type="Function">
+                            <param id="0" name="Name">&quot;PlayerDamage&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="175516161839009">
             <conditions>
