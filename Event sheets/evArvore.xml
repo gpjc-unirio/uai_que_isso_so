@@ -4,7 +4,7 @@
     <name>evArvore</name>
     <events>
         <include>evAbelhas</include>
-        <variable constant="1" name="qtdeTreeItens" sid="641824161617819" static="0" type="number">5</variable>
+        <variable constant="0" name="QTDETREEITENS" sid="641824161617819" static="0" type="number">5</variable>
         <variable constant="0" name="rdnItemTree" sid="969689366854781" static="0" type="number">1</variable>
         <event-block sid="847462946287140">
             <conditions>
@@ -31,9 +31,13 @@
                             <param id="3" name="Volume">10</param>
                             <param id="1" name="Tag (optional)">&quot;sfx&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="952332266294890" type="System">
+                            <param id="0" name="Variable">QTDETREEITENS</param>
+                            <param id="1" name="Value">(dificuldade = 0 ? 10 : 5)</param>
+                        </action>
                         <action id="0" name="Call function" sid="749629112736634" type="Function">
                             <param id="0" name="Name">&quot;CreateBees&quot;</param>
-                            <param id="1" name="Parameter {n}">Copa_Arvore.beeOriginX{###}Copa_Arvore.beeOriginY{###}round(random(1, 10))</param>
+                            <param id="1" name="Parameter {n}">Copa_Arvore.beeOriginX{###}Copa_Arvore.beeOriginY{###}round(random(1, (dificuldade = 0 ? 5 : 10)))</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -48,7 +52,7 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="928603507439954" type="System">
                                     <param id="0" name="Variable">rdnItemTree</param>
-                                    <param id="1" name="Value">round(random(1, 8))</param>
+                                    <param id="1" name="Value">round(random(1, (dificuldade = 0 ? 6 : 8)))</param>
                                 </action>
                             </actions>
                             <sub-events>

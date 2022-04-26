@@ -51,28 +51,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="ifsudeste_cataguases" uid="688">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>573</x>
-                        <y>882</y>
-                        <z>0</z>
-                        <width>212.661315918</width>
-                        <height>306.00769043</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="unirio" uid="705">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -83,7 +61,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>895.240234375</x>
+                        <x>711.240234375</x>
                         <y>878.243896484</y>
                         <z>0</z>
                         <width>355.944854736</width>
@@ -105,7 +83,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1336</x>
+                        <x>1152</x>
                         <y>882</y>
                         <z>0</z>
                         <width>466.811859131</width>

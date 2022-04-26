@@ -2,7 +2,7 @@
 <c2project>
     <name>Uai! Que isso sô!</name>
     <description>Uai! Que isso sô!</description>
-    <version>1.0.33</version>
+    <version>1.1.79</version>
     <author>Tadeu Moreira de Classe</author>
     <author-email>tadeu.classe@uniriotec.br</author-email>
     <author-website>http://</author-website>
@@ -22,6 +22,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -755,6 +756,7 @@
                 <instance-variable name="color" sid="849009901633131" type="string" />
                 <instance-variable name="Distance" sid="915529886964719" type="number" />
                 <instance-variable name="takeOff" sid="171507522772910" type="boolean" />
+                <instance-variable name="difficultTag" sid="412004847388544" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="221521176693022">
@@ -2822,6 +2824,7 @@
                 <instance-variable name="isMovimento" sid="174080696734135" type="number" />
                 <instance-variable name="isMorto" sid="246528486767116" type="number" />
                 <instance-variable name="ponto" sid="839377992564440" type="number" />
+                <instance-variable name="difficultTag" sid="448324132256471" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="699653953016738">
@@ -4194,6 +4197,31 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="couveHUD" sid="300060036362772">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="lifeTime" sid="266134194628031" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388405904367468" speed="5">
+                    <frame duration="1" hotspotX="0.0075" hotspotY="0.877778" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\Projeto QUe Trem é Esse\ELEMENTOS GRÁFICOS DO JOGO\FASE 1 - GALINHEIRO\couve.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.133333" />
+                            <point x="0.68" y="0.244444" />
+                            <point x="0.9825" y="0.155556" />
+                            <point x="0.96" y="0.5" />
+                            <point x="0.875" y="0.911111" />
+                            <point x="0.5" y="0.977778" />
+                            <point x="0.29" y="0.722222" />
+                            <point x="0.09375" y="0.716667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="couveBar" sid="385000336600856">
+            <plugin id="progressbar" />
         </object-type>
     </object-folder>
     <families>

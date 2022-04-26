@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evLevel_04</name>
     <events>
+        <include>evArvore</include>
+        <include>evAbelhas</include>
         <include>evPlayer</include>
         <include>evGameController</include>
         <include>evChico</include>
@@ -91,6 +93,24 @@
                     <param id="1" name="Value">12</param>
                 </action>
                 <action id="0" name="Set text" sid="584815924207325" type="txtQtdItens">
+                    <param id="0" name="Text">(ovosPegos &lt; 10 ? &quot;0&quot;&amp;ovosPegos &amp;&quot; / &quot; &amp; itensTotal : ovosPegos &amp;&quot; / &quot; &amp; itensTotal)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="241739123508786">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="606933660292190" type="System">
+                    <param id="0" name="Variable">dificuldade</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="894190609518624" type="System">
+                    <param id="0" name="Variable">itensTotal</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="0" name="Set text" sid="108677092866441" type="txtQtdItens">
                     <param id="0" name="Text">(ovosPegos &lt; 10 ? &quot;0&quot;&amp;ovosPegos &amp;&quot; / &quot; &amp; itensTotal : ovosPegos &amp;&quot; / &quot; &amp; itensTotal)</param>
                 </action>
             </actions>

@@ -25,15 +25,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <active-layer name="Fundo" />
     <layers>
-        <layer locked="0" name="Fundo" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Fundo_01" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Cenario" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Piso" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Game" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Fundo_04" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="HUD" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Narrativa" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Titulo" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Ajuda" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Fundo" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Fundo_01" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Cenario" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Piso" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Game" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Fundo_04" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="HUD" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Narrativa" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="Titulo" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="Ajuda" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

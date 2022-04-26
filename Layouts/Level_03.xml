@@ -4737,6 +4737,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4807,6 +4808,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4877,6 +4879,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -4947,6 +4950,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5017,6 +5021,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5087,6 +5092,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5157,6 +5163,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5227,6 +5234,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5297,6 +5305,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5367,6 +5376,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5437,6 +5447,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5507,6 +5518,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5577,6 +5589,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5647,6 +5660,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5717,6 +5731,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5787,6 +5802,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5857,6 +5873,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5927,6 +5944,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -5997,6 +6015,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6067,6 +6086,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6137,6 +6157,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6207,6 +6228,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6277,6 +6299,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6347,6 +6370,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6417,6 +6441,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6487,6 +6512,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6557,6 +6583,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6627,6 +6654,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -6697,6 +6725,7 @@
                         <isMovimento>0</isMovimento>
                         <isMorto>0</isMorto>
                         <ponto>25</ponto>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">

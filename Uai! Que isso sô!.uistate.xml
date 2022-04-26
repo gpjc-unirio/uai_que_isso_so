@@ -10,12 +10,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="3">Level_04</layout>
-        <layout order="5">Tela_Inicial</layout>
-        <event-sheet order="0">evNarrativa</event-sheet>
-        <event-sheet order="1">evCreditos</event-sheet>
-        <event-sheet order="2">evNiveis</event-sheet>
-        <event-sheet active="1" order="4">evTelaInicial</event-sheet>
+        <layout order="1">Level_02</layout>
+        <layout order="4">Level_01</layout>
+        <layout order="5">Level_03</layout>
+        <layout order="11">Level_04</layout>
+        <layout active="1" order="15">Loader</layout>
+        <event-sheet order="0">evLevel_02</event-sheet>
+        <event-sheet order="2">evGalinha</event-sheet>
+        <event-sheet order="3">evGameController</event-sheet>
+        <event-sheet order="6">evMosquito</event-sheet>
+        <event-sheet order="7">evLevel_03</event-sheet>
+        <event-sheet order="8">evLevel_04</event-sheet>
+        <event-sheet order="9">evAbelhas</event-sheet>
+        <event-sheet order="10">evArvore</event-sheet>
+        <event-sheet order="12">evLevel_01</event-sheet>
+        <event-sheet order="13">evNarrativa</event-sheet>
+        <event-sheet order="14">evPlayer</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,11 +34,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="Alfabeto" />
-        <family expanded="1" name="ChainLinks" />
-        <family expanded="1" name="Manga" />
-        <family expanded="1" name="Copa_Arvore" />
-        <family expanded="1" name="Galhos" />
+        <family expanded="0" name="Alfabeto" />
+        <family expanded="0" name="ChainLinks" />
+        <family expanded="0" name="Manga" />
+        <family expanded="0" name="Copa_Arvore" />
+        <family expanded="0" name="Galhos" />
         <family expanded="0" name="Labels" />
     </families-expanded>
     <folders-expanded>
@@ -229,5 +239,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/ifsudeste_cataguases/" />
         <folder expanded="1" path="animation-folder/unirio/" />
         <folder expanded="1" path="animation-folder/ppgi/" />
+        <folder expanded="1" path="animation-folder/couveHUD/" />
     </folders-expanded>
 </c2uistate>

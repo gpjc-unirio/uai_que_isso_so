@@ -93,7 +93,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="555340792105791" type="System">
                     <param id="0" name="Variable">dificuldade</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="784020710579604" type="System">
                     <param id="0" name="Variable">nivelDesbloqueado</param>

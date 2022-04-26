@@ -8,7 +8,6 @@
         <include>evPlayer</include>
         <include>evGameController</include>
         <include>evChico</include>
-        <include>evGameController</include>
         <event-block sid="406473271641022">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="314850620788152" type="System" />

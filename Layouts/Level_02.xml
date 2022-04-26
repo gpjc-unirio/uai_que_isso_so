@@ -51,6 +51,49 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="couve" uid="709">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <lifeTime>5</lifeTime>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>0</density>
+                                <friction>0.2</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>177</x>
+                        <y>-73</y>
+                        <z>0</z>
+                        <width>53</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0.0075</hotspotX>
+                        <hotspotY>0.877777755</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1545,49 +1588,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="couve" uid="200">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <lifeTime>5</lifeTime>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DestroyOutsideLayout" />
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>163</x>
-                        <y>-17</y>
-                        <z>0</z>
-                        <width>49.441326141</width>
-                        <height>11.124298096</height>
-                        <depth>0</depth>
-                        <hotspotX>0.0075</hotspotX>
-                        <hotspotY>0.877777755</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Player" uid="246">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1734,6 +1734,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1805,6 +1806,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1876,6 +1878,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1947,6 +1950,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2061,6 +2065,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2863,6 +2868,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2934,6 +2940,7 @@
                         <color>angola</color>
                         <Distance>150</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3005,6 +3012,7 @@
                         <color>angola</color>
                         <Distance>150</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3076,6 +3084,7 @@
                         <color>angola</color>
                         <Distance>150</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3147,6 +3156,7 @@
                         <color>angola</color>
                         <Distance>200</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3218,6 +3228,7 @@
                         <color>angola</color>
                         <Distance>300</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3289,6 +3300,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>true</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3360,6 +3372,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>true</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3431,6 +3444,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3502,6 +3516,7 @@
                         <color>angola</color>
                         <Distance>100</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3573,6 +3588,7 @@
                         <color>angola</color>
                         <Distance>50</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -3644,6 +3660,7 @@
                         <color>angola</color>
                         <Distance>50</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>1</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -4016,6 +4033,7 @@
                         <color>angola</color>
                         <Distance>200</Distance>
                         <takeOff>false</takeOff>
+                        <difficultTag>0</difficultTag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -4923,8 +4941,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>327</x>
-                        <y>203</y>
+                        <x>357</x>
+                        <y>286</y>
                         <z>0</z>
                         <width>79</width>
                         <height>78</height>
@@ -5738,6 +5756,74 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="itens_" uid="200">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>214.098251343</x>
+                        <y>200.269165039</y>
+                        <z>0</z>
+                        <width>368</width>
+                        <height>120</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="couveHUD" uid="710">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <lifeTime>0</lifeTime>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>47.803474426</x>
+                        <y>211.461700439</y>
+                        <z>0</z>
+                        <width>78</width>
+                        <height>33</height>
+                        <depth>0</depth>
+                        <hotspotX>0.0075</hotspotX>
+                        <hotspotY>0.877777994</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="couveBar" uid="711">
+                    <properties>
+                        <value>100</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>161.098251343</x>
+                        <y>170.269165039</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>56</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
