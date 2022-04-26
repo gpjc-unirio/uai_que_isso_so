@@ -10,22 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="1">Level_02</layout>
-        <layout order="4">Level_01</layout>
-        <layout order="5">Level_03</layout>
-        <layout order="11">Level_04</layout>
-        <layout active="1" order="15">Loader</layout>
-        <event-sheet order="0">evLevel_02</event-sheet>
-        <event-sheet order="2">evGalinha</event-sheet>
-        <event-sheet order="3">evGameController</event-sheet>
-        <event-sheet order="6">evMosquito</event-sheet>
-        <event-sheet order="7">evLevel_03</event-sheet>
-        <event-sheet order="8">evLevel_04</event-sheet>
-        <event-sheet order="9">evAbelhas</event-sheet>
-        <event-sheet order="10">evArvore</event-sheet>
-        <event-sheet order="12">evLevel_01</event-sheet>
-        <event-sheet order="13">evNarrativa</event-sheet>
-        <event-sheet order="14">evPlayer</event-sheet>
+        <event-sheet order="0">evPlayer</event-sheet>
+        <event-sheet order="1">evLevel_03</event-sheet>
+        <event-sheet order="2">evLevel_04</event-sheet>
+        <event-sheet order="3">evPesca</event-sheet>
+        <event-sheet order="4">evGalinha</event-sheet>
+        <event-sheet order="5">evNiveis</event-sheet>
+        <event-sheet active="1" order="6">evNarrativa</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

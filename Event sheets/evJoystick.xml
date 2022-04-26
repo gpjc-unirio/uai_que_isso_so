@@ -293,7 +293,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="474475710134155" type="System">
-                                    <param id="0" name="Layout">Level_03</param>
+                                    <param id="0" name="Layout">Level_04</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -332,7 +332,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="887989772878886" type="System">
-                                    <param id="0" name="Layout">Level_04</param>
+                                    <param id="0" name="Layout">Level_03</param>
                                 </action>
                             </actions>
                         </event-block>

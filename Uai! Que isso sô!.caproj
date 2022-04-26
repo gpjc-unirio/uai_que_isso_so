@@ -2,7 +2,7 @@
 <c2project>
     <name>Uai! Que isso sô!</name>
     <description>Uai! Que isso sô!</description>
-    <version>1.1.79</version>
+    <version>1.1.152</version>
     <author>Tadeu Moreira de Classe</author>
     <author-email>tadeu.classe@uniriotec.br</author-email>
     <author-website>http://</author-website>
@@ -4321,8 +4321,8 @@
     <layout-folder>
         <layout>Level_01.xml</layout>
         <layout>Level_02.xml</layout>
-        <layout>Level_03.xml</layout>
         <layout>Level_04.xml</layout>
+        <layout>Level_03.xml</layout>
         <layout>Tela_Inicial.xml</layout>
         <layout>Niveis.xml</layout>
         <layout>Expressoes.xml</layout>
@@ -4348,12 +4348,12 @@
         <event-sheet>evLevelComplete.xml</event-sheet>
         <event-sheet>evLevel_02.xml</event-sheet>
         <event-sheet>evLoader.xml</event-sheet>
-        <event-sheet>evLevel_03.xml</event-sheet>
+        <event-sheet>evLevel_04.xml</event-sheet>
         <event-sheet>evPesca.xml</event-sheet>
         <event-sheet>evBarco.xml</event-sheet>
         <event-sheet>evPeixe.xml</event-sheet>
         <event-sheet>evMosquito.xml</event-sheet>
-        <event-sheet>evLevel_04.xml</event-sheet>
+        <event-sheet>evLevel_03.xml</event-sheet>
         <event-sheet>evAbelhas.xml</event-sheet>
         <event-sheet>evArvore.xml</event-sheet>
         <event-sheet>evPersistence.xml</event-sheet>
