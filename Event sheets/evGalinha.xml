@@ -474,12 +474,24 @@
                             <param id="0" name="Object">galinha</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="954104158881300" type="galinha">
-                            <param id="0" name="Instance variable">Demage</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="770712082400940">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="394941394419124" type="System">
+                                    <param id="0" name="Variable">levelExecutando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="558526851975994" type="galinha">
+                                    <param id="0" name="Instance variable">Demage</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -495,12 +507,24 @@
                             <param id="0" name="Object">galinha</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="680654871768303" type="galinha">
-                            <param id="0" name="Instance variable">Demage</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="284505934512693">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="449690471027072" type="System">
+                                    <param id="0" name="Variable">levelExecutando</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="680654871768303" type="galinha">
+                                    <param id="0" name="Instance variable">Demage</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

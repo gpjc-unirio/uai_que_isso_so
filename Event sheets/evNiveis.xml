@@ -32,7 +32,7 @@
                     <param id="0" name="Size (pt)">40</param>
                 </action>
                 <action id="0" name="Set text" sid="649149292779607" type="txtHelp">
-                    <param id="0" name="Text">&quot;COMO JOGAR?&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;TECLADO:&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;MOVIMENTO DO TIÃO:&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA DIREITA = SETA DIREITA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA ESQUERDA = SETA ESQUERDA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PULAR = SETA CIMA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;AÇÃO = ESPAÇO&quot;</param>
+                    <param id="0" name="Text">&quot;COMO JOGAR?&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;TECLADO:&quot;&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;MOVIMENTO DO TIÃO:&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA DIREITA = SETA DIREITA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA ESQUERDA = SETA ESQUERDA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PULAR = SETA CIMA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;AÇÃO = ESPAÇO (JOGAR COUVE PARA AS GALINHAS, BALANÇAR O BAMBU PRA PEGAR MANGA E AFASTAR ABELHA E PESCAR)&quot;</param>
                 </action>
             </actions>
             <sub-events>

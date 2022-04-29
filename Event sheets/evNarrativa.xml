@@ -56,6 +56,28 @@
                 <action id="-15" name="Set visible" sid="807378612774984" type="esquerda">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="5" name="Set web font" sid="470048705586215" type="txtHelp">
+                    <param id="0" name="Family name">&quot;bagusregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="642804268408257" type="txtHelp">
+                    <param id="0" name="Size (pt)">40</param>
+                </action>
+                <action id="0" name="Set text" sid="113172003224599" type="txtHelp">
+                    <param id="0" name="Text">&quot;COMO JOGAR?&quot;&#x0D;&#x0A;&amp;newline&amp;newline&amp;&#x0D;&#x0A;&quot;TECLADO:&quot;&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;MOVIMENTO DO TIÃO:&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA DIREITA = SETA DIREITA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;ANDAR PARA ESQUERDA = SETA ESQUERDA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;PULAR = SETA CIMA&quot;&amp;newline&amp;&#x0D;&#x0A;&quot;AÇÃO = ESPAÇO (JOGAR COUVE PARA AS GALINHAS, BALANÇAR O BAMBU PRA PEGAR MANGA E AFASTAR ABELHA E PESCAR)&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="585649780628742" type="System">
+                    <param id="0" name="Layer">&quot;Personagem&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="665881963445306" type="System">
+                    <param id="0" name="Layer">&quot;Mensagem&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="154149264378309" type="System">
+                    <param id="0" name="Layer">&quot;Ajuda&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="927669562560497">
@@ -630,8 +652,20 @@
                 <action id="-41" name="Wait for signal" sid="344860920610789" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="373940072608152" type="System">
-                    <param id="0" name="Layout">Niveis</param>
+                <action id="3" name="Set font size" sid="162575994826365" type="txtHelp">
+                    <param id="0" name="Size (pt)">40</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="221549532176259" type="System">
+                    <param id="0" name="Layer">&quot;Personagem&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="357887758843802" type="System">
+                    <param id="0" name="Layer">&quot;Mensagem&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="705540279703856" type="System">
+                    <param id="0" name="Layer">&quot;Ajuda&quot;</param>
+                    <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
@@ -815,6 +849,23 @@
                 <action id="0" name="Call function" sid="521254388843689" type="Function">
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;...NÓIS PODE COMER UM PEDAÇO DE QUEJIM MINAS QUE NOSSA ENERGIA VOLTA. SANTO REMÉDIO ESSE QUEJIM!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="807915431066596" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="371547821914572" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="689297282799456" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OCEIS QUE TAÍ DE FORA... ESQUECE DE APERTAR O BOTÃO DE AÇÃO (ESPAÇO) PRA JOGAR COUVE PRAS GALINHAS NÃO, EIN!&quot; </param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="538796812982073" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
@@ -2894,10 +2945,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="191080548782822">
+        <event-block any="1" sid="191080548782822">
             <conditions>
                 <condition id="7" name="Cursor is over object" sid="109768237496676" type="Mouse">
                     <param id="0" name="Object">btnAvancar</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="631354910470988" type="Mouse">
+                    <param id="0" name="Object">btnCloseHelp</param>
                 </condition>
             </conditions>
             <actions>
@@ -2977,6 +3031,18 @@
                 </action>
                 <action id="-15" name="Set visible" sid="260729225740772" type="txtTiao">
                     <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="681935593047411">
+            <conditions>
+                <condition id="3" name="On touched object" sid="477732375609504" type="Touch">
+                    <param id="0" name="Object">btnCloseHelp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="486575355009938" type="System">
+                    <param id="0" name="Layout">Niveis</param>
                 </action>
             </actions>
         </event-block>
