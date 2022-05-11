@@ -184,6 +184,72 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="tadeu" uid="729">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>695.094848633</x>
+                        <y>432.580047607</y>
+                        <z>0</z>
+                        <width>101.679000854</width>
+                        <height>91.555000305</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="juliana2" uid="730">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1238.790893555</x>
+                        <y>512.390136719</y>
+                        <z>0</z>
+                        <width>101.679000854</width>
+                        <height>91.555000305</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501779377</hotspotX>
+                        <hotspotY>0.501730084</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ronney" uid="731">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>694.72668457</x>
+                        <y>583.524841309</y>
+                        <z>0</z>
+                        <width>101.678863525</width>
+                        <height>91.554862976</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501084626</hotspotX>
+                        <hotspotY>0.501170933</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

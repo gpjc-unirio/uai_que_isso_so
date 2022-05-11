@@ -15,12 +15,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="7">Narrativa</layout>
         <layout order="8">Niveis</layout>
         <layout order="10">Tela_Inicial</layout>
+        <layout active="1" order="11">Creditos</layout>
         <event-sheet order="1">evGalinha</event-sheet>
         <event-sheet order="2">evPlayer</event-sheet>
-        <event-sheet active="1" order="4">evNarrativa</event-sheet>
+        <event-sheet order="4">evNarrativa</event-sheet>
         <event-sheet order="5">evAbelhas</event-sheet>
         <event-sheet order="6">evLevel_03</event-sheet>
         <event-sheet order="9">evNiveis</event-sheet>
+        <event-sheet order="12">evCreditos</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -235,5 +237,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/unirio/" />
         <folder expanded="1" path="animation-folder/ppgi/" />
         <folder expanded="1" path="animation-folder/couveHUD/" />
+        <folder expanded="1" path="animation-folder/tadeu/" />
+        <folder expanded="1" path="animation-folder/juliana/" />
+        <folder expanded="1" path="animation-folder/juliana2/" />
+        <folder expanded="1" path="animation-folder/ronney/" />
     </folders-expanded>
 </c2uistate>

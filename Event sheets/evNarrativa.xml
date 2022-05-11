@@ -867,7 +867,21 @@
                     <param id="0" name="Name">&quot;FalaTiao&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;OCEIS QUE TAÍ DE FORA... ESQUECE DE APERTAR O BOTÃO DE AÇÃO (ESPAÇO) PRA JOGAR COUVE PRAS GALINHAS NÃO, EIN!&quot; </param>
                 </action>
+                <action id="-41" name="Wait for signal" sid="528741284905186" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="131011291557946" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;QUANDO AS GALINHAS ESTÃO COMENDO, AÍ NÓIS PODE PASSAR TRANQUILO, QUE ELAS NÃO VÃO BICAR...&quot; </param>
+                </action>
                 <action id="-41" name="Wait for signal" sid="538796812982073" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="601845249022927" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MAS SE ELAS PARAREM DE COMER, NÃO ENCOSTA NELAS NÃO EIN!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="208772604143260" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="230040175047190" type="System">
@@ -1144,6 +1158,34 @@
                 </action>
                 <action id="-41" name="Wait for signal" sid="914921051799739" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="933718757050592" type="Audio">
+                    <param id="0" name="Audio file">uai_so</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Chico</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="713040833634615" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OCEIS QUE TAÍ DE FORA... ESQUECE DE APERTAR O BOTÃO DE AÇÃO (ESPAÇO) PRA JOGAR COUVE PRAS GALINHAS NÃO, EIN!&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="499273071123457" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="174524453002654" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;QUANDO AS GALINHAS ESTÃO COMENDO, AÍ NÓIS PODE PASSAR TRANQUILO, QUE ELAS NÃO VÃO BICAR...&quot; </param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="296334650828492" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="749173782230749" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;...MAS SE ELAS PARAREM DE COMER, NÃO ENCOSTA NELAS NÃO EIN!&quot; </param>
                 </action>
                 <action id="-13" name="Set time scale" sid="328402168342641" type="System">
                     <param id="0" name="Time scale">1</param>
@@ -1716,6 +1758,30 @@
                     <param id="1" name="Parameter {n}">&quot;PESSOAL QUE TAÍ DE FORA VENDO NÓIS, ATENÇÃO: PRA PEGAR AS MANGAS TEM QUE BATER O BAMBÚ NAS FOLHAS DAS ÁRVORES!&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="704381836257058" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="25" name="Play at object" sid="616284993899942" type="Audio">
+                    <param id="0" name="Audio file">ixi</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">20</param>
+                    <param id="3" name="Object">Tiao</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;sfx&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="908114107390965" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;QUANDO AS ABELHAS E AS GALINHAS DAREM NO PÉ ATRÁS DE NÓIS, TEMOS QUE PICAR MULA E ESCONDER NA MOITA.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="526591273350208" type="System">
+                    <param id="0" name="Tag">&quot;next_message&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="743837200567740" type="Function">
+                    <param id="0" name="Name">&quot;FalaTiao&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;E É... SE BATER A VARA NAS ABELHAS ELAS SOMEM E VOLTAM PRA COLMÉIA DELAS.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="906574530149411" type="System">
                     <param id="0" name="Tag">&quot;next_message&quot;</param>
                 </action>
                 <action id="-13" name="Set time scale" sid="830298996002526" type="System">

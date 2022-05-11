@@ -2,7 +2,7 @@
 <c2project>
     <name>Uai! Que isso sô!</name>
     <description>Uai! Que isso sô!</description>
-    <version>1.3.12</version>
+    <version>1.3.131</version>
     <author>Tadeu Moreira de Classe</author>
     <author-email>tadeu.classe@uniriotec.br</author-email>
     <author-website>http://</author-website>
@@ -4223,6 +4223,47 @@
         </object-type>
         <object-type name="couveBar" sid="385000336600856">
             <plugin id="progressbar" />
+        </object-type>
+        <object-type name="tadeu" sid="155049915156727">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566428699461324" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\tadeu.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="juliana" sid="219582750683630">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910533300476611" speed="5">
+                    <frame duration="1" hotspotX="0.501139" hotspotY="0.50173" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\juliana.png">
+                        <collision-poly>
+                            <point x="0.353075" y="0.536332" />
+                            <point x="0.498861" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.498861" y="1" />
+                            <point x="0.353075" y="0.463668" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="juliana2" sid="253710003403698">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176973396827759" speed="5">
+                    <frame duration="1" hotspotX="0.501779" hotspotY="0.50173" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\juliana.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ronney" sid="952275489788680">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821364272820496" speed="5">
+                    <frame duration="1" hotspotX="0.501085" hotspotY="0.501171" original-source="C:\Users\tadeu\OneDrive\Área de Trabalho\_Lixos\ronney.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

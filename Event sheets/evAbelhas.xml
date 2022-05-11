@@ -296,22 +296,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="924681379524485" type="bee">
-                    <param id="0" name="Instance variable">isMovimento</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="695551468007499" type="bee">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">3</param>
-                </action>
-                <action id="-16" name="Wait" sid="277914126879432" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
-                <action disabled="1" id="-10" name="Set value" sid="512852951644766" type="bee">
-                    <param id="0" name="Instance variable">isMovimento</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="-9" name="Destroy" sid="419562315816681" type="bee" />
             </actions>
         </event-block>
